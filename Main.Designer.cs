@@ -71,7 +71,7 @@
             // modToolStripMenuItem
             // 
             this.modToolStripMenuItem.Name = "modToolStripMenuItem";
-            this.modToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
             this.modToolStripMenuItem.Text = "Mod";
             this.modToolStripMenuItem.Click += new System.EventHandler(this.installMod);
             // 
@@ -185,6 +185,7 @@
             this.modIcon.Location = new System.Drawing.Point(19, 34);
             this.modIcon.Name = "modIcon";
             this.modIcon.Size = new System.Drawing.Size(64, 64);
+            this.modIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.modIcon.TabIndex = 4;
             this.modIcon.TabStop = false;
             // 

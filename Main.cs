@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Net;
 #endregion
 
 namespace modbrowser
@@ -61,7 +62,7 @@ namespace modbrowser
          */
         private void modSelected(object sender, EventArgs e)
         {
-            updateModInfo(mbpath + "/mods/" + modlist.SelectedItem + ".ssf");
+            updateModInfo(mbpath + "/mods/" + modlist.SelectedItem + ".xml");
         }
 
         #region Functions
@@ -72,9 +73,9 @@ namespace modbrowser
         public void ListMods()
         {
             // For each file in instances path...
-            foreach (string file in System.IO.Directory.EnumerateFiles(mbpath + "/mods/"))
+            foreach (string file in System.IO.Directory.EnumerateFiles(mbpath + "\\mods"))
             {
-                string[] modmeta = DecodeSSF(mbpath + file);
+                string[] modmeta = DecodeXML(file);
                 modlist.Items.Add(modmeta[0]);
             }
         }
@@ -90,38 +91,26 @@ namespace modbrowser
         }
 
         /**
-         * Decodes a *.SSF file.
+         * Decodes a *.xml file.
          * @return the decoded array
          */
-        public string[] DecodeSSF(string filepath)
+        public string[] DecodeXML(string filepath)
         {
-            string[] decoded = new string[1];
-            try
-            {
-                // Prepares the DataSet and the DataTable
-                DataSet ds = new DataSet("smartsaveformat");
-                ds.ReadXml(filepath);
-                DataTable dt = ds.Tables["datas"];
+            // Prepares the DataSet and the DataTable
+            DataSet ds = new DataSet("smartsaveformat");
+            ds.ReadXml(filepath);
+            DataTable dt = ds.Tables["datas"];
 
-                // Prepares the array to return
-                decoded = new string[dt.Columns.Count];
+            // Prepares the array to return
+            string[] decoded = new string[dt.Columns.Count];
 
-                // Puts saved variables on the array to return
-                decoded[0] = dt.Rows[0]["col_name"].ToString();
-                decoded[1] = dt.Rows[0]["col_author"].ToString();
-                decoded[2] = dt.Rows[0]["col_version"].ToString();
-                decoded[3] = dt.Rows[0]["col_description"].ToString();
-                decoded[4] = dt.Rows[0]["col_image-url"].ToString();
-
-
-            }
-            catch (Exception e)
-            {
-                // Shows error MessageBox
-                MessageBox.Show("Erreur lors du chargement des informations liées au mod. Cela peut arriver si le fichier est corrompu ou n'a pas le bon format.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                MessageBox.Show("Une erreur a eu lieu. L'application va maintenant se fermer.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Application.Exit();
-            }
+            // Puts saved variables on the array to return
+            decoded[0] = dt.Rows[0]["col_name"].ToString();
+            decoded[1] = dt.Rows[0]["col_author"].ToString();
+            decoded[2] = dt.Rows[0]["col_version"].ToString();
+            decoded[3] = dt.Rows[0]["col_description"].ToString();
+            decoded[4] = dt.Rows[0]["col_image-url"].ToString();
+            decoded[5] = dt.Rows[0]["col_jar-url"].ToString();
 
             // Returns the array
             return decoded;
@@ -129,15 +118,21 @@ namespace modbrowser
 
         public void updateModInfo(string path)
         {
-            // Gets mod info
-            string[] modmeta = DecodeSSF(path);
+            // Get mod info
+            string[] modmeta = DecodeXML(path);
 
-            // Shows mod info
+            // Show mod info
             modTitle.Text = modmeta[0];
             modAuthor.Text = modmeta[1] + " / " + modmeta[2];
             modDescription.Text = modmeta[3];
-            
 
+            // Show the image
+            if (!File.Exists(Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg"))
+            {
+                WebClient webClient = new WebClient();
+                webClient.DownloadFile(modmeta[4], Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg");
+            }
+            modIcon.ImageLocation = Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg";
         }
         #endregion
     }
