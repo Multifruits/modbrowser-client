@@ -37,7 +37,7 @@ Documentation française
 
 #### Rechercher un mod
 
-Recherchez un mod avec les différents filtre ou avec la barre dee recherche
+Recherchez un mod avec les différents filtres ou avec la barre de recherche
 
 #### Installation
 
