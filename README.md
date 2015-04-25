@@ -2,15 +2,15 @@ ModBrowser
 ===================
 
 
-ModBrowser is a Minecraft mod software for Windows.
+ModBrowser is an Minecraft mod installation software for Windows.
+
+ModBrowser est un logiciel d'installation de mod Minecraft pour Windows.
 
 ----------
 
 
 English documentation
 -------------
-
-StackEdit stores your documents in your browser, which means all your documents are automatically saved locally and are accessible **offline!**
 
 > **Features:**
 
@@ -25,11 +25,10 @@ Search a mod with different filter or the search bar
 
 When you find your mod simply click "install" and voila!
 
+----------
 
 Documentation française
 -------------
-
-StackEdit stores your documents in your browser, which means all your documents are automatically saved locally and are accessible **offline!**
 
 > **Fonctionnalités:**
 
