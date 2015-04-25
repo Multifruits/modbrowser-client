@@ -21,6 +21,7 @@
 *.csproj
 *.sln
 *.config
+*.resx
 ipch/
 obj/
 [Pp]roperties
