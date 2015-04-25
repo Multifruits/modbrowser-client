@@ -65,14 +65,15 @@
             this.nouveauToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.modToolStripMenuItem});
             this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
-            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.nouveauToolStripMenuItem.Text = "Nouveau";
+            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.nouveauToolStripMenuItem.Text = "Installation";
             // 
             // modToolStripMenuItem
             // 
             this.modToolStripMenuItem.Name = "modToolStripMenuItem";
-            this.modToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.modToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.modToolStripMenuItem.Text = "Mod";
+            this.modToolStripMenuItem.Click += new System.EventHandler(this.installMod);
             // 
             // aProposToolStripMenuItem
             // 
@@ -103,7 +104,7 @@
             this.modlist.ForeColor = System.Drawing.Color.White;
             this.modlist.FormattingEnabled = true;
             this.modlist.ItemHeight = 23;
-            this.modlist.Location = new System.Drawing.Point(12, 50);
+            this.modlist.Location = new System.Drawing.Point(12, 43);
             this.modlist.Name = "modlist";
             this.modlist.Size = new System.Drawing.Size(157, 391);
             this.modlist.TabIndex = 1;

@@ -21,6 +21,9 @@ namespace modbrowser
         public Main()
         {
             InitializeComponent();
+            
+            // Set useful variables
+            mbpath = Directory.GetCurrentDirectory();
 
             // Load mods
             ListMods();
@@ -77,6 +80,16 @@ namespace modbrowser
         }
 
         /**
+         * What to do when the mod installation button is clicked
+         */
+        private void installMod(object sender, EventArgs e)
+        {
+            // Shows mod installation form
+            Form installModForm = new InstallMod();
+            installModForm.Show();
+        }
+
+        /**
          * Decodes a *.SSF file.
          * @return the decoded array
          */
@@ -123,6 +136,8 @@ namespace modbrowser
             modTitle.Text = modmeta[0];
             modAuthor.Text = modmeta[1] + " / " + modmeta[2];
             modDescription.Text = modmeta[3];
+            
+
         }
         #endregion
     }
