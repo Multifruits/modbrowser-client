@@ -22,9 +22,12 @@ namespace modbrowser
         public Main()
         {
             InitializeComponent();
-            
+
             // Set useful variables
             mbpath = Directory.GetCurrentDirectory();
+
+            // Load stats menu informations
+            mbVersion.Text = "version " + ProductVersion;
 
             // Load mods
             ListMods();
@@ -63,6 +66,9 @@ namespace modbrowser
         private void modSelected(object sender, EventArgs e)
         {
             updateModInfo(mbpath + "/mods/" + modlist.SelectedItem + ".xml");
+            statsPanel.Visible = false;
+            modInfo.Visible = true;
+            statsButton.Enabled = true;
         }
 
         #region Functions
@@ -135,5 +141,12 @@ namespace modbrowser
             modIcon.ImageLocation = Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg";
         }
         #endregion
+
+        private void installButton_Click(object sender, EventArgs e)
+        {
+            statsPanel.Visible = true;
+            modInfo.Visible = false;
+            statsButton.Enabled = false;
+        }
     }
 }

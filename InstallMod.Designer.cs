@@ -32,8 +32,8 @@
             this.hashInfo = new System.Windows.Forms.Label();
             this.hashTextBox = new System.Windows.Forms.TextBox();
             this.hashBox = new System.Windows.Forms.GroupBox();
-            this.installButton = new System.Windows.Forms.Button();
             this.invalidHash = new System.Windows.Forms.Label();
+            this.installButton = new System.Windows.Forms.Button();
             this.hashBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,11 +50,11 @@
             // 
             this.hashTextBox.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hashTextBox.Location = new System.Drawing.Point(43, 32);
+            this.hashTextBox.MaxLength = 40;
             this.hashTextBox.Name = "hashTextBox";
-            this.hashTextBox.ReadOnly = true;
             this.hashTextBox.Size = new System.Drawing.Size(338, 29);
             this.hashTextBox.TabIndex = 1;
-            this.hashTextBox.Text = "415ab40ae9b7cc4e66d6769cb2c08106e8293b48";
+            this.hashTextBox.Text = "entrez le HASH ici";
             this.hashTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.hashTextBox.Click += new System.EventHandler(this.hashBoxClicked);
             this.hashTextBox.TextChanged += new System.EventHandler(this.hashBoxChanged);
@@ -72,6 +72,16 @@
             this.hashBox.TabStop = false;
             this.hashBox.Text = "Entrer le HASH";
             // 
+            // invalidHash
+            // 
+            this.invalidHash.AutoSize = true;
+            this.invalidHash.Font = new System.Drawing.Font("Roboto Condensed Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.invalidHash.Location = new System.Drawing.Point(49, 73);
+            this.invalidHash.Name = "invalidHash";
+            this.invalidHash.Size = new System.Drawing.Size(74, 16);
+            this.invalidHash.TabIndex = 3;
+            this.invalidHash.Text = "HASH invalide.";
+            // 
             // installButton
             // 
             this.installButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(74)))));
@@ -85,16 +95,6 @@
             this.installButton.TabIndex = 6;
             this.installButton.Text = "INSTALLER";
             this.installButton.UseVisualStyleBackColor = false;
-            // 
-            // invalidHash
-            // 
-            this.invalidHash.AutoSize = true;
-            this.invalidHash.Font = new System.Drawing.Font("Roboto Condensed Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.invalidHash.Location = new System.Drawing.Point(49, 73);
-            this.invalidHash.Name = "invalidHash";
-            this.invalidHash.Size = new System.Drawing.Size(74, 16);
-            this.invalidHash.TabIndex = 3;
-            this.invalidHash.Text = "HASH invalide.";
             // 
             // InstallMod
             // 

@@ -24,11 +24,10 @@ namespace modbrowser
          */
         private void hashBoxClicked(object sender, EventArgs e)
         {
-            if (wasHashBoxClicked == false)
+            if (!wasHashBoxClicked)
             {
                 wasHashBoxClicked = true;
                 hashTextBox.Text = "";
-                hashTextBox.ReadOnly = false;
             }
         }
 
