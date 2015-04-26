@@ -26,8 +26,19 @@ namespace modbrowser
             // Set useful variables
             mbpath = Directory.GetCurrentDirectory();
 
+            // Native modbrowser files
+            if (!File.Exists("config.txt"))
+            {
+                File.WriteAllText("config.txt", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\.minecraft");
+            }
+            if (!Directory.Exists(@"mods"))
+            {
+                Directory.CreateDirectory(@"mods");
+            }
+
             // Load stats menu informations
             mbVersion.Text = "version " + ProductVersion;
+            updateModNumber();
 
             // Load mods
             ListMods();
@@ -83,6 +94,7 @@ namespace modbrowser
             {
                 string[] modmeta = DecodeXML(file);
                 modlist.Items.Add(modmeta[0]);
+                nomod.Visible = false;
             }
         }
 
@@ -122,6 +134,9 @@ namespace modbrowser
             return decoded;
         }
 
+        /**
+         * Updates the mod info
+         */
         public void updateModInfo(string path)
         {
             // Get mod info
@@ -140,6 +155,16 @@ namespace modbrowser
             }
             modIcon.ImageLocation = Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg";
         }
+
+        public void updateModNumber()
+        {
+            int modnumber = 0;
+            foreach (string file in System.IO.Directory.EnumerateFiles(mbpath + "\\mods"))
+            {
+                modnumber++;
+            }
+            modNumberLabel.Text = modnumber.ToString();
+        }
         #endregion
 
         private void installButton_Click(object sender, EventArgs e)
@@ -147,6 +172,29 @@ namespace modbrowser
             statsPanel.Visible = true;
             modInfo.Visible = false;
             statsButton.Enabled = false;
+        }
+
+        private void modNumberButton(object sender, EventArgs e)
+        {
+            updateModNumber();
+        }
+
+        private void platformStatusButton(object sender, EventArgs e)
+        {
+            // Shows TODO message
+            MessageBox.Show("Fonctionnalité en cours de développement.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void GitHubLink(object sender, EventArgs e)
+        {
+            // Views modbrowser's GitHub page in the default web browser
+            System.Diagnostics.Process.Start("https://github.com/Multifruits/modbrowser-client");
+        }
+
+        private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form SettingsForm = new modbrowser_Settings();
+            SettingsForm.Show();
         }
     }
 }

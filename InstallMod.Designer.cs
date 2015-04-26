@@ -34,17 +34,20 @@
             this.hashBox = new System.Windows.Forms.GroupBox();
             this.invalidHash = new System.Windows.Forms.Label();
             this.installButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.hashBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // hashInfo
             // 
             this.hashInfo.Font = new System.Drawing.Font("Roboto Condensed Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hashInfo.Location = new System.Drawing.Point(12, 9);
+            this.hashInfo.Location = new System.Drawing.Point(71, 9);
             this.hashInfo.Name = "hashInfo";
-            this.hashInfo.Size = new System.Drawing.Size(415, 50);
+            this.hashInfo.Size = new System.Drawing.Size(357, 50);
             this.hashInfo.TabIndex = 0;
             this.hashInfo.Text = resources.GetString("hashInfo.Text");
+            this.hashInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // hashTextBox
             // 
@@ -96,11 +99,23 @@
             this.installButton.Text = "INSTALLER";
             this.installButton.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(15, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // InstallMod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 201);
+            this.ClientSize = new System.Drawing.Size(440, 201);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.hashBox);
             this.Controls.Add(this.hashInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -108,6 +123,7 @@
             this.Text = "Installation de mods";
             this.hashBox.ResumeLayout(false);
             this.hashBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -119,5 +135,6 @@
         private System.Windows.Forms.GroupBox hashBox;
         private System.Windows.Forms.Button installButton;
         private System.Windows.Forms.Label invalidHash;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
