@@ -1,4 +1,5 @@
-﻿using System;
+﻿#region Using statements
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,16 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+#endregion
 
 namespace modbrowser
 {
     public partial class modbrowser_Settings : Form
     {
         public string lastConfig = System.IO.File.ReadAllText("config.txt");
+
         public modbrowser_Settings()
         {
             InitializeComponent();
             minecraftPathBox.Text = lastConfig;
+            if (!System.IO.Directory.Exists(lastConfig))
+            {
+                minecraftPathBox.Text = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\.minecraft";
+                MessageBox.Show("Le chemin de Minecraft entré était invalide et a été réinitialisé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.IO.File.WriteAllText("config.txt", minecraftPathBox.Text);
+            }
         }
 
         /**
@@ -68,6 +77,20 @@ namespace modbrowser
         private void buttonOnOff(object sender, EventArgs e)
         {
             saveSettings.Enabled = !minecraftPathBox.Text.Equals(lastConfig);
+        }
+
+        private void eraseCache(object sender, EventArgs e)
+        {
+            // For each file in instances path...
+            foreach (string file in System.IO.Directory.EnumerateFiles(System.IO.Directory.GetCurrentDirectory() + "\\mods"))
+            {
+                try
+                {
+                    System.IO.File.Delete(System.IO.Path.GetTempPath() + file.Replace(".xml", "").Replace(System.IO.Directory.GetCurrentDirectory() + "\\mods", "") + "_modbrowser.jpg");
+                }
+                catch (Exception ex) {}
+                MessageBox.Show("Le cache a été vidé.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

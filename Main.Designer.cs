@@ -144,7 +144,7 @@
             this.modlist.ItemHeight = 23;
             this.modlist.Location = new System.Drawing.Point(12, 43);
             this.modlist.Name = "modlist";
-            this.modlist.Size = new System.Drawing.Size(157, 322);
+            this.modlist.Size = new System.Drawing.Size(150, 322);
             this.modlist.TabIndex = 1;
             this.modlist.SelectedIndexChanged += new System.EventHandler(this.modSelected);
             // 
@@ -505,7 +505,6 @@
         private System.Windows.Forms.ToolStripMenuItem installMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modInstallItem;
         private System.Windows.Forms.ToolStripMenuItem settingsMenuButton;
-        private System.Windows.Forms.ListBox modlist;
         private System.Windows.Forms.Panel modInfo;
         private System.Windows.Forms.Label modAuthor;
         private System.Windows.Forms.Label modTitle;
@@ -535,6 +534,7 @@
         private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem misesÀJourToolStripMenuItem;
         private System.Windows.Forms.Button reloadModList;
+        public System.Windows.Forms.ListBox modlist;
     }
 }
 

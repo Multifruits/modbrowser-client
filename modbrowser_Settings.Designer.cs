@@ -33,6 +33,7 @@
             this.langLabel = new System.Windows.Forms.Label();
             this.minecraftPathLabel = new System.Windows.Forms.Label();
             this.settingsBox = new System.Windows.Forms.GroupBox();
+            this.reloadModList = new System.Windows.Forms.Button();
             this.folderBrowserBtn = new System.Windows.Forms.Button();
             this.minecraftPathBox = new System.Windows.Forms.TextBox();
             this.languageBox = new System.Windows.Forms.ComboBox();
@@ -87,6 +88,7 @@
             // 
             // settingsBox
             // 
+            this.settingsBox.Controls.Add(this.reloadModList);
             this.settingsBox.Controls.Add(this.folderBrowserBtn);
             this.settingsBox.Controls.Add(this.minecraftPathBox);
             this.settingsBox.Controls.Add(this.languageBox);
@@ -95,10 +97,24 @@
             this.settingsBox.Controls.Add(this.langLabel);
             this.settingsBox.Location = new System.Drawing.Point(34, 64);
             this.settingsBox.Name = "settingsBox";
-            this.settingsBox.Size = new System.Drawing.Size(362, 130);
+            this.settingsBox.Size = new System.Drawing.Size(362, 134);
             this.settingsBox.TabIndex = 6;
             this.settingsBox.TabStop = false;
             this.settingsBox.Text = "Paramètres";
+            // 
+            // reloadModList
+            // 
+            this.reloadModList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.reloadModList.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(0)))));
+            this.reloadModList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reloadModList.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reloadModList.Location = new System.Drawing.Point(108, 99);
+            this.reloadModList.Name = "reloadModList";
+            this.reloadModList.Size = new System.Drawing.Size(117, 29);
+            this.reloadModList.TabIndex = 11;
+            this.reloadModList.Text = "VIDER LE CACHE";
+            this.reloadModList.UseVisualStyleBackColor = false;
+            this.reloadModList.Click += new System.EventHandler(this.eraseCache);
             // 
             // folderBrowserBtn
             // 
@@ -137,7 +153,7 @@
             this.saveSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(159)))), ((int)(((byte)(56)))));
             this.saveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveSettings.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveSettings.Location = new System.Drawing.Point(231, 92);
+            this.saveSettings.Location = new System.Drawing.Point(231, 99);
             this.saveSettings.Name = "saveSettings";
             this.saveSettings.Size = new System.Drawing.Size(117, 29);
             this.saveSettings.TabIndex = 7;
@@ -149,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 217);
+            this.ClientSize = new System.Drawing.Size(423, 210);
             this.Controls.Add(this.settingsBox);
             this.Controls.Add(this.mbSettings);
             this.Controls.Add(this.mbTitle);
@@ -175,5 +191,6 @@
         private System.Windows.Forms.ComboBox languageBox;
         private System.Windows.Forms.Button saveSettings;
         private System.Windows.Forms.FolderBrowserDialog minecraftFolderBrowser;
+        private System.Windows.Forms.Button reloadModList;
     }
 }
