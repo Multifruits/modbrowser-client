@@ -22,6 +22,7 @@
 *.sln
 *.config
 *.resx
+Main.resx
 ipch/
 obj/
 [Pp]roperties
