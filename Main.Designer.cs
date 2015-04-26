@@ -30,9 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.menu = new System.Windows.Forms.MenuStrip();
-            this.nouveauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.installMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modInstallItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsMenuButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.misesÀJourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modlist = new System.Windows.Forms.ListBox();
             this.modInfo = new System.Windows.Forms.Panel();
             this.modAuthor = new System.Windows.Forms.Label();
@@ -59,6 +62,7 @@
             this.mbTitle = new System.Windows.Forms.Label();
             this.statsButton = new System.Windows.Forms.Button();
             this.nomod = new System.Windows.Forms.Label();
+            this.reloadModList = new System.Windows.Forms.Button();
             this.menu.SuspendLayout();
             this.modInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modIcon)).BeginInit();
@@ -73,37 +77,62 @@
             // 
             this.menu.Font = new System.Drawing.Font("Roboto Condensed", 9F);
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nouveauToolStripMenuItem,
-            this.aProposToolStripMenuItem});
+            this.installMenuItem,
+            this.settingsMenuButton,
+            this.toolStripMenuItem1});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(784, 24);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
             // 
-            // nouveauToolStripMenuItem
+            // installMenuItem
             // 
-            this.nouveauToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modToolStripMenuItem});
-            this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
-            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.nouveauToolStripMenuItem.Text = "Installation";
+            this.installMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modInstallItem});
+            this.installMenuItem.Name = "installMenuItem";
+            this.installMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.installMenuItem.Text = "Installation";
             // 
-            // modToolStripMenuItem
+            // modInstallItem
             // 
-            this.modToolStripMenuItem.Name = "modToolStripMenuItem";
-            this.modToolStripMenuItem.ShortcutKeyDisplayString = "";
-            this.modToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
-            this.modToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.modToolStripMenuItem.Text = "Mod";
-            this.modToolStripMenuItem.Click += new System.EventHandler(this.installMod);
+            this.modInstallItem.Name = "modInstallItem";
+            this.modInstallItem.ShortcutKeyDisplayString = "";
+            this.modInstallItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
+            this.modInstallItem.Size = new System.Drawing.Size(134, 22);
+            this.modInstallItem.Text = "Mod";
+            this.modInstallItem.Click += new System.EventHandler(this.installMod);
+            // 
+            // settingsMenuButton
+            // 
+            this.settingsMenuButton.Name = "settingsMenuButton";
+            this.settingsMenuButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
+            this.settingsMenuButton.Size = new System.Drawing.Size(75, 20);
+            this.settingsMenuButton.Text = "Paramètres";
+            this.settingsMenuButton.Click += new System.EventHandler(this.installModMenuButton);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aProposToolStripMenuItem,
+            this.misesÀJourToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(25, 20);
+            this.toolStripMenuItem1.Text = "?";
             // 
             // aProposToolStripMenuItem
             // 
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.aProposToolStripMenuItem.Text = "Paramètres";
-            this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.aProposToolStripMenuItem.Text = "A propos";
+            this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aboutFormStart);
+            // 
+            // misesÀJourToolStripMenuItem
+            // 
+            this.misesÀJourToolStripMenuItem.Name = "misesÀJourToolStripMenuItem";
+            this.misesÀJourToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.misesÀJourToolStripMenuItem.Text = "Mises à jour";
+            this.misesÀJourToolStripMenuItem.Click += new System.EventHandler(this.updatesButton);
             // 
             // modlist
             // 
@@ -115,7 +144,7 @@
             this.modlist.ItemHeight = 23;
             this.modlist.Location = new System.Drawing.Point(12, 43);
             this.modlist.Name = "modlist";
-            this.modlist.Size = new System.Drawing.Size(157, 368);
+            this.modlist.Size = new System.Drawing.Size(157, 322);
             this.modlist.TabIndex = 1;
             this.modlist.SelectedIndexChanged += new System.EventHandler(this.modSelected);
             // 
@@ -421,12 +450,27 @@
             this.nomod.TabIndex = 10;
             this.nomod.Text = "aucun mod";
             // 
+            // reloadModList
+            // 
+            this.reloadModList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.reloadModList.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(0)))));
+            this.reloadModList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reloadModList.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reloadModList.Location = new System.Drawing.Point(12, 385);
+            this.reloadModList.Name = "reloadModList";
+            this.reloadModList.Size = new System.Drawing.Size(150, 29);
+            this.reloadModList.TabIndex = 9;
+            this.reloadModList.Text = "RECHARGER LA LISTE";
+            this.reloadModList.UseVisualStyleBackColor = false;
+            this.reloadModList.Click += new System.EventHandler(this.reloadModsList);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.reloadModList);
             this.Controls.Add(this.nomod);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.statsPanel);
@@ -458,9 +502,9 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menu;
-        private System.Windows.Forms.ToolStripMenuItem nouveauToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem installMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modInstallItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsMenuButton;
         private System.Windows.Forms.ListBox modlist;
         private System.Windows.Forms.Panel modInfo;
         private System.Windows.Forms.Label modAuthor;
@@ -487,6 +531,10 @@
         private System.Windows.Forms.Label githubLabel_1;
         private System.Windows.Forms.PictureBox githubIcon;
         private System.Windows.Forms.Label nomod;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem misesÀJourToolStripMenuItem;
+        private System.Windows.Forms.Button reloadModList;
     }
 }
 

@@ -32,13 +32,13 @@
             this.mbTitle = new System.Windows.Forms.Label();
             this.langLabel = new System.Windows.Forms.Label();
             this.minecraftPathLabel = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.folderBrowserButn = new System.Windows.Forms.Button();
+            this.settingsBox = new System.Windows.Forms.GroupBox();
+            this.folderBrowserBtn = new System.Windows.Forms.Button();
             this.minecraftPathBox = new System.Windows.Forms.TextBox();
             this.languageBox = new System.Windows.Forms.ComboBox();
-            this.installButton = new System.Windows.Forms.Button();
+            this.saveSettings = new System.Windows.Forms.Button();
             this.minecraftFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
-            this.groupBox1.SuspendLayout();
+            this.settingsBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // mbSettings
@@ -85,30 +85,30 @@
             this.minecraftPathLabel.TabIndex = 5;
             this.minecraftPathLabel.Text = "Chemin de Minecraft";
             // 
-            // groupBox1
+            // settingsBox
             // 
-            this.groupBox1.Controls.Add(this.folderBrowserButn);
-            this.groupBox1.Controls.Add(this.minecraftPathBox);
-            this.groupBox1.Controls.Add(this.languageBox);
-            this.groupBox1.Controls.Add(this.installButton);
-            this.groupBox1.Controls.Add(this.minecraftPathLabel);
-            this.groupBox1.Controls.Add(this.langLabel);
-            this.groupBox1.Location = new System.Drawing.Point(34, 64);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(362, 130);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Paramètres";
+            this.settingsBox.Controls.Add(this.folderBrowserBtn);
+            this.settingsBox.Controls.Add(this.minecraftPathBox);
+            this.settingsBox.Controls.Add(this.languageBox);
+            this.settingsBox.Controls.Add(this.saveSettings);
+            this.settingsBox.Controls.Add(this.minecraftPathLabel);
+            this.settingsBox.Controls.Add(this.langLabel);
+            this.settingsBox.Location = new System.Drawing.Point(34, 64);
+            this.settingsBox.Name = "settingsBox";
+            this.settingsBox.Size = new System.Drawing.Size(362, 130);
+            this.settingsBox.TabIndex = 6;
+            this.settingsBox.TabStop = false;
+            this.settingsBox.Text = "Paramètres";
             // 
-            // folderBrowserButn
+            // folderBrowserBtn
             // 
-            this.folderBrowserButn.Location = new System.Drawing.Point(317, 30);
-            this.folderBrowserButn.Name = "folderBrowserButn";
-            this.folderBrowserButn.Size = new System.Drawing.Size(31, 20);
-            this.folderBrowserButn.TabIndex = 10;
-            this.folderBrowserButn.Text = "...";
-            this.folderBrowserButn.UseVisualStyleBackColor = true;
-            this.folderBrowserButn.Click += new System.EventHandler(this.selectFolder);
+            this.folderBrowserBtn.Location = new System.Drawing.Point(317, 30);
+            this.folderBrowserBtn.Name = "folderBrowserBtn";
+            this.folderBrowserBtn.Size = new System.Drawing.Size(31, 20);
+            this.folderBrowserBtn.TabIndex = 10;
+            this.folderBrowserBtn.Text = "...";
+            this.folderBrowserBtn.UseVisualStyleBackColor = true;
+            this.folderBrowserBtn.Click += new System.EventHandler(this.selectFolder);
             // 
             // minecraftPathBox
             // 
@@ -116,6 +116,7 @@
             this.minecraftPathBox.Name = "minecraftPathBox";
             this.minecraftPathBox.Size = new System.Drawing.Size(159, 20);
             this.minecraftPathBox.TabIndex = 9;
+            this.minecraftPathBox.TextChanged += new System.EventHandler(this.buttonOnOff);
             // 
             // languageBox
             // 
@@ -129,32 +130,34 @@
             this.languageBox.TabIndex = 8;
             this.languageBox.Text = "Français";
             // 
-            // installButton
+            // saveSettings
             // 
-            this.installButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(74)))));
-            this.installButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(159)))), ((int)(((byte)(56)))));
-            this.installButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.installButton.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.installButton.Location = new System.Drawing.Point(231, 92);
-            this.installButton.Name = "installButton";
-            this.installButton.Size = new System.Drawing.Size(117, 29);
-            this.installButton.TabIndex = 7;
-            this.installButton.Text = "SAUVEGARDER";
-            this.installButton.UseVisualStyleBackColor = false;
+            this.saveSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(74)))));
+            this.saveSettings.Enabled = false;
+            this.saveSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(159)))), ((int)(((byte)(56)))));
+            this.saveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveSettings.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveSettings.Location = new System.Drawing.Point(231, 92);
+            this.saveSettings.Name = "saveSettings";
+            this.saveSettings.Size = new System.Drawing.Size(117, 29);
+            this.saveSettings.TabIndex = 7;
+            this.saveSettings.Text = "SAUVEGARDER";
+            this.saveSettings.UseVisualStyleBackColor = false;
+            this.saveSettings.Click += new System.EventHandler(this.saveSettingsAction);
             // 
             // modbrowser_Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(423, 217);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.settingsBox);
             this.Controls.Add(this.mbSettings);
             this.Controls.Add(this.mbTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "modbrowser_Settings";
             this.Text = "Paramètres de modbrowser";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.settingsBox.ResumeLayout(false);
+            this.settingsBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,11 +169,11 @@
         private System.Windows.Forms.Label mbTitle;
         private System.Windows.Forms.Label langLabel;
         private System.Windows.Forms.Label minecraftPathLabel;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button folderBrowserButn;
+        private System.Windows.Forms.GroupBox settingsBox;
+        private System.Windows.Forms.Button folderBrowserBtn;
         private System.Windows.Forms.TextBox minecraftPathBox;
         private System.Windows.Forms.ComboBox languageBox;
-        private System.Windows.Forms.Button installButton;
+        private System.Windows.Forms.Button saveSettings;
         private System.Windows.Forms.FolderBrowserDialog minecraftFolderBrowser;
     }
 }

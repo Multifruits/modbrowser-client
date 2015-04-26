@@ -38,16 +38,9 @@ namespace modbrowser
          */
         private void hashBoxChanged(object sender, EventArgs e)
         {
-            if (hashTextBox.Text != "415ab40ae9b7cc4e66d6769cb2c08106e8293b48" && hashTextBox.Text.Length == 40)
-            {
-                installButton.Enabled = true;
-                invalidHash.Visible = false;
-            }
-            else
-            {
-                installButton.Enabled = false;
-                invalidHash.Visible = true;
-            }
+            wasHashBoxClicked = true;
+            installButton.Enabled = hashTextBox.Text.Length.Equals(40);
+            invalidHash.Visible = !hashTextBox.Text.Length.Equals(40);
         }
     }
 }

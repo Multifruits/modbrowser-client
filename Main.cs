@@ -19,12 +19,12 @@ namespace modbrowser
         // modbrowser's path
         public string mbpath;
 
+        // minecraft's path
+        public string minecraftpath;
+
         public Main()
         {
             InitializeComponent();
-
-            // Set useful variables
-            mbpath = Directory.GetCurrentDirectory();
 
             // Native modbrowser files
             if (!File.Exists("config.txt"))
@@ -35,6 +35,10 @@ namespace modbrowser
             {
                 Directory.CreateDirectory(@"mods");
             }
+
+            // Set useful variables
+            mbpath = Directory.GetCurrentDirectory();
+            minecraftpath = File.ReadAllText("config.txt");
 
             // Load stats menu informations
             mbVersion.Text = "version " + ProductVersion;
@@ -49,8 +53,24 @@ namespace modbrowser
          */
         private void uninstall(object sender, EventArgs e)
         {
-            // Shows TODO message
-            MessageBox.Show("Fonctionnalité en cours de développement.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mbpath + "\\mods\\" + modlist.SelectedItem.ToString() + ".xml");
+            string[] modmeta = DecodeXML(mbpath + "\\mods\\" + modlist.SelectedItem.ToString() + ".xml");
+            if(File.Exists(modmeta[5]))
+            {
+                File.Delete(modmeta[5]);
+                // File.Delete(modlist.SelectedItem.ToString() + ".xml"); Disabled for development
+                modlist.Items.Clear();
+                ListMods();
+                MessageBox.Show("Le mod " + modmeta[0] + " a été supprimé avec succès.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Ce mod est introuvable et va être supprimé de la liste.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                modlist.Items.Clear();
+                ListMods();
+                // File.Delete(modlist.SelectedItem.ToString() + ".xml"); Disabled for development
+            }
+
         }
 
         /**
@@ -80,6 +100,48 @@ namespace modbrowser
             statsPanel.Visible = false;
             modInfo.Visible = true;
             statsButton.Enabled = true;
+        }
+
+        private void installButton_Click(object sender, EventArgs e)
+        {
+            statsPanel.Visible = true;
+            modInfo.Visible = false;
+            statsButton.Enabled = false;
+        }
+
+        private void modNumberButton(object sender, EventArgs e)
+        {
+            updateModNumber();
+        }
+
+        private void platformStatusButton(object sender, EventArgs e)
+        {
+            // Shows TODO message
+            MessageBox.Show("Fonctionnalité en cours de développement.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void GitHubLink(object sender, EventArgs e)
+        {
+            // Views modbrowser's GitHub page in the default web browser
+            System.Diagnostics.Process.Start("https://github.com/Multifruits/modbrowser-client");
+        }
+
+        private void installModMenuButton(object sender, EventArgs e)
+        {
+            Form SettingsForm = new modbrowser_Settings();
+            SettingsForm.Show();
+        }
+
+        private void aboutFormStart(object sender, EventArgs e)
+        {
+            Form aboutForm = new About();
+            aboutForm.Show();
+        }
+
+        private void updatesButton(object sender, EventArgs e)
+        {
+            MessageBox.Show("Pour télécharger la dernière version de modbrowser, sélectionnez la dernière version depuis la page qui va s'ouvrir.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            System.Diagnostics.Process.Start("https://github.com/Multifruits/modbrowser-client");
         }
 
         #region Functions
@@ -128,7 +190,7 @@ namespace modbrowser
             decoded[2] = dt.Rows[0]["col_version"].ToString();
             decoded[3] = dt.Rows[0]["col_description"].ToString();
             decoded[4] = dt.Rows[0]["col_image-url"].ToString();
-            decoded[5] = dt.Rows[0]["col_jar-url"].ToString();
+            decoded[5] = dt.Rows[0]["col_jar-path"].ToString();
 
             // Returns the array
             return decoded;
@@ -167,34 +229,16 @@ namespace modbrowser
         }
         #endregion
 
-        private void installButton_Click(object sender, EventArgs e)
+        /**
+         * Reload the mod list.
+         * Occurs when the reloadModList button is clicked.
+         */
+        private void reloadModsList(object sender, EventArgs e)
         {
-            statsPanel.Visible = true;
-            modInfo.Visible = false;
-            statsButton.Enabled = false;
+            modlist.Items.Clear();
+            ListMods();
+            MessageBox.Show("La liste des mods a été rechargée.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void modNumberButton(object sender, EventArgs e)
-        {
-            updateModNumber();
-        }
-
-        private void platformStatusButton(object sender, EventArgs e)
-        {
-            // Shows TODO message
-            MessageBox.Show("Fonctionnalité en cours de développement.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void GitHubLink(object sender, EventArgs e)
-        {
-            // Views modbrowser's GitHub page in the default web browser
-            System.Diagnostics.Process.Start("https://github.com/Multifruits/modbrowser-client");
-        }
-
-        private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form SettingsForm = new modbrowser_Settings();
-            SettingsForm.Show();
-        }
     }
 }
