@@ -98,6 +98,7 @@
             this.installButton.TabIndex = 6;
             this.installButton.Text = "INSTALLER";
             this.installButton.UseVisualStyleBackColor = false;
+            this.installButton.Click += new System.EventHandler(this.installMod);
             // 
             // pictureBox1
             // 

@@ -53,22 +53,23 @@ namespace modbrowser
          */
         private void uninstall(object sender, EventArgs e)
         {
-            MessageBox.Show(mbpath + "\\mods\\" + modlist.SelectedItem.ToString() + ".xml");
             string[] modmeta = DecodeXML(mbpath + "\\mods\\" + modlist.SelectedItem.ToString() + ".xml");
             if(File.Exists(modmeta[5]))
             {
                 File.Delete(modmeta[5]);
-                // File.Delete(modlist.SelectedItem.ToString() + ".xml"); Disabled for development
+                File.Delete(mbpath + "\\mods\\" + modlist.SelectedItem.ToString() + ".xml");
                 modlist.Items.Clear();
                 ListMods();
-                MessageBox.Show("Le mod " + modmeta[0] + " a été supprimé avec succès.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Le mod '" + modmeta[0] + "' a été supprimé avec succès.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
+                File.Delete(modmeta[5]);
                 MessageBox.Show("Ce mod est introuvable et va être supprimé de la liste.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                File.Delete(mbpath + "\\mods\\" + modlist.SelectedItem.ToString() + ".xml");
                 modlist.Items.Clear();
                 ListMods();
-                // File.Delete(modlist.SelectedItem.ToString() + ".xml"); Disabled for development
+                MessageBox.Show("Le mod '" + modmeta[0] + "' a été supprimé avec succès.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -213,7 +214,14 @@ namespace modbrowser
             if (!File.Exists(Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg"))
             {
                 WebClient webClient = new WebClient();
-                webClient.DownloadFile(modmeta[4], Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg");
+                try
+                {
+                    webClient.DownloadFile(modmeta[4], Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Vous devez être connecté à Internet pour récupérer les icônes des mods", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             modIcon.ImageLocation = Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg";
         }
