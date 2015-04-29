@@ -1,42 +1,40 @@
 modbrowser-client
 ===================
-a Minecraft mod library and installer for Windows
-> **Features:**
-
-> - Automatic mods installation
-> - An online platform to host your mods
+installer et gérer vos mods n'a jamais été aussi simple
+> **Fonctionnalités :**
+> - Installation automatique et simple de mods sur Minecraft
+> - [En cours] Une plateforme en ligne pour ajouter vos propres mods
+> - [Prévu] Support d'autres mods
 
 
 ----------
 
 *[ThuleMalta](http://thulemalta.github.io)* and *[GamingChope](https://github.com/GamingChope)* are proud to present you the modbrowser platform.
 
-Project information
+Informations sur le projet
 -------------
-### Genesis
+### Genèse
 
-> We created modbrowser in order to make an open-source, brand-new and without bugs "*[Pipix](http://www.pixe-life.org/pipix/)*" alternative.
-> - *[ThuleMalta](http://thulemalta.github.io)*, 12 years old french developer   
+> Nous avons créé modbrowser pour créer une alternative de "*[Pipix](http://www.pixe-life.org/pipix/)*" supportant d'autres jeux, open-source, sans bugs et améliorée.
+> - *[ThuleMalta](http://thulemalta.github.io)*   
 
-We had the idea to create modbrowser in a Skype conversation, in April 25, 2015. At this moment we created a GitHub repository, ThuleMalta started to code the client and GamingChope the online platform.
+Nous avons eu l'idée de créer modbrowser lors d'une conversation Skype entre amis. Nous trouvions Pipix buggé et nous voulions faire quelque chose dans l'optique d'un "Technic Platform" pour les mods. Chaque modder pourrait alors ajouter ses mods à notre base de données et donc à notre logiciel.
 
-Features
+Fonctionnalités
 -------------
 
-#### Automatic and easy mods installation
-Enjoying Minecraft mods ?
-Install your favourite mods easily and rate it.
-Mod your Minecraft with an automatic installation of Minecraft Forge.
+#### Installation simple et automatique
+Vous aimez les mods ?  
+Installez vos mods favoris simplement et automatiquement et évaluez les.  
 
-#### An online platform to host your mods
-A modder ?
-Share your mods with players by hosting them on the modbrowser online platform.
+#### Une plateforme en ligne pour développer vos mods
+Vous développez des mods ?  
+Partagez vos mods avec les joueurs pour qu'ils puissent en profiter.
 
-#### A fast, open source and secure solution
-Every day the client is upgraded by a lot of developers around the world.
-We use a reliable license so everybody can improve our software.
-We use a secure framework so you will never be hacked.
+#### Une solution rapide, sécurisée
+Tous les jours le client est amélioré par des développeurs du monde entier.  
+Vos mots de passe sont cryptés avec un algorithme de cryptographie à sens unique et un _salt_ secrets.  
+Même si la base de données était piratée, vos mots de passe cryptés seraient alors indéchiffrables.
 
-#### You don't play Minecraft ?
-Don't worry, we plan to support other games, as well as Minecraft.
-
+#### Vous ne jouez pas à Minecraft ?
+Ne vous inquiétez pas, nous prévoyons de supporter d'autres jeux que Minecraft.
