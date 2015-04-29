@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(modbrowser_Settings));
             this.mbSettings = new System.Windows.Forms.Label();
             this.mbTitle = new System.Windows.Forms.Label();
             this.langLabel = new System.Windows.Forms.Label();
@@ -170,6 +171,7 @@
             this.Controls.Add(this.mbSettings);
             this.Controls.Add(this.mbTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "modbrowser_Settings";
             this.Text = "Paramètres de modbrowser";
             this.settingsBox.ResumeLayout(false);

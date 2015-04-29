@@ -22,6 +22,9 @@ namespace modbrowser
         // minecraft's path
         public string minecraftpath;
 
+        // api url
+        public string api_url = "http://modbrowser.olympe.in/api/";
+
         public Main()
         {
             InitializeComponent();
@@ -57,21 +60,19 @@ namespace modbrowser
             if(File.Exists(modmeta[5]))
             {
                 File.Delete(modmeta[5]);
-                File.Delete(mbpath + "\\mods\\" + modlist.SelectedItem.ToString() + ".xml");
-                modlist.Items.Clear();
-                ListMods();
-                MessageBox.Show("Le mod '" + modmeta[0] + "' a été supprimé avec succès.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                File.Delete(modmeta[5]);
                 MessageBox.Show("Ce mod est introuvable et va être supprimé de la liste.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                File.Delete(mbpath + "\\mods\\" + modlist.SelectedItem.ToString() + ".xml");
-                modlist.Items.Clear();
-                ListMods();
-                MessageBox.Show("Le mod '" + modmeta[0] + "' a été supprimé avec succès.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+            File.Delete(mbpath + "\\mods\\" + modlist.SelectedItem.ToString() + ".xml");
+            modlist.Items.Clear();
+            ListMods();
+            MessageBox.Show("Le mod '" + modmeta[0] + "' a été supprimé avec succès.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            statsPanel.Visible = true;
+            modInfo.Visible = false;
+            statsButton.Enabled = false;
         }
 
         /**
@@ -97,13 +98,22 @@ namespace modbrowser
          */
         private void modSelected(object sender, EventArgs e)
         {
-            updateModInfo(mbpath + "/mods/" + modlist.SelectedItem + ".xml");
-            statsPanel.Visible = false;
-            modInfo.Visible = true;
-            statsButton.Enabled = true;
+            if (File.Exists(mbpath + "/mods/" + modlist.SelectedItem + ".xml"))
+            {
+                updateModInfo(mbpath + "/mods/" + modlist.SelectedItem + ".xml");
+                statsPanel.Visible = false;
+                modInfo.Visible = true;
+                statsButton.Enabled = true;
+            }
+            else
+            {
+                statsPanel.Visible = true;
+                modInfo.Visible = false;
+                statsButton.Enabled = false;
+            }
         }
 
-        private void installButton_Click(object sender, EventArgs e)
+        private void openStats(object sender, EventArgs e)
         {
             statsPanel.Visible = true;
             modInfo.Visible = false;
@@ -117,8 +127,29 @@ namespace modbrowser
 
         private void platformStatusButton(object sender, EventArgs e)
         {
-            // Shows TODO message
-            MessageBox.Show("Fonctionnalité en cours de développement.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            pingTest(api_url.Replace("http://", "").Replace("/api/", ""));
+        }
+
+        private void pingTest(string url)
+        {
+            // Ping the platform
+            System.Net.NetworkInformation.Ping pingClass = new System.Net.NetworkInformation.Ping();
+            System.Net.NetworkInformation.PingReply pingReply = pingClass.Send(url, 5000);
+
+            // Show the results
+            platformStatusLabel.Text = (pingReply.RoundtripTime.ToString() + "ms");
+            if (pingReply.RoundtripTime <= 100)
+            {
+                platformStatusPanel.BackColor = Color.FromArgb(139, 195, 74);
+            }
+            else if (pingReply.RoundtripTime > 100 && pingReply.RoundtripTime <= 300)
+            {
+                platformStatusPanel.BackColor = Color.FromArgb(255, 193, 7);
+            }
+            else
+            {
+                platformStatusPanel.BackColor = Color.FromArgb(244, 67, 54);
+            }
         }
 
         private void GitHubLink(object sender, EventArgs e)
@@ -142,7 +173,7 @@ namespace modbrowser
         private void updatesButton(object sender, EventArgs e)
         {
             MessageBox.Show("Pour télécharger la dernière version de modbrowser, sélectionnez la dernière version depuis la page qui va s'ouvrir.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            System.Diagnostics.Process.Start("https://github.com/Multifruits/modbrowser-client");
+            System.Diagnostics.Process.Start("https://github.com/Multifruits/modbrowser-client/releases");
         }
 
         #region Functions
@@ -152,13 +183,18 @@ namespace modbrowser
          */
         public void ListMods()
         {
-            // For each file in instances path...
-            foreach (string file in System.IO.Directory.EnumerateFiles(mbpath + "\\mods"))
+            try
             {
-                string[] modmeta = DecodeXML(file);
-                modlist.Items.Add(modmeta[0]);
-                nomod.Visible = false;
+                nomod.Visible = true;
+                // For each file in instances path...
+                foreach (string file in System.IO.Directory.EnumerateFiles(mbpath + "\\mods"))
+                {
+                    string[] modmeta = DecodeXML(file);
+                    modlist.Items.Add(modmeta[0]);
+                    nomod.Visible = false;
+                }
             }
+            catch (Exception) { }
         }
 
         /**
@@ -177,24 +213,33 @@ namespace modbrowser
          */
         public string[] DecodeXML(string filepath)
         {
-            // Prepares the DataSet and the DataTable
-            DataSet ds = new DataSet("smartsaveformat");
-            ds.ReadXml(filepath);
-            DataTable dt = ds.Tables["datas"];
+            try
+            {
+                // Prepares the DataSet and the DataTable
+                DataSet ds = new DataSet("smartsaveformat");
+                ds.ReadXml(filepath);
+                DataTable dt = ds.Tables["datas"];
 
-            // Prepares the array to return
-            string[] decoded = new string[dt.Columns.Count];
+                // Prepares the array to return
+                string[] decoded = new string[dt.Columns.Count];
 
-            // Puts saved variables on the array to return
-            decoded[0] = dt.Rows[0]["col_name"].ToString();
-            decoded[1] = dt.Rows[0]["col_author"].ToString();
-            decoded[2] = dt.Rows[0]["col_version"].ToString();
-            decoded[3] = dt.Rows[0]["col_description"].ToString();
-            decoded[4] = dt.Rows[0]["col_image-url"].ToString();
-            decoded[5] = dt.Rows[0]["col_jar-path"].ToString();
+                // Puts saved variables on the array to return
+                decoded[0] = dt.Rows[0]["col_name"].ToString();
+                decoded[1] = dt.Rows[0]["col_author"].ToString();
+                decoded[2] = dt.Rows[0]["col_version"].ToString();
+                decoded[3] = dt.Rows[0]["col_description"].ToString();
+                decoded[4] = dt.Rows[0]["col_image-url"].ToString();
+                decoded[5] = dt.Rows[0]["col_jar-path"].ToString();
 
-            // Returns the array
-            return decoded;
+                // Returns the array
+                return decoded;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Le fichier de ce mod était corrompu et a été supprimé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                File.Delete(filepath);
+                return new string[25565];
+            }
         }
 
         /**
@@ -218,7 +263,7 @@ namespace modbrowser
                 {
                     webClient.DownloadFile(modmeta[4], Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Vous devez être connecté à Internet pour récupérer les icônes des mods", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -246,7 +291,9 @@ namespace modbrowser
             modlist.Items.Clear();
             ListMods();
             MessageBox.Show("La liste des mods a été rechargée.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            statsPanel.Visible = true;
+            modInfo.Visible = false;
+            statsButton.Enabled = false;
         }
-
     }
 }

@@ -37,10 +37,10 @@
             // aboutText
             // 
             this.aboutText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.aboutText.Location = new System.Drawing.Point(33, 77);
+            this.aboutText.Location = new System.Drawing.Point(33, 79);
             this.aboutText.Name = "aboutText";
             this.aboutText.ReadOnly = true;
-            this.aboutText.Size = new System.Drawing.Size(352, 114);
+            this.aboutText.Size = new System.Drawing.Size(352, 123);
             this.aboutText.TabIndex = 0;
             this.aboutText.Text = resources.GetString("aboutText.Text");
             // 
@@ -70,11 +70,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 212);
+            this.ClientSize = new System.Drawing.Size(428, 222);
             this.Controls.Add(this.mbVersion);
             this.Controls.Add(this.mbTitle);
             this.Controls.Add(this.aboutText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About";
             this.Text = "A propos";
             this.ResumeLayout(false);

@@ -62,7 +62,7 @@ namespace modbrowser
                     minecraftPathBox.Text = lastConfig;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 System.IO.File.WriteAllText("config.txt", minecraftPathBox.Text);
                 MessageBox.Show("Le chemin du dossier entré est invalide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -88,7 +88,7 @@ namespace modbrowser
                 {
                     System.IO.File.Delete(System.IO.Path.GetTempPath() + file.Replace(".xml", "").Replace(System.IO.Directory.GetCurrentDirectory() + "\\mods", "") + "_modbrowser.jpg");
                 }
-                catch (Exception ex) {}
+                catch (Exception) {}
                 MessageBox.Show("Le cache a été vidé.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

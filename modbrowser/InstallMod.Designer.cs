@@ -35,8 +35,12 @@
             this.invalidHash = new System.Windows.Forms.Label();
             this.installButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.installStatus = new System.Windows.Forms.StatusStrip();
+            this.installStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusBar = new System.Windows.Forms.ToolStripProgressBar();
             this.hashBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.installStatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // hashInfo
@@ -111,21 +115,50 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // installStatus
+            // 
+            this.installStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.installStatusLabel,
+            this.statusBar});
+            this.installStatus.Location = new System.Drawing.Point(0, 197);
+            this.installStatus.Name = "installStatus";
+            this.installStatus.Size = new System.Drawing.Size(440, 22);
+            this.installStatus.TabIndex = 9;
+            this.installStatus.Text = "statusStrip1";
+            // 
+            // installStatusLabel
+            // 
+            this.installStatusLabel.Name = "installStatusLabel";
+            this.installStatusLabel.Size = new System.Drawing.Size(60, 17);
+            this.installStatusLabel.Text = "En attente";
+            // 
+            // statusBar
+            // 
+            this.statusBar.Name = "statusBar";
+            this.statusBar.Size = new System.Drawing.Size(100, 16);
+            this.statusBar.Visible = false;
+            // 
             // InstallMod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 201);
+            this.ClientSize = new System.Drawing.Size(440, 219);
+            this.Controls.Add(this.installStatus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.hashBox);
             this.Controls.Add(this.hashInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InstallMod";
             this.Text = "Installation de mods";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InstallMod_FormClosing);
             this.hashBox.ResumeLayout(false);
             this.hashBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.installStatus.ResumeLayout(false);
+            this.installStatus.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -137,5 +170,8 @@
         private System.Windows.Forms.Button installButton;
         private System.Windows.Forms.Label invalidHash;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.StatusStrip installStatus;
+        private System.Windows.Forms.ToolStripStatusLabel installStatusLabel;
+        private System.Windows.Forms.ToolStripProgressBar statusBar;
     }
 }

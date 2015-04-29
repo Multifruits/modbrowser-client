@@ -381,13 +381,13 @@
             // 
             // platformStatusLabel
             // 
-            this.platformStatusLabel.Font = new System.Drawing.Font("Roboto Condensed", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.platformStatusLabel.Font = new System.Drawing.Font("Roboto Condensed", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.platformStatusLabel.ForeColor = System.Drawing.Color.White;
             this.platformStatusLabel.Location = new System.Drawing.Point(3, 0);
             this.platformStatusLabel.Name = "platformStatusLabel";
             this.platformStatusLabel.Size = new System.Drawing.Size(69, 50);
             this.platformStatusLabel.TabIndex = 5;
-            this.platformStatusLabel.Text = "?";
+            this.platformStatusLabel.Text = "inconnu";
             this.platformStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // modNumber
@@ -437,13 +437,13 @@
             this.statsButton.TabIndex = 7;
             this.statsButton.Text = "STATISTIQUES";
             this.statsButton.UseVisualStyleBackColor = false;
-            this.statsButton.Click += new System.EventHandler(this.installButton_Click);
+            this.statsButton.Click += new System.EventHandler(this.openStats);
             // 
             // nomod
             // 
             this.nomod.AutoSize = true;
             this.nomod.Font = new System.Drawing.Font("Roboto Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomod.ForeColor = System.Drawing.Color.White;
+            this.nomod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.nomod.Location = new System.Drawing.Point(12, 43);
             this.nomod.Name = "nomod";
             this.nomod.Size = new System.Drawing.Size(88, 24);
@@ -478,6 +478,7 @@
             this.Controls.Add(this.modlist);
             this.Controls.Add(this.modInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menu;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
