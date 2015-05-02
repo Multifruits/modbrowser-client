@@ -44,35 +44,31 @@ namespace modbrowser
             minecraftpath = File.ReadAllText("config.txt");
 
             // Load stats menu informations
-            mbVersion.Text = "version " + ProductVersion;
+            mbVersion.Text = "v1.0-beta.3";
             updateModNumber();
 
             // Load mods
             ListMods();
         }
 
+        #region Events
         /**
-         * TODO : Fully uninstalls a mod.
+         * Fully uninstalls a mod.
+         */
+        private void uninstallModStripMenuItem(object sender, EventArgs e)
+        {
+            if (File.Exists(mbpath + "/mods/" + modlist.SelectedItem + ".xml"))
+                modUninstall(modlist.SelectedItem.ToString());
+            else
+                MessageBox.Show("Merci de cliquer sur le nom d'un mod puis ensuite d'essayer de le désinstaller.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        /**
+         * Fully uninstalls a mod.
          */
         private void uninstall(object sender, EventArgs e)
         {
-            string[] modmeta = DecodeXML(mbpath + "\\mods\\" + modlist.SelectedItem.ToString() + ".xml");
-            if(File.Exists(modmeta[5]))
-            {
-                File.Delete(modmeta[5]);
-            }
-            else
-            {
-                MessageBox.Show("Ce mod est introuvable et va être supprimé de la liste.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            File.Delete(mbpath + "\\mods\\" + modlist.SelectedItem.ToString() + ".xml");
-            modlist.Items.Clear();
-            ListMods();
-            MessageBox.Show("Le mod '" + modmeta[0] + "' a été supprimé avec succès.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            statsPanel.Visible = true;
-            modInfo.Visible = false;
-            statsButton.Enabled = false;
+            modUninstall(modlist.SelectedItem.ToString());
         }
 
         /**
@@ -89,8 +85,7 @@ namespace modbrowser
          */
         private void updateButton(object sender, EventArgs e)
         {
-            // Shows TODO message
-            MessageBox.Show("Fonctionnalité en cours de développement.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            updateModVersion();
         }
 
         /**
@@ -101,80 +96,97 @@ namespace modbrowser
             if (File.Exists(mbpath + "/mods/" + modlist.SelectedItem + ".xml"))
             {
                 updateModInfo(mbpath + "/mods/" + modlist.SelectedItem + ".xml");
-                statsPanel.Visible = false;
+                mainPagePanel.Visible = false;
                 modInfo.Visible = true;
-                statsButton.Enabled = true;
+                mainPageButton.Enabled = true;
             }
             else
             {
-                statsPanel.Visible = true;
-                modInfo.Visible = false;
-                statsButton.Enabled = false;
+                gotoMenu();
             }
         }
 
-        private void openStats(object sender, EventArgs e)
+        /**
+         * Go to menu
+         */
+        private void menuButton(object sender, EventArgs e)
         {
-            statsPanel.Visible = true;
-            modInfo.Visible = false;
-            statsButton.Enabled = false;
+            gotoMenu();
         }
 
+        /**
+         * Update mod number stat
+         */
         private void modNumberButton(object sender, EventArgs e)
         {
             updateModNumber();
         }
 
+        /**
+         * Verify platform status
+         */
         private void platformStatusButton(object sender, EventArgs e)
         {
             pingTest(api_url.Replace("http://", "").Replace("/api/", ""));
         }
 
-        private void pingTest(string url)
-        {
-            // Ping the platform
-            System.Net.NetworkInformation.Ping pingClass = new System.Net.NetworkInformation.Ping();
-            System.Net.NetworkInformation.PingReply pingReply = pingClass.Send(url, 5000);
-
-            // Show the results
-            platformStatusLabel.Text = (pingReply.RoundtripTime.ToString() + "ms");
-            if (pingReply.RoundtripTime <= 100)
-            {
-                platformStatusPanel.BackColor = Color.FromArgb(139, 195, 74);
-            }
-            else if (pingReply.RoundtripTime > 100 && pingReply.RoundtripTime <= 300)
-            {
-                platformStatusPanel.BackColor = Color.FromArgb(255, 193, 7);
-            }
-            else
-            {
-                platformStatusPanel.BackColor = Color.FromArgb(244, 67, 54);
-            }
-        }
-
+        /**
+         * Open modbrowser's GitHub repository
+         */
         private void GitHubLink(object sender, EventArgs e)
         {
             // Views modbrowser's GitHub page in the default web browser
             System.Diagnostics.Process.Start("https://github.com/Multifruits/modbrowser-client");
         }
 
+        /**
+         * Shows the settings form
+         */
         private void installModMenuButton(object sender, EventArgs e)
         {
             Form SettingsForm = new modbrowser_Settings();
             SettingsForm.Show();
         }
 
+        /**
+         * Show the about form
+         */
         private void aboutFormStart(object sender, EventArgs e)
         {
             Form aboutForm = new About();
             aboutForm.Show();
         }
 
+        /**
+         * Update modbrowser
+         */
         private void updatesButton(object sender, EventArgs e)
         {
             MessageBox.Show("Pour télécharger la dernière version de modbrowser, sélectionnez la dernière version depuis la page qui va s'ouvrir.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             System.Diagnostics.Process.Start("https://github.com/Multifruits/modbrowser-client/releases");
         }
+
+        /**
+         * Reload the mod list.
+         * Occurs when the reloadModList button is clicked.
+         */
+        private void reloadModsList(object sender, EventArgs e)
+        {
+            modlist.Items.Clear();
+            ListMods();
+            MessageBox.Show("La liste des mods a été rechargée.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            gotoMenu();
+        }
+
+        /**
+         * What to do when the updateStripMenuItem is clicked
+         */
+        private void updateByStripMenuItem(object sender, EventArgs e)
+        {
+            updateModVersion();
+        }
+
+        #endregion
 
         #region Functions
         /**
@@ -195,6 +207,40 @@ namespace modbrowser
                 }
             }
             catch (Exception) { }
+            gotoMenu();
+        }
+
+        /**
+         * Pings an URL
+         */
+        private void pingTest(string url)
+        {
+            // Ping the platform
+            System.Net.NetworkInformation.Ping pingClass = new System.Net.NetworkInformation.Ping();
+            try
+            {
+                System.Net.NetworkInformation.PingReply pingReply = pingClass.Send(url, 5000);
+
+                // Show the results
+                platformStatusLabel.Text = (pingReply.RoundtripTime.ToString() + "ms");
+                if (pingReply.RoundtripTime <= 100)
+                {
+                    platformStatusPanel.BackColor = Color.FromArgb(139, 195, 74);
+                }
+                else if (pingReply.RoundtripTime > 100 && pingReply.RoundtripTime <= 300)
+                {
+                    platformStatusPanel.BackColor = Color.FromArgb(255, 193, 7);
+                }
+                else
+                {
+                    platformStatusPanel.BackColor = Color.FromArgb(244, 67, 54);
+                }
+            }
+            catch (Exception)
+            {
+                platformStatusLabel.Text = ("erreur");
+                platformStatusPanel.BackColor = Color.FromArgb(244, 67, 54);
+            }
         }
 
         /**
@@ -271,6 +317,9 @@ namespace modbrowser
             modIcon.ImageLocation = Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg";
         }
 
+        /**
+         * Updates mod number stat
+         */
         public void updateModNumber()
         {
             int modnumber = 0;
@@ -280,20 +329,42 @@ namespace modbrowser
             }
             modNumberLabel.Text = modnumber.ToString();
         }
-        #endregion
 
         /**
-         * Reload the mod list.
-         * Occurs when the reloadModList button is clicked.
+         * Fully uninstalls a mod
          */
-        private void reloadModsList(object sender, EventArgs e)
+        public void modUninstall(String modName)
         {
+            string[] modmeta = DecodeXML(mbpath + "\\mods\\" + modName + ".xml");
+            if (File.Exists(modmeta[5]))
+                File.Delete(modmeta[5]);
+            else
+                MessageBox.Show("Ce mod est introuvable et va être supprimé de la liste.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            File.Delete(mbpath + "\\mods\\" + modlist.SelectedItem.ToString() + ".xml");
             modlist.Items.Clear();
             ListMods();
-            MessageBox.Show("La liste des mods a été rechargée.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            statsPanel.Visible = true;
-            modInfo.Visible = false;
-            statsButton.Enabled = false;
+            MessageBox.Show("Le mod '" + modmeta[0] + "' a été supprimé avec succès.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        /**
+         * Hide the modInfo panel and shows the mainPage panel
+         */
+        public void gotoMenu()
+        {
+            mainPagePanel.Visible = true;
+            modInfo.Visible = false;
+            mainPageButton.Enabled = false;
+        }
+
+        /**
+         * Updates mod version
+         */
+        private void updateModVersion()
+        {
+            // Shows TODO message
+            MessageBox.Show("Fonctionnalité en cours de développement.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        #endregion
     }
 }

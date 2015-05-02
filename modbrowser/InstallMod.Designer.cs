@@ -38,9 +38,16 @@
             this.installStatus = new System.Windows.Forms.StatusStrip();
             this.installStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusBar = new System.Windows.Forms.ToolStripProgressBar();
+            this.modInfo = new System.Windows.Forms.Panel();
+            this.modAuthor = new System.Windows.Forms.Label();
+            this.modTitle = new System.Windows.Forms.Label();
+            this.modDescription = new System.Windows.Forms.RichTextBox();
+            this.modIcon = new System.Windows.Forms.PictureBox();
             this.hashBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.installStatus.SuspendLayout();
+            this.modInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // hashInfo
@@ -138,11 +145,73 @@
             this.statusBar.Size = new System.Drawing.Size(100, 16);
             this.statusBar.Visible = false;
             // 
+            // modInfo
+            // 
+            this.modInfo.Controls.Add(this.modAuthor);
+            this.modInfo.Controls.Add(this.modTitle);
+            this.modInfo.Controls.Add(this.modDescription);
+            this.modInfo.Controls.Add(this.modIcon);
+            this.modInfo.Location = new System.Drawing.Point(0, 9);
+            this.modInfo.Name = "modInfo";
+            this.modInfo.Size = new System.Drawing.Size(440, 185);
+            this.modInfo.TabIndex = 10;
+            this.modInfo.Visible = false;
+            // 
+            // modAuthor
+            // 
+            this.modAuthor.AutoSize = true;
+            this.modAuthor.Font = new System.Drawing.Font("Roboto Condensed Light", 8.25F);
+            this.modAuthor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.modAuthor.Location = new System.Drawing.Point(85, 53);
+            this.modAuthor.Name = "modAuthor";
+            this.modAuthor.Size = new System.Drawing.Size(34, 15);
+            this.modAuthor.TabIndex = 9;
+            this.modAuthor.Text = "Auteur";
+            // 
+            // modTitle
+            // 
+            this.modTitle.AutoSize = true;
+            this.modTitle.Font = new System.Drawing.Font("Roboto Condensed", 18F);
+            this.modTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.modTitle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.modTitle.Location = new System.Drawing.Point(82, 21);
+            this.modTitle.Name = "modTitle";
+            this.modTitle.Size = new System.Drawing.Size(57, 32);
+            this.modTitle.TabIndex = 8;
+            this.modTitle.Text = "Titre";
+            // 
+            // modDescription
+            // 
+            this.modDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.modDescription.BackColor = System.Drawing.SystemColors.Control;
+            this.modDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.modDescription.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.modDescription.Location = new System.Drawing.Point(15, 84);
+            this.modDescription.Name = "modDescription";
+            this.modDescription.ReadOnly = true;
+            this.modDescription.Size = new System.Drawing.Size(406, 85);
+            this.modDescription.TabIndex = 11;
+            this.modDescription.Text = "";
+            // 
+            // modIcon
+            // 
+            this.modIcon.BackColor = System.Drawing.SystemColors.Control;
+            this.modIcon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.modIcon.Location = new System.Drawing.Point(15, 14);
+            this.modIcon.Name = "modIcon";
+            this.modIcon.Size = new System.Drawing.Size(64, 64);
+            this.modIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.modIcon.TabIndex = 10;
+            this.modIcon.TabStop = false;
+            // 
             // InstallMod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 219);
+            this.Controls.Add(this.modInfo);
             this.Controls.Add(this.installStatus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.hashBox);
@@ -157,6 +226,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.installStatus.ResumeLayout(false);
             this.installStatus.PerformLayout();
+            this.modInfo.ResumeLayout(false);
+            this.modInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +245,10 @@
         private System.Windows.Forms.StatusStrip installStatus;
         private System.Windows.Forms.ToolStripStatusLabel installStatusLabel;
         private System.Windows.Forms.ToolStripProgressBar statusBar;
+        private System.Windows.Forms.Panel modInfo;
+        private System.Windows.Forms.Label modAuthor;
+        private System.Windows.Forms.Label modTitle;
+        private System.Windows.Forms.RichTextBox modDescription;
+        private System.Windows.Forms.PictureBox modIcon;
     }
 }
