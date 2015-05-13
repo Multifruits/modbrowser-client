@@ -9,7 +9,7 @@ installer et gérer vos mods n'a jamais été aussi simple
 
 ----------
 
-*[ThuleMalta](http://thulemalta.github.io)* and *[GamingChope](https://github.com/GamingChope)* are proud to present you the modbrowser platform.
+*[ThuleMalta](http://thulemalta.github.io)* and *[GamingChope](https://github.com/GamingChope)* sont heureux de vous présenter la plateforme modbrowser.
 
 Informations sur le projet
 -------------
