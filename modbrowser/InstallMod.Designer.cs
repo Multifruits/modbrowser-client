@@ -135,8 +135,9 @@
             // 
             // installStatusLabel
             // 
+            this.installStatusLabel.Font = new System.Drawing.Font("Roboto Condensed", 9F);
             this.installStatusLabel.Name = "installStatusLabel";
-            this.installStatusLabel.Size = new System.Drawing.Size(60, 17);
+            this.installStatusLabel.Size = new System.Drawing.Size(57, 17);
             this.installStatusLabel.Text = "En attente";
             // 
             // statusBar
@@ -191,7 +192,7 @@
             this.modDescription.Location = new System.Drawing.Point(15, 84);
             this.modDescription.Name = "modDescription";
             this.modDescription.ReadOnly = true;
-            this.modDescription.Size = new System.Drawing.Size(406, 85);
+            this.modDescription.Size = new System.Drawing.Size(412, 85);
             this.modDescription.TabIndex = 11;
             this.modDescription.Text = "";
             // 

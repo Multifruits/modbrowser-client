@@ -16,7 +16,7 @@ namespace modbrowser
 {
     public partial class InstallMod : Form
     {
-        public string api_url = "http://modbrowser.olympe.in/api/";
+        public string api_url = "http://modbrowser.shost.ca/api/";
         public bool wasHashBoxClicked = false;
         public bool installing = false;
 
@@ -63,7 +63,7 @@ namespace modbrowser
             else if (!Directory.Exists(File.ReadAllText("config.txt")))
             {
                 MessageBox.Show("Le répertoire de Minecraft spécifié dans les paramètres n'existe pas. Merci de le régler avant de pouvoir installer un mod.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Form settingsForm = new modbrowser_Settings();
+                Form settingsForm = new Settings();
                 settingsForm.Show();
                 this.Close();
             }
@@ -118,7 +118,7 @@ namespace modbrowser
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Vous devez être connecté pour installer des mods.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Vous devez être connecté pour installer des mods. ", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     installStatusLabel.Text = "En attente";
                     installing = false;
                     statusBar.Visible = false;

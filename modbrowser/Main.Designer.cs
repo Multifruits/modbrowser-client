@@ -32,19 +32,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.menu = new System.Windows.Forms.MenuStrip();
             this.installMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.forgeInstallItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItem_18 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItem_1710 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItem_164 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItem_other = new System.Windows.Forms.ToolStripMenuItem();
             this.modInstallItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsMenuButton = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modlist = new System.Windows.Forms.ListBox();
-            this.modActionsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.modActions = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.uninstallStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modInfo = new System.Windows.Forms.Panel();
             this.plusonePanel = new System.Windows.Forms.Panel();
             this.plusone = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.plusoneNumber = new System.Windows.Forms.Label();
             this.modActionsPanel = new System.Windows.Forms.Panel();
             this.uninstallMod = new System.Windows.Forms.Button();
             this.updateMod = new System.Windows.Forms.Button();
@@ -75,7 +80,7 @@
             this.listButtonsPanel = new System.Windows.Forms.Panel();
             this.modlistPanel = new System.Windows.Forms.Panel();
             this.menu.SuspendLayout();
-            this.modActionsContextMenuStrip.SuspendLayout();
+            this.modActions.SuspendLayout();
             this.modInfo.SuspendLayout();
             this.plusonePanel.SuspendLayout();
             this.modActionsPanel.SuspendLayout();
@@ -102,9 +107,44 @@
             // installMenuItem
             // 
             this.installMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.forgeInstallItem,
             this.modInstallItem});
             this.installMenuItem.Name = "installMenuItem";
             resources.ApplyResources(this.installMenuItem, "installMenuItem");
+            // 
+            // forgeInstallItem
+            // 
+            this.forgeInstallItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItem_18,
+            this.menuItem_1710,
+            this.menuItem_164,
+            this.menuItem_other});
+            this.forgeInstallItem.Name = "forgeInstallItem";
+            resources.ApplyResources(this.forgeInstallItem, "forgeInstallItem");
+            // 
+            // menuItem_18
+            // 
+            this.menuItem_18.Name = "menuItem_18";
+            resources.ApplyResources(this.menuItem_18, "menuItem_18");
+            this.menuItem_18.Click += new System.EventHandler(this.menuItem_18_Click);
+            // 
+            // menuItem_1710
+            // 
+            this.menuItem_1710.Name = "menuItem_1710";
+            resources.ApplyResources(this.menuItem_1710, "menuItem_1710");
+            this.menuItem_1710.Click += new System.EventHandler(this.menuItem_1710_Click);
+            // 
+            // menuItem_164
+            // 
+            this.menuItem_164.Name = "menuItem_164";
+            resources.ApplyResources(this.menuItem_164, "menuItem_164");
+            this.menuItem_164.Click += new System.EventHandler(this.menuItem_164_Click);
+            // 
+            // menuItem_other
+            // 
+            this.menuItem_other.Name = "menuItem_other";
+            resources.ApplyResources(this.menuItem_other, "menuItem_other");
+            this.menuItem_other.Click += new System.EventHandler(this.menuItem_other_Click);
             // 
             // modInstallItem
             // 
@@ -142,7 +182,7 @@
             // 
             this.modlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.modlist.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.modlist.ContextMenuStrip = this.modActionsContextMenuStrip;
+            this.modlist.ContextMenuStrip = this.modActions;
             resources.ApplyResources(this.modlist, "modlist");
             this.modlist.ForeColor = System.Drawing.Color.White;
             this.modlist.FormattingEnabled = true;
@@ -150,13 +190,13 @@
             this.modlist.Sorted = true;
             this.modlist.SelectedIndexChanged += new System.EventHandler(this.modSelected);
             // 
-            // modActionsContextMenuStrip
+            // modActions
             // 
-            this.modActionsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modActions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.uninstallStripMenuItem,
             this.updateStripMenuItem});
-            this.modActionsContextMenuStrip.Name = "modActionsContextMenuStrip";
-            resources.ApplyResources(this.modActionsContextMenuStrip, "modActionsContextMenuStrip");
+            this.modActions.Name = "modActionsContextMenuStrip";
+            resources.ApplyResources(this.modActions, "modActions");
             // 
             // uninstallStripMenuItem
             // 
@@ -186,7 +226,7 @@
             // 
             resources.ApplyResources(this.plusonePanel, "plusonePanel");
             this.plusonePanel.Controls.Add(this.plusone);
-            this.plusonePanel.Controls.Add(this.label1);
+            this.plusonePanel.Controls.Add(this.plusoneNumber);
             this.plusonePanel.Name = "plusonePanel";
             // 
             // plusone
@@ -198,10 +238,10 @@
             this.plusone.UseVisualStyleBackColor = false;
             this.plusone.Click += new System.EventHandler(this.plusoneButton);
             // 
-            // label1
+            // plusoneNumber
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.plusoneNumber, "plusoneNumber");
+            this.plusoneNumber.Name = "plusoneNumber";
             // 
             // modActionsPanel
             // 
@@ -367,7 +407,8 @@
             // 
             resources.ApplyResources(this.platformBrowser, "platformBrowser");
             this.platformBrowser.Name = "platformBrowser";
-            this.platformBrowser.Url = new System.Uri("http://modbrowser.olympe.in/mods.php", System.UriKind.Absolute);
+            this.platformBrowser.ScriptErrorsSuppressed = true;
+            this.platformBrowser.Url = new System.Uri("http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview/", System.UriKind.Absolute);
             // 
             // mbVersion
             // 
@@ -437,7 +478,7 @@
             this.Name = "Main";
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            this.modActionsContextMenuStrip.ResumeLayout(false);
+            this.modActions.ResumeLayout(false);
             this.modInfo.ResumeLayout(false);
             this.modInfo.PerformLayout();
             this.plusonePanel.ResumeLayout(false);
@@ -503,10 +544,15 @@
         private System.Windows.Forms.Panel statsPanel;
         private System.Windows.Forms.Panel modActionsPanel;
         private System.Windows.Forms.Panel plusonePanel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ContextMenuStrip modActionsContextMenuStrip;
+        private System.Windows.Forms.Label plusoneNumber;
+        private System.Windows.Forms.ContextMenuStrip modActions;
         private System.Windows.Forms.ToolStripMenuItem uninstallStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem forgeInstallItem;
+        private System.Windows.Forms.ToolStripMenuItem menuItem_18;
+        private System.Windows.Forms.ToolStripMenuItem menuItem_1710;
+        private System.Windows.Forms.ToolStripMenuItem menuItem_164;
+        private System.Windows.Forms.ToolStripMenuItem menuItem_other;
     }
 }
 

@@ -23,7 +23,86 @@ namespace modbrowser
         public string minecraftpath;
 
         // api url
-        public string api_url = "http://modbrowser.olympe.in/api/";
+        public string api_url = "http://modbrowser.shost.ca/api/";
+
+        // material color palette
+        #region Material Design colors
+        public Color[,] themeColors = new Color[,]
+        {
+            {
+                // =====================
+                //      BASE COLORS
+                // =====================
+
+                ColorTranslator.FromHtml("#ffc107"), // Amber (#ffc107)
+                ColorTranslator.FromHtml("#2196f3"), // Blue (#2196f3)
+                ColorTranslator.FromHtml("#03a9f4"), // Light Blue (#03a9f4)
+                ColorTranslator.FromHtml("#cddc39"), // Lime (#cddc39)
+                ColorTranslator.FromHtml("#00bcd4"), // Cyan (#00bcd4)
+                ColorTranslator.FromHtml("#9e9e9e"), // Grey (#9e9e9e)
+                ColorTranslator.FromHtml("#607d8b"), // Blue Grey (#607d8b)
+                ColorTranslator.FromHtml("#3f51b5"), // Indigo (#3f51b5)
+                ColorTranslator.FromHtml("#ffeb3b"), // Yellow (#ffeb3b)
+                ColorTranslator.FromHtml("#795548"), // Brown (#795548)
+                ColorTranslator.FromHtml("#ff9800"), // Orange (#ff9800)
+                ColorTranslator.FromHtml("#ff5722"), // Deep Orange (#ff5722)
+                ColorTranslator.FromHtml("#e91e63"), // Pink (#e91e63)
+                ColorTranslator.FromHtml("#f44336"), // Red (#f44336)
+                ColorTranslator.FromHtml("#4caf50"), // Green (#4caf50)
+                ColorTranslator.FromHtml("#8bc34a"), // Light Green (#8bc34a)
+                ColorTranslator.FromHtml("#9c27b0"), // Purple (#9c27b0)
+                ColorTranslator.FromHtml("#673ab7") // Deep Purple (#673ab7)
+            },
+            {
+                // =====================
+                //     ACCENT COLORS
+                // =====================
+
+                ColorTranslator.FromHtml("#ffa000"), // Amber (#ffa000)
+                ColorTranslator.FromHtml("#1976d2"), // Blue (#1976d2)
+                ColorTranslator.FromHtml("#0288d1"), // Light Blue (#0288d1)
+                ColorTranslator.FromHtml("#afb42b"), // Lime (#afb42b)
+                ColorTranslator.FromHtml("#0097a7"), // Cyan (#0097a7)
+                ColorTranslator.FromHtml("#616161"), // Grey (#616161)
+                ColorTranslator.FromHtml("#455a64"), // Blue Grey (#455a64)
+                ColorTranslator.FromHtml("#303f9f"), // Indigo (#303f9f)
+                ColorTranslator.FromHtml("#fbc02d"), // Yellow (#fbc02d)
+                ColorTranslator.FromHtml("#5d4037"), // Brown (#5d4037)
+                ColorTranslator.FromHtml("#f57c00"), // Orange (#f57c00)
+                ColorTranslator.FromHtml("#e64a19"), // Deep Orange (#e64a19)
+                ColorTranslator.FromHtml("#c2185b"), // Pink (#c2185b)
+                ColorTranslator.FromHtml("#d32f2f"), // Red (#d32f2f)
+                ColorTranslator.FromHtml("#388e3c"), // Green (#388e3c)
+                ColorTranslator.FromHtml("#689f38"), // Light Green (#689f38)
+                ColorTranslator.FromHtml("#7b1fa2"), // Purple (#7b1fa2)
+                ColorTranslator.FromHtml("#512da8") // Deep Purple (#512da8)
+            },
+            {
+                // =====================
+                //     FORE COLOR
+                // =====================
+
+                Color.Black, // Amber (#ffa000)         
+                Color.White, // Blue (#1976d2)
+                Color.Black, // Light Blue (#0288d1)
+                Color.Black, // Lime (#afb42b)
+                Color.Black, // Cyan (#0097a7)
+                Color.Black, // Grey (#616161)
+                Color.White, // Blue Grey (#455a64)
+                Color.White, // Indigo (#303f9f)
+                Color.Black, // Yellow (#fbc02d)
+                Color.White, // Brown (#5d4037)
+                Color.Black, // Orange (#f57c00)
+                Color.White, // Deep Orange (#e64a19)
+                Color.White, // Pink (#c2185b)
+                Color.White, // Red (#d32f2f)
+                Color.Black, // Green (#388e3c)
+                Color.Black, // Light Green (#689f38)
+                Color.White, // Purple (#7b1fa2)
+                Color.White, // Deep Purple (#512da8)
+            }
+        };
+        #endregion
 
         public Main()
         {
@@ -33,6 +112,10 @@ namespace modbrowser
             if (!File.Exists("config.txt"))
             {
                 File.WriteAllText("config.txt", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\.minecraft");
+            }
+            if (!File.Exists("color.txt"))
+            {
+                File.WriteAllText("color.txt", "14");
             }
             if (!Directory.Exists(@"mods"))
             {
@@ -49,6 +132,14 @@ namespace modbrowser
 
             // Load mods
             ListMods();
+
+            // Apply Material Design colors
+            int selectedTheme = Convert.ToInt32(File.ReadAllText("color.txt"));
+            modlistPanel.BackColor = themeColors[0, selectedTheme];
+            modlist.BackColor = themeColors[0, selectedTheme];
+            listButtonsPanel.BackColor = themeColors[1, selectedTheme];
+            nomod.ForeColor = themeColors[2, selectedTheme];
+            modlist.ForeColor = themeColors[2, selectedTheme];
         }
 
         #region Events
@@ -144,7 +235,7 @@ namespace modbrowser
          */
         private void installModMenuButton(object sender, EventArgs e)
         {
-            Form SettingsForm = new modbrowser_Settings();
+            Form SettingsForm = new Settings();
             SettingsForm.Show();
         }
 
@@ -302,19 +393,20 @@ namespace modbrowser
             modDescription.Text = modmeta[3];
 
             // Show the image
-            if (!File.Exists(Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg"))
+            if (!File.Exists(Path.GetTempPath() + "mb_cache\\" + modmeta[0]))
             {
+                if (!Directory.Exists(Path.GetTempPath() + "mb_cache")) { Directory.CreateDirectory(Path.GetTempPath() + "mb_cache"); }
                 WebClient webClient = new WebClient();
                 try
                 {
-                    webClient.DownloadFile(modmeta[4], Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg");
+                    webClient.DownloadFile(modmeta[4], Path.GetTempPath() + "mb_cache\\" + modmeta[0]);
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("Vous devez être connecté à Internet pour récupérer les icônes des mods", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            modIcon.ImageLocation = Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg";
+            modIcon.ImageLocation = Path.GetTempPath() + "mb_cache\\" + modmeta[0];
         }
 
         /**
@@ -366,5 +458,42 @@ namespace modbrowser
             MessageBox.Show("Fonctionnalité en cours de développement.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
+
+        /**
+         * Open Forge website
+         */
+        private void menuItem_other_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Dans le site qui va s'ouvrir, sélectionnez la version de Minecraft que vous voulez modder, puis cliquez sur l\'Installer-win qui correspond à votre version.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            System.Diagnostics.Process.Start("http://files.minecraftforge.net/#Downloads");
+        }
+
+        /**
+         * Download Forge 1.8
+         */
+        private void menuItem_18_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Téléchargez le fichier qui va apparaître et ouvrez le.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            System.Diagnostics.Process.Start("http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.1.1398/forge-1.8-11.14.1.1398-installer-win.exe");
+        }
+
+        /**
+         * Download Forge 1.7.10
+         */
+        private void menuItem_1710_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Téléchargez le fichier qui va apparaître et ouvrez le.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            System.Diagnostics.Process.Start("http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.7.10-10.13.3.1399-1.7.10/forge-1.7.10-10.13.3.1399-1.7.10-installer-win.exe");
+        }
+
+        /**
+         * Download Forge 1.6.4
+         */
+        private void menuItem_164_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Téléchargez le fichier qui va apparaître et ouvrez le.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            System.Diagnostics.Process.Start("http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.6.4-9.11.1.1345/forge-1.6.4-9.11.1.1345-installer-win.exe");
+        }
+
     }
 }
