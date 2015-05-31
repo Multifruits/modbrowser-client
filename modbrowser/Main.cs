@@ -504,5 +504,18 @@ namespace modbrowser
             modlist.Size = new Size(150, this.Size.Height - 155);
         }
 
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            if (searchBox.Text != "")
+                platformBrowser.Url = new Uri("http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview/search.php?s=" + searchBox.Text);
+            else
+                MessageBox.Show("Merci de spécifier un terme à rechercher.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void cancelSearchButton_Click(object sender, EventArgs e)
+        {
+            platformBrowser.Url = new Uri("http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview/index.php");
+        }
+
     }
 }

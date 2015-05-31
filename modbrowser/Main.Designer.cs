@@ -79,6 +79,11 @@
             this.reloadModList = new System.Windows.Forms.Button();
             this.listButtonsPanel = new System.Windows.Forms.Panel();
             this.modlistPanel = new System.Windows.Forms.Panel();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.searchPanel = new System.Windows.Forms.Panel();
+            this.searchLabel = new System.Windows.Forms.Label();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.cancelSearchButton = new System.Windows.Forms.Button();
             this.menu.SuspendLayout();
             this.modActions.SuspendLayout();
             this.modInfo.SuspendLayout();
@@ -93,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.githubIcon)).BeginInit();
             this.listButtonsPanel.SuspendLayout();
             this.modlistPanel.SuspendLayout();
+            this.searchPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
@@ -300,9 +306,10 @@
             // 
             resources.ApplyResources(this.mainPagePanel, "mainPagePanel");
             this.mainPagePanel.BackColor = System.Drawing.SystemColors.Control;
+            this.mainPagePanel.Controls.Add(this.searchPanel);
+            this.mainPagePanel.Controls.Add(this.platformBrowser);
             this.mainPagePanel.Controls.Add(this.statsPanel);
             this.mainPagePanel.Controls.Add(this.githubPanel);
-            this.mainPagePanel.Controls.Add(this.platformBrowser);
             this.mainPagePanel.Controls.Add(this.mbVersion);
             this.mainPagePanel.Controls.Add(this.mbTitle);
             this.mainPagePanel.Name = "mainPagePanel";
@@ -465,6 +472,43 @@
             resources.ApplyResources(this.modlistPanel, "modlistPanel");
             this.modlistPanel.Name = "modlistPanel";
             // 
+            // searchBox
+            // 
+            resources.ApplyResources(this.searchBox, "searchBox");
+            this.searchBox.Name = "searchBox";
+            // 
+            // searchPanel
+            // 
+            resources.ApplyResources(this.searchPanel, "searchPanel");
+            this.searchPanel.Controls.Add(this.cancelSearchButton);
+            this.searchPanel.Controls.Add(this.searchButton);
+            this.searchPanel.Controls.Add(this.searchBox);
+            this.searchPanel.Controls.Add(this.searchLabel);
+            this.searchPanel.Name = "searchPanel";
+            // 
+            // searchLabel
+            // 
+            resources.ApplyResources(this.searchLabel, "searchLabel");
+            this.searchLabel.Name = "searchLabel";
+            // 
+            // searchButton
+            // 
+            this.searchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(74)))));
+            this.searchButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(159)))), ((int)(((byte)(56)))));
+            resources.ApplyResources(this.searchButton, "searchButton");
+            this.searchButton.Name = "searchButton";
+            this.searchButton.UseVisualStyleBackColor = false;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // cancelSearchButton
+            // 
+            this.cancelSearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.cancelSearchButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            resources.ApplyResources(this.cancelSearchButton, "cancelSearchButton");
+            this.cancelSearchButton.Name = "cancelSearchButton";
+            this.cancelSearchButton.UseVisualStyleBackColor = false;
+            this.cancelSearchButton.Click += new System.EventHandler(this.cancelSearchButton_Click);
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -498,6 +542,8 @@
             this.listButtonsPanel.ResumeLayout(false);
             this.modlistPanel.ResumeLayout(false);
             this.modlistPanel.PerformLayout();
+            this.searchPanel.ResumeLayout(false);
+            this.searchPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,6 +600,11 @@
         private System.Windows.Forms.ToolStripMenuItem menuItem_1710;
         private System.Windows.Forms.ToolStripMenuItem menuItem_164;
         private System.Windows.Forms.ToolStripMenuItem menuItem_other;
+        private System.Windows.Forms.Panel searchPanel;
+        private System.Windows.Forms.Label searchLabel;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Button cancelSearchButton;
     }
 }
 
