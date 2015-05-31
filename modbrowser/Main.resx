@@ -175,31 +175,31 @@
     <value>Alt+F</value>
   </data>
   <data name="forgeInstallItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>137, 22</value>
   </data>
   <data name="forgeInstallItem.Text" xml:space="preserve">
     <value>Forge</value>
   </data>
   <data name="menuItem_18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>111, 22</value>
   </data>
   <data name="menuItem_18.Text" xml:space="preserve">
     <value>1.8</value>
   </data>
   <data name="menuItem_1710.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>111, 22</value>
   </data>
   <data name="menuItem_1710.Text" xml:space="preserve">
     <value>1.7.10</value>
   </data>
   <data name="menuItem_164.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>111, 22</value>
   </data>
   <data name="menuItem_164.Text" xml:space="preserve">
     <value>1.6.4</value>
   </data>
   <data name="menuItem_other.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>111, 22</value>
   </data>
   <data name="menuItem_other.Text" xml:space="preserve">
     <value>Autre...</value>
@@ -211,19 +211,19 @@
     <value>Alt+M</value>
   </data>
   <data name="modInstallItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>137, 22</value>
   </data>
   <data name="modInstallItem.Text" xml:space="preserve">
     <value>Mod</value>
   </data>
   <data name="aboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>134, 22</value>
   </data>
   <data name="aboutMenuItem.Text" xml:space="preserve">
     <value>A propos</value>
   </data>
   <data name="updateMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>134, 22</value>
   </data>
   <data name="updateMenuItem.Text" xml:space="preserve">
     <value>Mises à jour</value>
@@ -459,11 +459,11 @@
   <data name="&gt;&gt;plusone.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="plusoneNumber.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="plusoneNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="plusoneNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 9</value>
+    <value>8, 6</value>
   </data>
   <data name="plusoneNumber.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 16</value>
@@ -472,7 +472,10 @@
     <value>10</value>
   </data>
   <data name="plusoneNumber.Text" xml:space="preserve">
-    <value>&lt;+1 number&gt;</value>
+    <value> </value>
+  </data>
+  <data name="plusoneNumber.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;plusoneNumber.Name" xml:space="preserve">
     <value>plusoneNumber</value>

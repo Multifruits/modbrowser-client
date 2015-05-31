@@ -121,7 +121,6 @@ namespace modbrowser
             {
                 Directory.CreateDirectory(@"mods");
             }
-
             // Set useful variables
             mbpath = Directory.GetCurrentDirectory();
             minecraftpath = File.ReadAllText("config.txt");
@@ -493,6 +492,16 @@ namespace modbrowser
         {
             MessageBox.Show("Téléchargez le fichier qui va apparaître et ouvrez le.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             System.Diagnostics.Process.Start("http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.6.4-9.11.1.1345/forge-1.6.4-9.11.1.1345-installer-win.exe");
+        }
+
+        private void modDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resizeModList(Object sender, EventArgs e)
+        {
+            modlist.Size = new Size(150, this.Size.Height - 155);
         }
 
     }

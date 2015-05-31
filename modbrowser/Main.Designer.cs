@@ -287,6 +287,7 @@
             this.modDescription.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.modDescription.Name = "modDescription";
             this.modDescription.ReadOnly = true;
+            this.modDescription.TextChanged += new System.EventHandler(this.modDescription_TextChanged);
             // 
             // modIcon
             // 
@@ -476,13 +477,13 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.MainMenuStrip = this.menu;
             this.Name = "Main";
+            this.ResizeEnd += new System.EventHandler(this.resizeModList);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.modActions.ResumeLayout(false);
             this.modInfo.ResumeLayout(false);
             this.modInfo.PerformLayout();
             this.plusonePanel.ResumeLayout(false);
-            this.plusonePanel.PerformLayout();
             this.modActionsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.modIcon)).EndInit();
             this.mainPagePanel.ResumeLayout(false);
