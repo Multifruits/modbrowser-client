@@ -117,35 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="hashInfo.Text" xml:space="preserve">
-    <value>Pour chaque version de mod, un HASH unique est généré. Il vous suffit d'entrer ce code crypté pour télécharger la version du mod donnée. Ce HASH peut être récupéré via la plateforme en ligne modbrowser.</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAA7RJREFUeF7t3b9u02AUh+EimBATF8AIAsaSuDDELqAKGjsVEpW4DWDlMhi5EwZu
-        g4ENIcGOBGKBnsqU4rSJk/O5Ps7vfaUjVflnO+dRlSnZIpIrm+zf3smrJ6dntFvdre+mTS/Lq7dZUf3+
-        b/Lpu/pu2vQAIB4AxAOAeAAQDwDiAUA8AIgHAPEAIB4AxAOAeAAQDwDiAUA8AIgHAPEAIB4AxAOAeAAQ
-        DwDiAUA8AIgHAEfjYjbN8tmLiJPn+ZX6NBfmBHDprGNHmHFRHdTn2F3jSflp7s0LMnl+eK0+zYV5ABiy
-        uecGmdFk+rU+ze4CAAAA0HxukAEAAPoBMMqnX7LJ9GPfs12WV+vTXJgHwOHh4eWzjn3hU1Sfm9fQG4Bx
-        Pn1e3z2IPACiZN9p0LwGALQMAI4AECMAOAKAIwDECACOAOAIADECgCMAOAJAjADgCACOABAjADgCgCMA
-        xAgAjgDgCAAxAoAjADgCQIwA4AgAjgAQIwA4AoAjAMQIAI4A4AgAMQKAIwA4AkCMAOAIAI4AECMAOAKA
-        IwDECACOAOCoDwA7e3vX6z+TdBEAUp9zMxkAR6//2i5s/HB2p77JXdcARo+e3jz+zoS8fFPflDwJAFlR
-        vvp7jKM39FsqBF0COFn+yet2g2DjAYzz8mXzOKkQdAVgbvknr50ewUYD2H5c3hgV1Y/mcWxSIOgCwLnL
-        P57y173d2a36oUna+P8AdoHjSfWzeSwbL4LUAJYt/2gxz+qHJkviM0BXCFIC6GP5lgQAqwsEqQD0tXxL
-        BoCVGkEKAH0u35ICYKVE4AXQ9/ItOQBWKgQeABGWb0kCsFIgWBdAlOVbsgCsbFI+9SBYB0Ck5VvSACwP
-        glUBRFu+JQ/AWhfBKgAiLt8CQN06CNoCiLp8CwCnWhVBGwCRl28BoNEqCJYBiL58CwBnlO1O99sgWARg
-        CMu3AHBObRCcB2Aoy7cAsKClCIry/dztRfVhKMu3ALCkRQhWm3jLtwDQIj+CmMu3ANCy9RHEXb4FgBVa
-        HUHs5VsAWDH70et2COIv3wLAGi1HMIzlWwBYs/MRDGf5FgAczSMY1vItADj7h2B4y7cAkCBDMMTlWwAQ
-        DwDiAUA8AIgHAPEAIB4AxAOAeAAQDwDiAUA8AIgHAPEAIB4AxAOAeAAQDwDiAUA8AIgHAPEAIB4AxAOA
-        eAAQDwDiAUC8UABG9gtfk+o7c3Fz/J4399AXACbGAEB8ACA+ABCfCwGQFbMsy6cFE2/u7x48qNdE1Kat
-        rT9hXpEx2iYmnAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="installStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAQAEBAAAAAAIABoBAAARgAAACAgAAAAACAAqBAAAK4EAAAwMAAAAAAgAKglAABWFQAAQEAAAAAA

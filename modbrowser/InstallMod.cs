@@ -17,34 +17,24 @@ namespace modbrowser
     public partial class InstallMod : Form
     {
         public string api_url = "http://modbrowser.shost.ca/api/";
+        public string lastMod;
+        public string lastVersion;
         public bool wasHashBoxClicked = false;
         public bool installing = false;
+
+        public string tempPath = System.IO.Path.GetTempPath() + "mb_cache\\";
 
         public InstallMod()
         {
             InitializeComponent();
+
+            // Load mods
+            updateListFromUrl(installModList, "http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview2/index.php", "modList.txt");
         }
 
-        /**
-         * What to do when the hash box is clicked.
-         */
-        private void hashBoxClicked(object sender, EventArgs e)
+        private void debug()
         {
-            if (!wasHashBoxClicked)
-            {
-                wasHashBoxClicked = true;
-                hashTextBox.Text = "";
-            }
-        }
-
-        /**
-         * What to do when the hash box text is changed.
-         */
-        private void hashBoxChanged(object sender, EventArgs e)
-        {
-            wasHashBoxClicked = true;
-            installButton.Enabled = hashTextBox.Text.Length.Equals(40);
-            invalidHash.Visible = !hashTextBox.Text.Length.Equals(40);
+            MessageBox.Show("debug");
         }
 
         /**
@@ -75,28 +65,49 @@ namespace modbrowser
             
         }
 
+        private void updateListFromUrl(ListView listBox, string url, string fileName)
+        {
+            listBox.Items.Clear();
+            WebClient client = new WebClient();
+
+            if (File.Exists(tempPath + fileName))
+                File.Delete(tempPath + fileName);
+
+            client.DownloadFile(url, tempPath + fileName);
+
+            foreach (var line in File.ReadAllLines(tempPath + fileName))
+                listBox.Items.Add(line);
+        }
+
+        public void modInstall(object sender, EventArgs e)
+        {
+            modInstall();
+        }
+
         /**
          * Install the mod
          */
-        public void modInstall()
+        private void modInstall()
         {
-            installStatusLabel.Text = "Vérification du HASH";
+            installStatusLabel.Text = "Récupération du HASH";
 
             // Get mod's install url from the HASH
             WebClient client = new WebClient();
-            string modName = client.DownloadString(api_url + "name.php?sha1=" + hashTextBox.Text);
+            string version = client.DownloadString(api_url + "hash.php?n=" + lastMod + "&v=" + installVersionList.SelectedItems[0].Text);
+
+            installStatusLabel.Text = "Vérification du HASH";
 
             // Install the mod
-            if (!File.Exists(File.ReadAllText("config.txt") + "\\mods\\" + "mb_" + modName + ".jar"))
+            if (!File.Exists(File.ReadAllText("config.txt") + "\\mods\\" + "mb_" + lastMod + ".jar"))
             {
                 try
                 {
-                    string modUrl = client.DownloadString(api_url + "version.php?hash=" + hashTextBox.Text);
+                    string modUrl = client.DownloadString(api_url + "version.php?hash=" + version);
 
                     // Download the mod from the mod's install url
                     if (modUrl.Contains("unknown"))
                     {
-                        MessageBox.Show("Le HASH spécifié ne correspond à aucune version de mod.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("La version spécifiée ne correspond à aucune version de mod.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         installStatusLabel.Text = "En attente";
                         statusBar.Visible = false;
                     }
@@ -105,15 +116,15 @@ namespace modbrowser
                         installButton.Enabled = false;
                         installing = true;
                         installStatusLabel.Text = "Installation des informations du mod";
-                        File.WriteAllText(Directory.GetCurrentDirectory() + "\\mods\\" + modName + ".xml", client.DownloadString(api_url + "xml.php?sha1=" + hashTextBox.Text).Replace("modpathgoeshere", File.ReadAllText("config.txt") + "\\mods\\mb_" + modName + ".jar"));
-                        updateModInfo(Directory.GetCurrentDirectory() + "\\mods\\" + modName + ".xml");
+                        File.WriteAllText(Directory.GetCurrentDirectory() + "\\mods\\" + lastMod + ".xml", client.DownloadString(api_url + "xml.php?sha1=" + version).Replace("modpathgoeshere", File.ReadAllText("config.txt") + "\\mods\\mb_" + lastMod + ".jar"));
+                        updateModInfo(Directory.GetCurrentDirectory() + "\\mods\\" + lastMod + ".xml");
                         modInfo.Visible = true;
 
                         statusBar.Visible = true;
                         installStatusLabel.Text = "Installation du JAR";
                         client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(client_DownloadProgressChanged);
                         client.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFileCompleted);
-                        client.DownloadFileAsync(new Uri(modUrl), File.ReadAllText("config.txt") + "\\mods\\" + "mb_" + modName + ".jar");
+                        client.DownloadFileAsync(new Uri(modUrl), File.ReadAllText("config.txt") + "\\mods\\" + "mb_" + lastMod + ".jar");
                     }
                 }
                 catch (Exception)
@@ -131,7 +142,7 @@ namespace modbrowser
                 DialogResult result = MessageBox.Show("Voulez-vous désinstaller ce mod et procéder à sa réinstallation ?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
                 if (result == DialogResult.Yes)
                 {
-                    modUninstall(modName);
+                    modUninstall(lastMod);
                     modInstall();
                 }
                 else
@@ -270,6 +281,44 @@ namespace modbrowser
                 }
             }
             modIcon.ImageLocation = Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg";
+        }
+
+        private void installModList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (installModList.SelectedItems.Count > 0)
+            {
+                updateListFromUrl(installVersionList, "http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview2/view.php?a=" + installModList.SelectedItems[0].Text, "modVersionList.txt");
+                lastMod = installModList.SelectedItems[0].Text;
+                lastVersion = null;
+                installButton.Enabled = false;
+            }
+        }
+
+        private void installVersionList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (installVersionList.SelectedItems.Count > 0)
+            {
+                installButton.Enabled = true;
+                lastVersion = installVersionList.SelectedItems[0].Text;
+            }
+            else
+                installButton.Enabled = false;
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            if (searchBox.TextLength >= 3)
+                updateListFromUrl(installModList, "http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview2/search.php?a=" + searchBox.Text, "modList.txt");
+            else if (searchBox.TextLength > 0)
+                MessageBox.Show("Votre recherche ne comprend pas assez de caractères.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show("Merci d'ajouter des mots-clés à votre recherche.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void cancelSearchButton_Click(object sender, EventArgs e)
+        {
+            updateListFromUrl(installModList, "http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview2/index.php", "modList.txt");
         }
 
     }

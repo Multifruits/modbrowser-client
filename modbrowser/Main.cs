@@ -16,8 +16,9 @@ namespace modbrowser
 {
     public partial class Main : Form
     {
-        // modbrowser's path
+        // modbrowser's paths
         public string mbpath;
+        public string tempPath = System.IO.Path.GetTempPath() + "mb_cache\\";
 
         // minecraft's path
         public string minecraftpath;
@@ -114,19 +115,20 @@ namespace modbrowser
                 File.WriteAllText("config.txt", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\.minecraft");
             }
             if (!File.Exists("color.txt"))
-            {
                 File.WriteAllText("color.txt", "14");
-            }
+
             if (!Directory.Exists(@"mods"))
-            {
                 Directory.CreateDirectory(@"mods");
-            }
+
+            if(!Directory.Exists(System.IO.Path.GetTempPath() + "mb_cache"))
+                System.IO.Directory.CreateDirectory(System.IO.Path.GetTempPath() + "mb_cache");
+
             // Set useful variables
             mbpath = Directory.GetCurrentDirectory();
             minecraftpath = File.ReadAllText("config.txt");
 
             // Load stats menu informations
-            mbVersion.Text = "v1.0-beta.3";
+            mbVersion.Text = "release v1.1";
             updateModNumber();
 
             // Load mods
@@ -141,14 +143,29 @@ namespace modbrowser
             modlist.ForeColor = themeColors[2, selectedTheme];
         }
 
+        private void updateListFromUrl(ListView listBox, string url, string fileName)
+        {
+            listBox.Items.Clear();
+            WebClient client = new WebClient();
+
+            if (File.Exists(tempPath + fileName))
+                File.Delete(tempPath + fileName);
+
+            client.DownloadFile(url, tempPath + fileName);
+
+            foreach (var line in File.ReadAllLines(tempPath + fileName))
+                listBox.Items.Add(line);
+        }
+
+
         #region Events
         /**
          * Fully uninstalls a mod.
          */
         private void uninstallModStripMenuItem(object sender, EventArgs e)
         {
-            if (File.Exists(mbpath + "/mods/" + modlist.SelectedItem + ".xml"))
-                modUninstall(modlist.SelectedItem.ToString());
+            if (modlist.SelectedItems.Count > 0)
+                modUninstall(modlist.SelectedItems[0].Text.ToString());
             else
                 MessageBox.Show("Merci de cliquer sur le nom d'un mod puis ensuite d'essayer de le désinstaller.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -158,7 +175,7 @@ namespace modbrowser
          */
         private void uninstall(object sender, EventArgs e)
         {
-            modUninstall(modlist.SelectedItem.ToString());
+            modUninstall(modlist.SelectedItems[0].Text.ToString());
         }
 
         /**
@@ -183,17 +200,39 @@ namespace modbrowser
          */
         private void modSelected(object sender, EventArgs e)
         {
-            if (File.Exists(mbpath + "/mods/" + modlist.SelectedItem + ".xml"))
+            if (modlist.SelectedItems.Count > 0)
             {
-                updateModInfo(mbpath + "/mods/" + modlist.SelectedItem + ".xml");
-                mainPagePanel.Visible = false;
-                modInfo.Visible = true;
-                mainPageButton.Enabled = true;
+                if (File.Exists(mbpath + "/mods/" + modlist.SelectedItems[0].Text + ".xml"))
+                {
+                    updateModInfo(mbpath + "/mods/" + modlist.SelectedItems[0].Text + ".xml");
+                    mainPagePanel.Visible = false;
+                    modInfo.Visible = true;
+                    mainPageButton.Enabled = true;
+                }
+                else
+                {
+                    gotoMenu();
+                }
             }
-            else
+        }
+
+        private void buildImageList(string[] modmeta)
+        {
+            // Show the image
+            if (!File.Exists(Path.GetTempPath() + "mb_cache\\" + modmeta[0]))
             {
-                gotoMenu();
+                if (!Directory.Exists(Path.GetTempPath() + "mb_cache")) { Directory.CreateDirectory(Path.GetTempPath() + "mb_cache"); }
+                WebClient webClient = new WebClient();
+                try
+                {
+                    webClient.DownloadFile(modmeta[4], Path.GetTempPath() + "mb_cache\\" + modmeta[0]);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Vous devez être connecté à Internet pour récupérer les icônes des mods", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+            modIconsList.Images.Add(Image.FromFile(Path.GetTempPath() + "mb_cache\\" + modmeta[0]));
         }
 
         /**
@@ -260,7 +299,12 @@ namespace modbrowser
          * Reload the mod list.
          * Occurs when the reloadModList button is clicked.
          */
-        private void reloadModsList(object sender, EventArgs e)
+        public void reloadModsList(object sender, EventArgs e)
+        {
+            reloadModsListView();
+        }
+
+        public void reloadModsListView()
         {
             modlist.Items.Clear();
             ListMods();
@@ -285,15 +329,20 @@ namespace modbrowser
          */
         public void ListMods()
         {
+            modlist.Items.Clear();
+            modIconsList.Images.Clear();
             try
             {
-                nomod.Visible = true;
+                nomod.Text = "aucun mod";
+                int i = 0;
                 // For each file in instances path...
                 foreach (string file in System.IO.Directory.EnumerateFiles(mbpath + "\\mods"))
                 {
+                    i++;
                     string[] modmeta = DecodeXML(file);
-                    modlist.Items.Add(modmeta[0]);
-                    nomod.Visible = false;
+                    modlist.Items.Add(modmeta[0], i - 1);
+                    nomod.Text = "mods installés";
+                    buildImageList(modmeta);
                 }
             }
             catch (Exception) { }
@@ -432,8 +481,7 @@ namespace modbrowser
             else
                 MessageBox.Show("Ce mod est introuvable et va être supprimé de la liste.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            File.Delete(mbpath + "\\mods\\" + modlist.SelectedItem.ToString() + ".xml");
-            modlist.Items.Clear();
+            File.Delete(mbpath + "\\mods\\" + modlist.SelectedItems[0].Text.ToString() + ".xml");
             ListMods();
             MessageBox.Show("Le mod '" + modmeta[0] + "' a été supprimé avec succès.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -494,28 +542,9 @@ namespace modbrowser
             System.Diagnostics.Process.Start("http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.6.4-9.11.1.1345/forge-1.6.4-9.11.1.1345-installer-win.exe");
         }
 
-        private void modDescription_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void resizeModList(Object sender, EventArgs e)
         {
-            modlist.Size = new Size(150, this.Size.Height - 155);
+            modlist.Size = new Size(150, this.Size.Height - 200);
         }
-
-        private void searchButton_Click(object sender, EventArgs e)
-        {
-            if (searchBox.Text != "")
-                platformBrowser.Url = new Uri("http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview/search.php?s=" + searchBox.Text);
-            else
-                MessageBox.Show("Merci de spécifier un terme à rechercher.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private void cancelSearchButton_Click(object sender, EventArgs e)
-        {
-            platformBrowser.Url = new Uri("http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview/index.php");
-        }
-
     }
 }
