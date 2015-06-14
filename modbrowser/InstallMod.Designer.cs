@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstallMod));
-            this.hashBox = new System.Windows.Forms.GroupBox();
+            this.installBox = new System.Windows.Forms.GroupBox();
             this.modInfo = new System.Windows.Forms.Panel();
             this.modAuthor = new System.Windows.Forms.Label();
             this.modTitle = new System.Windows.Forms.Label();
@@ -48,29 +48,31 @@
             this.installStatus = new System.Windows.Forms.StatusStrip();
             this.installStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusBar = new System.Windows.Forms.ToolStripProgressBar();
-            this.hashBox.SuspendLayout();
+            this.installBox.SuspendLayout();
             this.modInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modIcon)).BeginInit();
             this.searchPanel.SuspendLayout();
             this.installStatus.SuspendLayout();
             this.SuspendLayout();
             // 
-            // hashBox
+            // installBox
             // 
-            this.hashBox.Controls.Add(this.modInfo);
-            this.hashBox.Controls.Add(this.installButton);
-            this.hashBox.Controls.Add(this.correspondingVersionsLabel);
-            this.hashBox.Controls.Add(this.installModLabel);
-            this.hashBox.Controls.Add(this.installVersionList);
-            this.hashBox.Controls.Add(this.installModList);
-            this.hashBox.Controls.Add(this.searchPanel);
-            this.hashBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hashBox.Location = new System.Drawing.Point(15, 12);
-            this.hashBox.Name = "hashBox";
-            this.hashBox.Size = new System.Drawing.Size(412, 319);
-            this.hashBox.TabIndex = 2;
-            this.hashBox.TabStop = false;
-            this.hashBox.Text = "Installation de mods";
+            this.installBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
+            this.installBox.Controls.Add(this.modInfo);
+            this.installBox.Controls.Add(this.installButton);
+            this.installBox.Controls.Add(this.correspondingVersionsLabel);
+            this.installBox.Controls.Add(this.installModLabel);
+            this.installBox.Controls.Add(this.installVersionList);
+            this.installBox.Controls.Add(this.installModList);
+            this.installBox.Controls.Add(this.searchPanel);
+            this.installBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.installBox.ForeColor = System.Drawing.Color.White;
+            this.installBox.Location = new System.Drawing.Point(15, 12);
+            this.installBox.Name = "installBox";
+            this.installBox.Size = new System.Drawing.Size(412, 333);
+            this.installBox.TabIndex = 2;
+            this.installBox.TabStop = false;
+            this.installBox.Text = "Installation de mods";
             // 
             // modInfo
             // 
@@ -78,7 +80,7 @@
             this.modInfo.Controls.Add(this.modTitle);
             this.modInfo.Controls.Add(this.modDescription);
             this.modInfo.Controls.Add(this.modIcon);
-            this.modInfo.Location = new System.Drawing.Point(6, 22);
+            this.modInfo.Location = new System.Drawing.Point(6, 17);
             this.modInfo.Name = "modInfo";
             this.modInfo.Size = new System.Drawing.Size(400, 297);
             this.modInfo.TabIndex = 10;
@@ -99,7 +101,7 @@
             // 
             this.modTitle.AutoSize = true;
             this.modTitle.Font = new System.Drawing.Font("Roboto Condensed", 18F);
-            this.modTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.modTitle.ForeColor = System.Drawing.Color.White;
             this.modTitle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.modTitle.Location = new System.Drawing.Point(82, 21);
             this.modTitle.Name = "modTitle";
@@ -142,9 +144,9 @@
             this.installButton.Font = new System.Drawing.Font("Roboto Condensed", 9F);
             this.installButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.installButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.installButton.Location = new System.Drawing.Point(245, 255);
+            this.installButton.Location = new System.Drawing.Point(216, 260);
             this.installButton.Name = "installButton";
-            this.installButton.Size = new System.Drawing.Size(148, 29);
+            this.installButton.Size = new System.Drawing.Size(177, 54);
             this.installButton.TabIndex = 17;
             this.installButton.Text = "INSTALLER";
             this.installButton.UseVisualStyleBackColor = false;
@@ -154,9 +156,9 @@
             // 
             this.correspondingVersionsLabel.AutoSize = true;
             this.correspondingVersionsLabel.Font = new System.Drawing.Font("Roboto Condensed", 9F);
-            this.correspondingVersionsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.correspondingVersionsLabel.ForeColor = System.Drawing.Color.White;
             this.correspondingVersionsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.correspondingVersionsLabel.Location = new System.Drawing.Point(232, 21);
+            this.correspondingVersionsLabel.Location = new System.Drawing.Point(213, 21);
             this.correspondingVersionsLabel.Name = "correspondingVersionsLabel";
             this.correspondingVersionsLabel.Size = new System.Drawing.Size(129, 16);
             this.correspondingVersionsLabel.TabIndex = 22;
@@ -166,7 +168,7 @@
             // 
             this.installModLabel.AutoSize = true;
             this.installModLabel.Font = new System.Drawing.Font("Roboto Condensed", 9F);
-            this.installModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.installModLabel.ForeColor = System.Drawing.Color.White;
             this.installModLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.installModLabel.Location = new System.Drawing.Point(17, 21);
             this.installModLabel.Name = "installModLabel";
@@ -180,10 +182,10 @@
             this.installVersionList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.installVersionList.Font = new System.Drawing.Font("Roboto Condensed Light", 11F);
             this.installVersionList.ForeColor = System.Drawing.Color.Black;
-            this.installVersionList.Location = new System.Drawing.Point(245, 40);
+            this.installVersionList.Location = new System.Drawing.Point(216, 42);
             this.installVersionList.MultiSelect = false;
             this.installVersionList.Name = "installVersionList";
-            this.installVersionList.Size = new System.Drawing.Size(161, 209);
+            this.installVersionList.Size = new System.Drawing.Size(177, 212);
             this.installVersionList.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.installVersionList.TabIndex = 20;
             this.installVersionList.UseCompatibleStateImageBehavior = false;
@@ -196,10 +198,10 @@
             this.installModList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.installModList.Font = new System.Drawing.Font("Roboto Condensed Light", 11F);
             this.installModList.ForeColor = System.Drawing.Color.Black;
-            this.installModList.Location = new System.Drawing.Point(20, 40);
+            this.installModList.Location = new System.Drawing.Point(20, 105);
             this.installModList.MultiSelect = false;
             this.installModList.Name = "installModList";
-            this.installModList.Size = new System.Drawing.Size(187, 210);
+            this.installModList.Size = new System.Drawing.Size(187, 209);
             this.installModList.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.installModList.TabIndex = 19;
             this.installModList.UseCompatibleStateImageBehavior = false;
@@ -213,9 +215,9 @@
             this.searchPanel.Controls.Add(this.searchButton);
             this.searchPanel.Controls.Add(this.searchBox);
             this.searchPanel.Controls.Add(this.searchLabel);
-            this.searchPanel.Location = new System.Drawing.Point(20, 255);
+            this.searchPanel.Location = new System.Drawing.Point(20, 42);
             this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Size = new System.Drawing.Size(203, 58);
+            this.searchPanel.Size = new System.Drawing.Size(187, 58);
             this.searchPanel.TabIndex = 18;
             // 
             // cancelSearchButton
@@ -225,7 +227,7 @@
             this.cancelSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelSearchButton.Font = new System.Drawing.Font("Roboto Condensed", 8.25F);
             this.cancelSearchButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cancelSearchButton.Location = new System.Drawing.Point(111, 1);
+            this.cancelSearchButton.Location = new System.Drawing.Point(111, 3);
             this.cancelSearchButton.Name = "cancelSearchButton";
             this.cancelSearchButton.Size = new System.Drawing.Size(76, 24);
             this.cancelSearchButton.TabIndex = 14;
@@ -239,8 +241,9 @@
             this.searchButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(159)))), ((int)(((byte)(56)))));
             this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchButton.Font = new System.Drawing.Font("Roboto Condensed", 8.25F);
+            this.searchButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.searchButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.searchButton.Location = new System.Drawing.Point(73, 1);
+            this.searchButton.Location = new System.Drawing.Point(73, 3);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(32, 24);
             this.searchButton.TabIndex = 11;
@@ -250,9 +253,9 @@
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(16, 31);
+            this.searchBox.Location = new System.Drawing.Point(0, 32);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(171, 23);
+            this.searchBox.Size = new System.Drawing.Size(187, 23);
             this.searchBox.TabIndex = 13;
             // 
             // searchLabel
@@ -260,7 +263,7 @@
             this.searchLabel.AutoSize = true;
             this.searchLabel.Font = new System.Drawing.Font("Roboto Condensed", 9F);
             this.searchLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.searchLabel.Location = new System.Drawing.Point(13, 5);
+            this.searchLabel.Location = new System.Drawing.Point(3, 7);
             this.searchLabel.Name = "searchLabel";
             this.searchLabel.Size = new System.Drawing.Size(56, 16);
             this.searchLabel.TabIndex = 10;
@@ -271,14 +274,16 @@
             this.installStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.installStatusLabel,
             this.statusBar});
-            this.installStatus.Location = new System.Drawing.Point(0, 334);
+            this.installStatus.Location = new System.Drawing.Point(0, 357);
             this.installStatus.Name = "installStatus";
+            this.installStatus.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
             this.installStatus.Size = new System.Drawing.Size(440, 22);
             this.installStatus.TabIndex = 9;
             this.installStatus.Text = "statusStrip1";
             // 
             // installStatusLabel
             // 
+            this.installStatusLabel.BackColor = System.Drawing.SystemColors.Control;
             this.installStatusLabel.Font = new System.Drawing.Font("Roboto Condensed", 9F);
             this.installStatusLabel.Name = "installStatusLabel";
             this.installStatusLabel.Size = new System.Drawing.Size(57, 17);
@@ -294,16 +299,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 356);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
+            this.ClientSize = new System.Drawing.Size(440, 379);
             this.Controls.Add(this.installStatus);
-            this.Controls.Add(this.hashBox);
+            this.Controls.Add(this.installBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(456, 418);
+            this.MinimumSize = new System.Drawing.Size(456, 418);
             this.Name = "InstallMod";
             this.Text = "Installation de mods";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InstallMod_FormClosing);
-            this.hashBox.ResumeLayout(false);
-            this.hashBox.PerformLayout();
+            this.installBox.ResumeLayout(false);
+            this.installBox.PerformLayout();
             this.modInfo.ResumeLayout(false);
             this.modInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modIcon)).EndInit();
@@ -318,7 +326,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox hashBox;
+        private System.Windows.Forms.GroupBox installBox;
         private System.Windows.Forms.StatusStrip installStatus;
         private System.Windows.Forms.ToolStripStatusLabel installStatusLabel;
         private System.Windows.Forms.ToolStripProgressBar statusBar;

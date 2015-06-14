@@ -28,6 +28,16 @@ namespace modbrowser
         {
             InitializeComponent();
 
+            int selectedTheme = Convert.ToInt32(File.ReadAllText("color.txt"));
+            Main mainForm = new Main();
+            this.BackColor = mainForm.themeColors[0, selectedTheme];
+            installBox.BackColor = mainForm.themeColors[0, selectedTheme];
+            this.ForeColor = mainForm.themeColors[2, selectedTheme];
+            installBox.ForeColor = mainForm.themeColors[2, selectedTheme];
+            modTitle.ForeColor = mainForm.themeColors[2, selectedTheme];
+            correspondingVersionsLabel.ForeColor = mainForm.themeColors[2, selectedTheme];
+            installModLabel.ForeColor = mainForm.themeColors[2, selectedTheme];
+
             // Load mods
             updateListFromUrl(installModList, "http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview2/index.php", "modList.txt");
         }

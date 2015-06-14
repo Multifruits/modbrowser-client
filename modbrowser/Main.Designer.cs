@@ -485,6 +485,7 @@
             this.MainMenuStrip = this.menu;
             this.Name = "Main";
             this.ResizeEnd += new System.EventHandler(this.resizeModList);
+            this.Resize += new System.EventHandler(this.resizeModList);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.modActions.ResumeLayout(false);

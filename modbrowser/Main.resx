@@ -124,13 +124,58 @@
   <data name="menu.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Condensed, 9pt</value>
   </data>
+  <data name="menuItem_18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 22</value>
+  </data>
+  <data name="menuItem_18.Text" xml:space="preserve">
+    <value>1.8</value>
+  </data>
+  <data name="menuItem_1710.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 22</value>
+  </data>
+  <data name="menuItem_1710.Text" xml:space="preserve">
+    <value>1.7.10</value>
+  </data>
+  <data name="menuItem_164.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 22</value>
+  </data>
+  <data name="menuItem_164.Text" xml:space="preserve">
+    <value>1.6.4</value>
+  </data>
+  <data name="menuItem_other.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 22</value>
+  </data>
+  <data name="menuItem_other.Text" xml:space="preserve">
+    <value>Autre...</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="forgeInstallItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+F</value>
+  </data>
+  <data name="forgeInstallItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 22</value>
+  </data>
+  <data name="forgeInstallItem.Text" xml:space="preserve">
+    <value>Forge</value>
+  </data>
+  <data name="modInstallItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value />
+  </data>
+  <data name="modInstallItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+M</value>
+  </data>
+  <data name="modInstallItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 22</value>
+  </data>
+  <data name="modInstallItem.Text" xml:space="preserve">
+    <value>Mod</value>
+  </data>
   <data name="installMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 20</value>
   </data>
   <data name="installMenuItem.Text" xml:space="preserve">
     <value>Installation</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="settingsMenuButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Alt+S</value>
   </data>
@@ -139,6 +184,18 @@
   </data>
   <data name="settingsMenuButton.Text" xml:space="preserve">
     <value>Paramètres</value>
+  </data>
+  <data name="aboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="aboutMenuItem.Text" xml:space="preserve">
+    <value>A propos</value>
+  </data>
+  <data name="updateMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="updateMenuItem.Text" xml:space="preserve">
+    <value>Mises à jour</value>
   </data>
   <data name="helpMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 20</value>
@@ -171,78 +228,9 @@
   <data name="&gt;&gt;menu.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="forgeInstallItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+F</value>
-  </data>
-  <data name="forgeInstallItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 22</value>
-  </data>
-  <data name="forgeInstallItem.Text" xml:space="preserve">
-    <value>Forge</value>
-  </data>
-  <data name="menuItem_18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 22</value>
-  </data>
-  <data name="menuItem_18.Text" xml:space="preserve">
-    <value>1.8</value>
-  </data>
-  <data name="menuItem_1710.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 22</value>
-  </data>
-  <data name="menuItem_1710.Text" xml:space="preserve">
-    <value>1.7.10</value>
-  </data>
-  <data name="menuItem_164.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 22</value>
-  </data>
-  <data name="menuItem_164.Text" xml:space="preserve">
-    <value>1.6.4</value>
-  </data>
-  <data name="menuItem_other.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 22</value>
-  </data>
-  <data name="menuItem_other.Text" xml:space="preserve">
-    <value>Autre...</value>
-  </data>
-  <data name="modInstallItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value />
-  </data>
-  <data name="modInstallItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+M</value>
-  </data>
-  <data name="modInstallItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 22</value>
-  </data>
-  <data name="modInstallItem.Text" xml:space="preserve">
-    <value>Mod</value>
-  </data>
-  <data name="aboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
-  </data>
-  <data name="aboutMenuItem.Text" xml:space="preserve">
-    <value>A propos</value>
-  </data>
-  <data name="updateMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
-  </data>
-  <data name="updateMenuItem.Text" xml:space="preserve">
-    <value>Mises à jour</value>
-  </data>
   <metadata name="modActions.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>100, 17</value>
   </metadata>
-  <data name="modActions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 48</value>
-  </data>
-  <data name="modActions.Text" xml:space="preserve">
-    <value>Actions</value>
-  </data>
-  <data name="&gt;&gt;modActions.Name" xml:space="preserve">
-    <value>modActions</value>
-  </data>
-  <data name="&gt;&gt;modActions.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="uninstallStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 22</value>
   </data>
@@ -254,6 +242,18 @@
   </data>
   <data name="updateStripMenuItem.Text" xml:space="preserve">
     <value>Mettre à jour</value>
+  </data>
+  <data name="modActions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 48</value>
+  </data>
+  <data name="modActions.Text" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="&gt;&gt;modActions.Name" xml:space="preserve">
+    <value>modActions</value>
+  </data>
+  <data name="&gt;&gt;modActions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="nomod.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -378,42 +378,6 @@
   <data name="&gt;&gt;listButtonsPanel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;modlist.Name" xml:space="preserve">
-    <value>modlist</value>
-  </data>
-  <data name="&gt;&gt;modlist.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modlist.Parent" xml:space="preserve">
-    <value>modlistPanel</value>
-  </data>
-  <data name="&gt;&gt;modlist.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="modlistPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="modlistPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="modlistPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 461</value>
-  </data>
-  <data name="modlistPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;modlistPanel.Name" xml:space="preserve">
-    <value>modlistPanel</value>
-  </data>
-  <data name="&gt;&gt;modlistPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modlistPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;modlistPanel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="modlist.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Condensed Light, 11pt</value>
   </data>
@@ -431,7 +395,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACI
-        CAAAAk1TRnQBSQFMAwEBAAEgAQABIAEAARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        CAAAAk1TRnQBSQFMAwEBAAEwAQABMAEAARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
         AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
         AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
         AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
@@ -484,6 +448,30 @@
   </data>
   <data name="&gt;&gt;modlist.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="modlistPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="modlistPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="modlistPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 461</value>
+  </data>
+  <data name="modlistPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;modlistPanel.Name" xml:space="preserve">
+    <value>modlistPanel</value>
+  </data>
+  <data name="&gt;&gt;modlistPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;modlistPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;modlistPanel.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="mbTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -553,63 +541,6 @@
   </data>
   <data name="githubPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_1.Name" xml:space="preserve">
-    <value>githubLabel_1</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_1.Parent" xml:space="preserve">
-    <value>githubPanel</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;githubIcon.Name" xml:space="preserve">
-    <value>githubIcon</value>
-  </data>
-  <data name="&gt;&gt;githubIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;githubIcon.Parent" xml:space="preserve">
-    <value>githubPanel</value>
-  </data>
-  <data name="&gt;&gt;githubIcon.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_2.Name" xml:space="preserve">
-    <value>githubLabel_2</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_2.Parent" xml:space="preserve">
-    <value>githubPanel</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="githubPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>393, 385</value>
-  </data>
-  <data name="githubPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 76</value>
-  </data>
-  <data name="githubPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;githubPanel.Name" xml:space="preserve">
-    <value>githubPanel</value>
-  </data>
-  <data name="&gt;&gt;githubPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;githubPanel.Parent" xml:space="preserve">
-    <value>mainPagePanel</value>
-  </data>
-  <data name="&gt;&gt;githubPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="githubLabel_1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -759,122 +690,29 @@
   <data name="&gt;&gt;githubLabel_2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="statsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="githubPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>393, 385</value>
   </data>
-  <data name="&gt;&gt;modNumberPanel.Name" xml:space="preserve">
-    <value>modNumberPanel</value>
+  <data name="githubPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 76</value>
   </data>
-  <data name="&gt;&gt;modNumberPanel.Type" xml:space="preserve">
+  <data name="githubPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;githubPanel.Name" xml:space="preserve">
+    <value>githubPanel</value>
+  </data>
+  <data name="&gt;&gt;githubPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;modNumberPanel.Parent" xml:space="preserve">
-    <value>statsPanel</value>
-  </data>
-  <data name="&gt;&gt;modNumberPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;modNumber.Name" xml:space="preserve">
-    <value>modNumber</value>
-  </data>
-  <data name="&gt;&gt;modNumber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modNumber.Parent" xml:space="preserve">
-    <value>statsPanel</value>
-  </data>
-  <data name="&gt;&gt;modNumber.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;platformStatusPanel.Name" xml:space="preserve">
-    <value>platformStatusPanel</value>
-  </data>
-  <data name="&gt;&gt;platformStatusPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;platformStatusPanel.Parent" xml:space="preserve">
-    <value>statsPanel</value>
-  </data>
-  <data name="&gt;&gt;platformStatusPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;platformStatus.Name" xml:space="preserve">
-    <value>platformStatus</value>
-  </data>
-  <data name="&gt;&gt;platformStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;platformStatus.Parent" xml:space="preserve">
-    <value>statsPanel</value>
-  </data>
-  <data name="&gt;&gt;platformStatus.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="statsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 27</value>
-  </data>
-  <data name="statsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 104</value>
-  </data>
-  <data name="statsPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;statsPanel.Name" xml:space="preserve">
-    <value>statsPanel</value>
-  </data>
-  <data name="&gt;&gt;statsPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statsPanel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;githubPanel.Parent" xml:space="preserve">
     <value>mainPagePanel</value>
   </data>
-  <data name="&gt;&gt;statsPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;verifyModNumber.Name" xml:space="preserve">
-    <value>verifyModNumber</value>
-  </data>
-  <data name="&gt;&gt;verifyModNumber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;verifyModNumber.Parent" xml:space="preserve">
-    <value>modNumberPanel</value>
-  </data>
-  <data name="&gt;&gt;verifyModNumber.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;modNumberLabel.Name" xml:space="preserve">
-    <value>modNumberLabel</value>
-  </data>
-  <data name="&gt;&gt;modNumberLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modNumberLabel.Parent" xml:space="preserve">
-    <value>modNumberPanel</value>
-  </data>
-  <data name="&gt;&gt;modNumberLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="modNumberPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="modNumberPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 75</value>
-  </data>
-  <data name="modNumberPanel.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;githubPanel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;modNumberPanel.Name" xml:space="preserve">
-    <value>modNumberPanel</value>
-  </data>
-  <data name="&gt;&gt;modNumberPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modNumberPanel.Parent" xml:space="preserve">
-    <value>statsPanel</value>
-  </data>
-  <data name="&gt;&gt;modNumberPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="statsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="verifyModNumber.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -939,6 +777,27 @@
   <data name="&gt;&gt;modNumberLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="modNumberPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="modNumberPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 75</value>
+  </data>
+  <data name="modNumberPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;modNumberPanel.Name" xml:space="preserve">
+    <value>modNumberPanel</value>
+  </data>
+  <data name="&gt;&gt;modNumberPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;modNumberPanel.Parent" xml:space="preserve">
+    <value>statsPanel</value>
+  </data>
+  <data name="&gt;&gt;modNumberPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="modNumber.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -971,51 +830,6 @@
   </data>
   <data name="&gt;&gt;modNumber.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;verifyPlatformStatus.Name" xml:space="preserve">
-    <value>verifyPlatformStatus</value>
-  </data>
-  <data name="&gt;&gt;verifyPlatformStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;verifyPlatformStatus.Parent" xml:space="preserve">
-    <value>platformStatusPanel</value>
-  </data>
-  <data name="&gt;&gt;verifyPlatformStatus.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;platformStatusLabel.Name" xml:space="preserve">
-    <value>platformStatusLabel</value>
-  </data>
-  <data name="&gt;&gt;platformStatusLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;platformStatusLabel.Parent" xml:space="preserve">
-    <value>platformStatusPanel</value>
-  </data>
-  <data name="&gt;&gt;platformStatusLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="platformStatusPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 3</value>
-  </data>
-  <data name="platformStatusPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 75</value>
-  </data>
-  <data name="platformStatusPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;platformStatusPanel.Name" xml:space="preserve">
-    <value>platformStatusPanel</value>
-  </data>
-  <data name="&gt;&gt;platformStatusPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;platformStatusPanel.Parent" xml:space="preserve">
-    <value>statsPanel</value>
-  </data>
-  <data name="&gt;&gt;platformStatusPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="verifyPlatformStatus.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1080,6 +894,27 @@
   <data name="&gt;&gt;platformStatusLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="platformStatusPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 3</value>
+  </data>
+  <data name="platformStatusPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 75</value>
+  </data>
+  <data name="platformStatusPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;platformStatusPanel.Name" xml:space="preserve">
+    <value>platformStatusPanel</value>
+  </data>
+  <data name="&gt;&gt;platformStatusPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;platformStatusPanel.Parent" xml:space="preserve">
+    <value>statsPanel</value>
+  </data>
+  <data name="&gt;&gt;platformStatusPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="platformStatus.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1113,152 +948,29 @@
   <data name="&gt;&gt;platformStatus.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;plusonePanel.Name" xml:space="preserve">
-    <value>plusonePanel</value>
+  <data name="statsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 27</value>
   </data>
-  <data name="&gt;&gt;plusonePanel.Type" xml:space="preserve">
+  <data name="statsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 104</value>
+  </data>
+  <data name="statsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;statsPanel.Name" xml:space="preserve">
+    <value>statsPanel</value>
+  </data>
+  <data name="&gt;&gt;statsPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;plusonePanel.Parent" xml:space="preserve">
-    <value>modInfo</value>
+  <data name="&gt;&gt;statsPanel.Parent" xml:space="preserve">
+    <value>mainPagePanel</value>
   </data>
-  <data name="&gt;&gt;plusonePanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;modActionsPanel.Name" xml:space="preserve">
-    <value>modActionsPanel</value>
-  </data>
-  <data name="&gt;&gt;modActionsPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modActionsPanel.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="&gt;&gt;modActionsPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;modAuthor.Name" xml:space="preserve">
-    <value>modAuthor</value>
-  </data>
-  <data name="&gt;&gt;modAuthor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modAuthor.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="&gt;&gt;modAuthor.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;modTitle.Name" xml:space="preserve">
-    <value>modTitle</value>
-  </data>
-  <data name="&gt;&gt;modTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modTitle.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="&gt;&gt;modTitle.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;modDescription.Name" xml:space="preserve">
-    <value>modDescription</value>
-  </data>
-  <data name="&gt;&gt;modDescription.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modDescription.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="&gt;&gt;modDescription.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;modIcon.Name" xml:space="preserve">
-    <value>modIcon</value>
-  </data>
-  <data name="&gt;&gt;modIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modIcon.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="&gt;&gt;modIcon.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="modInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="modInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="modInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 24</value>
-  </data>
-  <data name="modInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>609, 437</value>
-  </data>
-  <data name="modInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;modInfo.Name" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="&gt;&gt;modInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modInfo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;modInfo.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;statsPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="plusonePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;plusone.Name" xml:space="preserve">
-    <value>plusone</value>
-  </data>
-  <data name="&gt;&gt;plusone.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;plusone.Parent" xml:space="preserve">
-    <value>plusonePanel</value>
-  </data>
-  <data name="&gt;&gt;plusone.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;plusoneNumber.Name" xml:space="preserve">
-    <value>plusoneNumber</value>
-  </data>
-  <data name="&gt;&gt;plusoneNumber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;plusoneNumber.Parent" xml:space="preserve">
-    <value>plusonePanel</value>
-  </data>
-  <data name="&gt;&gt;plusoneNumber.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="plusonePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 397</value>
-  </data>
-  <data name="plusonePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 40</value>
-  </data>
-  <data name="plusonePanel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;plusonePanel.Name" xml:space="preserve">
-    <value>plusonePanel</value>
-  </data>
-  <data name="&gt;&gt;plusonePanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;plusonePanel.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="&gt;&gt;plusonePanel.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="plusone.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1320,53 +1032,29 @@
   <data name="&gt;&gt;plusoneNumber.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="modActionsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="plusonePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>480, 397</value>
   </data>
-  <data name="&gt;&gt;uninstallMod.Name" xml:space="preserve">
-    <value>uninstallMod</value>
+  <data name="plusonePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 40</value>
   </data>
-  <data name="&gt;&gt;uninstallMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="plusonePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="&gt;&gt;uninstallMod.Parent" xml:space="preserve">
-    <value>modActionsPanel</value>
+  <data name="&gt;&gt;plusonePanel.Name" xml:space="preserve">
+    <value>plusonePanel</value>
   </data>
-  <data name="&gt;&gt;uninstallMod.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;updateMod.Name" xml:space="preserve">
-    <value>updateMod</value>
-  </data>
-  <data name="&gt;&gt;updateMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateMod.Parent" xml:space="preserve">
-    <value>modActionsPanel</value>
-  </data>
-  <data name="&gt;&gt;updateMod.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="modActionsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>453, 10</value>
-  </data>
-  <data name="modActionsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 79</value>
-  </data>
-  <data name="modActionsPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;modActionsPanel.Name" xml:space="preserve">
-    <value>modActionsPanel</value>
-  </data>
-  <data name="&gt;&gt;modActionsPanel.Type" xml:space="preserve">
+  <data name="&gt;&gt;plusonePanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;modActionsPanel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;plusonePanel.Parent" xml:space="preserve">
     <value>modInfo</value>
   </data>
-  <data name="&gt;&gt;modActionsPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;plusonePanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="modActionsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="uninstallMod.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1432,6 +1120,27 @@
     <value>modActionsPanel</value>
   </data>
   <data name="&gt;&gt;updateMod.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="modActionsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>466, 6</value>
+  </data>
+  <data name="modActionsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 79</value>
+  </data>
+  <data name="modActionsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;modActionsPanel.Name" xml:space="preserve">
+    <value>modActionsPanel</value>
+  </data>
+  <data name="&gt;&gt;modActionsPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;modActionsPanel.Parent" xml:space="preserve">
+    <value>modInfo</value>
+  </data>
+  <data name="&gt;&gt;modActionsPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="modAuthor.AutoSize" type="System.Boolean, mscorlib">
@@ -1531,7 +1240,7 @@
     <value>NoControl</value>
   </data>
   <data name="modIcon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 18</value>
+    <value>21, 15</value>
   </data>
   <data name="modIcon.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 64</value>
@@ -1553,6 +1262,33 @@
   </data>
   <data name="&gt;&gt;modIcon.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="modInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="modInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 9pt</value>
+  </data>
+  <data name="modInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 24</value>
+  </data>
+  <data name="modInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>609, 437</value>
+  </data>
+  <data name="modInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;modInfo.Name" xml:space="preserve">
+    <value>modInfo</value>
+  </data>
+  <data name="&gt;&gt;modInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;modInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;modInfo.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="mainPagePanel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

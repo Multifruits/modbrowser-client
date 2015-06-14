@@ -57,8 +57,11 @@ namespace modbrowser
                 {
                     System.IO.File.WriteAllText("config.txt", minecraftPathBox.Text);
                     System.IO.File.WriteAllText("color.txt", colorComboBox.SelectedIndex.ToString());
-                    MessageBox.Show("Paramètres de modbrowser sauvegardés avec succès. Merci de relancer le logiciel pour que les modifications soient prises en compte.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
+                    MessageBox.Show("Paramètres de modbrowser sauvegardés avec succès. Le logiciel va redémarrer pour que les modifications soient prises en compte.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Application.Restart();
+                    Environment.Exit(0);
+                    Main mainForm = new Main();
+                    mainForm.Show();
                 }
                 else
                 {
