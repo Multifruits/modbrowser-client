@@ -323,10 +323,9 @@ namespace modbrowser
         #endregion
 
         #region Functions
-        /**
-         * Lists modbrowser-known mods.
-         * @return null
-         */
+        /// <summary>
+        /// Lists modbrowser know mods.
+        /// </summary>
         public void ListMods()
         {
             modlist.Items.Clear();
@@ -349,9 +348,10 @@ namespace modbrowser
             gotoMenu();
         }
 
-        /**
-         * Pings an URL
-         */
+        /// <summary>
+        /// Ping an URL.
+        /// </summary>
+        /// <param name="url">The URL to ping.</param>
         private void pingTest(string url)
         {
             // Ping the platform
@@ -382,9 +382,9 @@ namespace modbrowser
             }
         }
 
-        /**
-         * What to do when the mod installation button is clicked
-         */
+        /// <summary>
+        /// What to do when the mod installation button is clicked
+        /// </summary>
         private void installMod(object sender, EventArgs e)
         {
             // Shows mod installation form
@@ -392,10 +392,11 @@ namespace modbrowser
             installModForm.Show();
         }
 
-        /**
-         * Decodes a *.xml file.
-         * @return the decoded array
-         */
+        /// <summary>
+        ///Decodes a *.xml file.
+        /// </summary>
+        /// <param name="filepath">File to decode.</param>
+        /// <returns>The decoded array</returns>
         public string[] DecodeXML(string filepath)
         {
             try
@@ -427,9 +428,10 @@ namespace modbrowser
             }
         }
 
-        /**
-         * Updates the mod info
-         */
+        /// <summary>
+        /// Update mod's info
+        /// </summary>
+        /// <param name="path"></param>
         public void updateModInfo(string path)
         {
             // Get mod info
@@ -457,9 +459,9 @@ namespace modbrowser
             modIcon.ImageLocation = Path.GetTempPath() + "mb_cache\\" + modmeta[0];
         }
 
-        /**
-         * Updates mod number stat
-         */
+        /// <summary>
+        /// Updates a mod number state
+        /// </summary>
         public void updateModNumber()
         {
             int modnumber = 0;
@@ -470,9 +472,10 @@ namespace modbrowser
             modNumberLabel.Text = modnumber.ToString();
         }
 
-        /**
-         * Fully uninstalls a mod
-         */
+        /// <summary>
+        /// Fully uninstall a mod
+        /// </summary>
+        /// <param name="modName">The mod to uninstall.</param>
         public void modUninstall(String modName)
         {
             string[] modmeta = DecodeXML(mbpath + "\\mods\\" + modName + ".xml");
@@ -486,9 +489,9 @@ namespace modbrowser
             MessageBox.Show("Le mod '" + modmeta[0] + "' a été supprimé avec succès.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        /**
-         * Hide the modInfo panel and shows the mainPage panel
-         */
+        /// <summary>
+        /// Hide the modInfo panel and shows the mainPage panel
+        /// </summary>
         public void gotoMenu()
         {
             mainPagePanel.Visible = true;
@@ -496,9 +499,9 @@ namespace modbrowser
             mainPageButton.Enabled = false;
         }
 
-        /**
-         * Updates mod version
-         */
+        /// <summary>
+        /// Updates mod version
+        /// </summary>
         private void updateModVersion()
         {
             // Shows TODO message
@@ -506,36 +509,36 @@ namespace modbrowser
         }
         #endregion
 
-        /**
-         * Open Forge website
-         */
+        /// <summary>
+        /// Open Forge's website.
+        /// </summary>
         private void menuItem_other_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Dans le site qui va s'ouvrir, sélectionnez la version de Minecraft que vous voulez modder, puis cliquez sur l\'Installer-win qui correspond à votre version.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             System.Diagnostics.Process.Start("http://files.minecraftforge.net/#Downloads");
         }
 
-        /**
-         * Download Forge 1.8
-         */
+        /// <summary>
+        /// Downloads Forge 1.8
+        /// </summary>
         private void menuItem_18_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Téléchargez le fichier qui va apparaître et ouvrez le.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             System.Diagnostics.Process.Start("http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.1.1398/forge-1.8-11.14.1.1398-installer-win.exe");
         }
 
-        /**
-         * Download Forge 1.7.10
-         */
+        /// <summary>
+        /// Downloads Forge 1.7.10
+        /// </summary>
         private void menuItem_1710_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Téléchargez le fichier qui va apparaître et ouvrez le.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             System.Diagnostics.Process.Start("http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.7.10-10.13.3.1399-1.7.10/forge-1.7.10-10.13.3.1399-1.7.10-installer-win.exe");
         }
 
-        /**
-         * Download Forge 1.6.4
-         */
+        /// <summary>
+        /// Downloads Forge 1.6.4
+        /// </summary>
         private void menuItem_164_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Téléchargez le fichier qui va apparaître et ouvrez le.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
