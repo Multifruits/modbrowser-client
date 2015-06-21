@@ -38,6 +38,9 @@
     <StartupObject>modbrowser.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:\Desktop\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -68,6 +71,13 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Plugins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plugins.Designer.cs">
+      <DependentUpon>Plugins.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins.resx">
+      <DependentUpon>Plugins.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.nqo.resx">
       <DependentUpon>Settings.cs</DependentUpon>

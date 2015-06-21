@@ -150,7 +150,7 @@
             this.installButton.TabIndex = 17;
             this.installButton.Text = "INSTALLER";
             this.installButton.UseVisualStyleBackColor = false;
-            this.installButton.Click += new System.EventHandler(this.modInstall);
+            this.installButton.Click += new System.EventHandler(this.installButton_Clicked);
             // 
             // correspondingVersionsLabel
             // 
@@ -309,7 +309,7 @@
             this.MinimumSize = new System.Drawing.Size(456, 418);
             this.Name = "InstallMod";
             this.Text = "Installation de mods";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InstallMod_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.installationClosing);
             this.installBox.ResumeLayout(false);
             this.installBox.PerformLayout();
             this.modInfo.ResumeLayout(false);

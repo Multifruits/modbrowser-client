@@ -39,9 +39,12 @@
             this.menuItem_other = new System.Windows.Forms.ToolStripMenuItem();
             this.modInstallItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsMenuButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.modbrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionnaireDePluginsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pluginsList = new System.Windows.Forms.ToolStripComboBox();
             this.modActions = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.uninstallStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,15 +61,6 @@
             this.githubLabel_1 = new System.Windows.Forms.Label();
             this.githubIcon = new System.Windows.Forms.PictureBox();
             this.githubLabel_2 = new System.Windows.Forms.Label();
-            this.statsPanel = new System.Windows.Forms.Panel();
-            this.modNumberPanel = new System.Windows.Forms.Panel();
-            this.verifyModNumber = new System.Windows.Forms.Button();
-            this.modNumberLabel = new System.Windows.Forms.Label();
-            this.modNumber = new System.Windows.Forms.Label();
-            this.platformStatusPanel = new System.Windows.Forms.Panel();
-            this.verifyPlatformStatus = new System.Windows.Forms.Button();
-            this.platformStatusLabel = new System.Windows.Forms.Label();
-            this.platformStatus = new System.Windows.Forms.Label();
             this.modInfo = new System.Windows.Forms.Panel();
             this.plusonePanel = new System.Windows.Forms.Panel();
             this.plusone = new System.Windows.Forms.Button();
@@ -86,9 +80,6 @@
             this.modlistPanel.SuspendLayout();
             this.githubPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.githubIcon)).BeginInit();
-            this.statsPanel.SuspendLayout();
-            this.modNumberPanel.SuspendLayout();
-            this.platformStatusPanel.SuspendLayout();
             this.modInfo.SuspendLayout();
             this.plusonePanel.SuspendLayout();
             this.modActionsPanel.SuspendLayout();
@@ -102,7 +93,8 @@
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.installMenuItem,
             this.settingsMenuButton,
-            this.helpMenuItem});
+            this.helpMenuItem,
+            this.pluginsList});
             this.menu.Name = "menu";
             // 
             // installMenuItem
@@ -110,8 +102,8 @@
             this.installMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.forgeInstallItem,
             this.modInstallItem});
-            this.installMenuItem.Name = "installMenuItem";
             resources.ApplyResources(this.installMenuItem, "installMenuItem");
+            this.installMenuItem.Name = "installMenuItem";
             // 
             // forgeInstallItem
             // 
@@ -155,9 +147,24 @@
             // 
             // settingsMenuButton
             // 
+            this.settingsMenuButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modbrowserToolStripMenuItem,
+            this.gestionnaireDePluginsToolStripMenuItem});
             this.settingsMenuButton.Name = "settingsMenuButton";
             resources.ApplyResources(this.settingsMenuButton, "settingsMenuButton");
             this.settingsMenuButton.Click += new System.EventHandler(this.installModMenuButton);
+            // 
+            // modbrowserToolStripMenuItem
+            // 
+            this.modbrowserToolStripMenuItem.Name = "modbrowserToolStripMenuItem";
+            resources.ApplyResources(this.modbrowserToolStripMenuItem, "modbrowserToolStripMenuItem");
+            this.modbrowserToolStripMenuItem.Click += new System.EventHandler(this.modbrowserToolStripMenuItem_Click);
+            // 
+            // gestionnaireDePluginsToolStripMenuItem
+            // 
+            this.gestionnaireDePluginsToolStripMenuItem.Name = "gestionnaireDePluginsToolStripMenuItem";
+            resources.ApplyResources(this.gestionnaireDePluginsToolStripMenuItem, "gestionnaireDePluginsToolStripMenuItem");
+            this.gestionnaireDePluginsToolStripMenuItem.Click += new System.EventHandler(this.gestionnaireDePluginsToolStripMenuItem_Click);
             // 
             // helpMenuItem
             // 
@@ -178,6 +185,13 @@
             this.updateMenuItem.Name = "updateMenuItem";
             resources.ApplyResources(this.updateMenuItem, "updateMenuItem");
             this.updateMenuItem.Click += new System.EventHandler(this.updatesButton);
+            // 
+            // pluginsList
+            // 
+            this.pluginsList.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.pluginsList.Name = "pluginsList";
+            resources.ApplyResources(this.pluginsList, "pluginsList");
+            this.pluginsList.SelectedIndexChanged += new System.EventHandler(this.pluginsList_Click);
             // 
             // modActions
             // 
@@ -300,77 +314,6 @@
             resources.ApplyResources(this.githubLabel_2, "githubLabel_2");
             this.githubLabel_2.Name = "githubLabel_2";
             // 
-            // statsPanel
-            // 
-            resources.ApplyResources(this.statsPanel, "statsPanel");
-            this.statsPanel.Controls.Add(this.modNumberPanel);
-            this.statsPanel.Controls.Add(this.modNumber);
-            this.statsPanel.Controls.Add(this.platformStatusPanel);
-            this.statsPanel.Controls.Add(this.platformStatus);
-            this.statsPanel.Name = "statsPanel";
-            // 
-            // modNumberPanel
-            // 
-            this.modNumberPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
-            this.modNumberPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.modNumberPanel.Controls.Add(this.verifyModNumber);
-            this.modNumberPanel.Controls.Add(this.modNumberLabel);
-            resources.ApplyResources(this.modNumberPanel, "modNumberPanel");
-            this.modNumberPanel.Name = "modNumberPanel";
-            // 
-            // verifyModNumber
-            // 
-            this.verifyModNumber.BackColor = System.Drawing.SystemColors.Control;
-            this.verifyModNumber.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            resources.ApplyResources(this.verifyModNumber, "verifyModNumber");
-            this.verifyModNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.verifyModNumber.Name = "verifyModNumber";
-            this.verifyModNumber.UseVisualStyleBackColor = false;
-            this.verifyModNumber.Click += new System.EventHandler(this.modNumberButton);
-            // 
-            // modNumberLabel
-            // 
-            resources.ApplyResources(this.modNumberLabel, "modNumberLabel");
-            this.modNumberLabel.ForeColor = System.Drawing.Color.White;
-            this.modNumberLabel.Name = "modNumberLabel";
-            // 
-            // modNumber
-            // 
-            resources.ApplyResources(this.modNumber, "modNumber");
-            this.modNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.modNumber.Name = "modNumber";
-            // 
-            // platformStatusPanel
-            // 
-            this.platformStatusPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.platformStatusPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.platformStatusPanel.Controls.Add(this.verifyPlatformStatus);
-            this.platformStatusPanel.Controls.Add(this.platformStatusLabel);
-            resources.ApplyResources(this.platformStatusPanel, "platformStatusPanel");
-            this.platformStatusPanel.Name = "platformStatusPanel";
-            // 
-            // verifyPlatformStatus
-            // 
-            this.verifyPlatformStatus.BackColor = System.Drawing.SystemColors.Control;
-            this.verifyPlatformStatus.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            resources.ApplyResources(this.verifyPlatformStatus, "verifyPlatformStatus");
-            this.verifyPlatformStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.verifyPlatformStatus.Name = "verifyPlatformStatus";
-            this.verifyPlatformStatus.UseVisualStyleBackColor = false;
-            this.verifyPlatformStatus.Click += new System.EventHandler(this.platformStatusButton);
-            // 
-            // platformStatusLabel
-            // 
-            resources.ApplyResources(this.platformStatusLabel, "platformStatusLabel");
-            this.platformStatusLabel.ForeColor = System.Drawing.Color.White;
-            this.platformStatusLabel.Name = "platformStatusLabel";
-            // 
-            // platformStatus
-            // 
-            resources.ApplyResources(this.platformStatus, "platformStatus");
-            this.platformStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.platformStatus.Name = "platformStatus";
-            // 
             // modInfo
             // 
             this.modInfo.BackColor = System.Drawing.SystemColors.Control;
@@ -461,7 +404,6 @@
             resources.ApplyResources(this.mainPagePanel, "mainPagePanel");
             this.mainPagePanel.BackColor = System.Drawing.SystemColors.Control;
             this.mainPagePanel.Controls.Add(this.platformBrowser);
-            this.mainPagePanel.Controls.Add(this.statsPanel);
             this.mainPagePanel.Controls.Add(this.githubPanel);
             this.mainPagePanel.Controls.Add(this.mbVersion);
             this.mainPagePanel.Controls.Add(this.mbTitle);
@@ -495,10 +437,6 @@
             this.githubPanel.ResumeLayout(false);
             this.githubPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.githubIcon)).EndInit();
-            this.statsPanel.ResumeLayout(false);
-            this.statsPanel.PerformLayout();
-            this.modNumberPanel.ResumeLayout(false);
-            this.platformStatusPanel.ResumeLayout(false);
             this.modInfo.ResumeLayout(false);
             this.modInfo.PerformLayout();
             this.plusonePanel.ResumeLayout(false);
@@ -541,15 +479,6 @@
         private System.Windows.Forms.Label githubLabel_1;
         private System.Windows.Forms.PictureBox githubIcon;
         private System.Windows.Forms.Label githubLabel_2;
-        private System.Windows.Forms.Panel statsPanel;
-        private System.Windows.Forms.Panel modNumberPanel;
-        private System.Windows.Forms.Button verifyModNumber;
-        private System.Windows.Forms.Label modNumberLabel;
-        private System.Windows.Forms.Label modNumber;
-        private System.Windows.Forms.Panel platformStatusPanel;
-        private System.Windows.Forms.Button verifyPlatformStatus;
-        private System.Windows.Forms.Label platformStatusLabel;
-        private System.Windows.Forms.Label platformStatus;
         private System.Windows.Forms.Panel modInfo;
         private System.Windows.Forms.Panel plusonePanel;
         private System.Windows.Forms.Button plusone;
@@ -563,6 +492,9 @@
         private System.Windows.Forms.PictureBox modIcon;
         private System.Windows.Forms.Panel mainPagePanel;
         private System.Windows.Forms.WebBrowser platformBrowser;
+        private System.Windows.Forms.ToolStripMenuItem modbrowserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionnaireDePluginsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox pluginsList;
     }
 }
 
