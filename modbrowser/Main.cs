@@ -122,19 +122,14 @@ namespace modbrowser
             if(!Directory.Exists(Path.GetTempPath() + "mb_cache"))
                 Directory.CreateDirectory(Path.GetTempPath() + "mb_cache");
 
-            if (!Directory.Exists(@"\\plugins"))
-                Directory.CreateDirectory(@"\\plugins");
+            if (!Directory.Exists(@"plugins"))
+                Directory.CreateDirectory(@"plugins");
 
             // Set useful variables
             mbpath = Directory.GetCurrentDirectory();
-            minecraftpath = File.ReadAllText("config.txt");
 
             // Load stats menu informations
-            mbVersion.Text = "release v1.1";
-
-            // Load mods and plugins
-            ListMods();
-            ListPlugins();
+            mbVersion.Text = "v2.0-alpha.1";
 
             // Apply Material Design colors
             int selectedTheme = Convert.ToInt32(File.ReadAllText("color.txt"));
@@ -143,6 +138,10 @@ namespace modbrowser
             listButtonsPanel.BackColor = themeColors[1, selectedTheme];
             nomod.ForeColor = themeColors[2, selectedTheme];
             modlist.ForeColor = themeColors[2, selectedTheme];
+
+            // Load mods and plugins
+            ListMods();
+            ListPlugins();
         }
 
 
