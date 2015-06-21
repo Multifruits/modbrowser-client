@@ -38,16 +38,16 @@ namespace modbrowser
             #region Apply Material Design colors
             int selectedTheme = Convert.ToInt32(File.ReadAllText("color.txt"));
             this.BackColor = mainForm.themeColors[0, selectedTheme];
-            this.ForeColor = mainForm.themeColors[2, selectedTheme];
-            installBox.BackColor = mainForm.themeColors[0, selectedTheme];
             installBox.ForeColor = mainForm.themeColors[2, selectedTheme];
+            modDescription.BackColor = mainForm.themeColors[0, selectedTheme];
+            modDescription.ForeColor = mainForm.themeColors[2, selectedTheme];
             modTitle.ForeColor = mainForm.themeColors[2, selectedTheme];
             installModLabel.ForeColor = mainForm.themeColors[2, selectedTheme];
             correspondingVersionsLabel.ForeColor = mainForm.themeColors[2, selectedTheme];
             #endregion
 
             // Update mods list
-            updateListFromUrl(installModList, "http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview2/index.php", "modList.txt");
+            updateListFromUrl(installModList, api_url + "?mode=list", "modList.txt");
         }
 
         #region Functions
@@ -58,31 +58,26 @@ namespace modbrowser
         /// <param name="version">Mod version</param>
         private void modInstall(string name, string version)
         {
-            installStatusLabel.Text = "Récupération du HASH";
-
             // Get mod's install url from the HASH
             WebClient client = new WebClient();
-            string hash = client.DownloadString(api_url + "hash.php?n=" + name + "&v=" + version);
 
             string modPath = File.ReadAllText("config.txt") + "\\" + mainForm.currentPlugin.name + "\\" + "mb_" + lastMod + mainForm.currentPlugin.game.modsPrefix;
-            string modInfoPath = Directory.GetCurrentDirectory() + "\\" + mainForm.currentPlugin.name + "\\" + lastMod + ".xml";
-
-            installStatusLabel.Text = "Vérification du HASH";
+            string modInfoPath = Directory.GetCurrentDirectory() + "\\" + mainForm.currentPlugin.name + "\\" + lastMod + ".json";
 
             // Install the mod
             if (!File.Exists(modPath))
             {
-                string modUrl = client.DownloadString(api_url + "version.php?hash=" + hash);
-
                 // Download the mod from the mod's install url
                 installButton.Enabled = false;
                 installing = true;
 
                 installStatusLabel.Text = "Installation des informations du mod";
-                File.WriteAllText(modInfoPath, client.DownloadString(api_url + "xml.php?sha1=" + hash).Replace("modpathgoeshere", File.ReadAllText("config.txt") + "\\" + mainForm.currentPlugin.name + "\\mb_" + lastMod + mainForm.currentPlugin.game.modsPrefix));
-                mainForm.updateModInfo(modInfoPath);
+                client.DownloadFile((api_url + "?n=" + lastMod + "&v=" + lastVersion).Replace("modpathgoeshere", File.ReadAllText("config.txt") + "\\" + mainForm.currentPlugin.name + "\\mb_" + lastMod + mainForm.currentPlugin.game.modsPrefix), modInfoPath);
+                updateModInfo(modInfoPath);
                 modInfo.Visible = true;
                 statusBar.Visible = true;
+
+                string modUrl = mainForm.DecodeJSON(modInfoPath)[6];
 
                 installStatusLabel.Text = "Installation du mod";
                 client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(downloadInProgress);
@@ -130,6 +125,36 @@ namespace modbrowser
 
             foreach (var line in File.ReadAllLines(tempPath + fileName))
                 listView.Items.Add(line);
+        }
+
+        /// <summary>
+        /// Updates mod info
+        /// </summary>
+        /// <param name="path">Mod info path</param>
+        public void updateModInfo(string path)
+        {
+            // Get mod info
+            string[] modmeta = mainForm.DecodeJSON(path);
+
+            // Show mod info
+            modTitle.Text = modmeta[0];
+            modAuthor.Text = modmeta[1] + " / " + modmeta[2];
+            modDescription.Text = modmeta[3];
+            
+            // Show the image
+            if (!File.Exists(Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg"))
+            {
+                WebClient webClient = new WebClient();
+                try
+                {
+                    webClient.DownloadFile(modmeta[4], Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Vous devez être connecté à Internet pour récupérer les icônes des mods", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            modIcon.ImageLocation = Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg";
         }
 
         /// <summary>
@@ -205,7 +230,7 @@ namespace modbrowser
         {
             if (installModList.SelectedItems.Count > 0)
             {
-                updateListFromUrl(installVersionList, "http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview2/view.php?a=" + installModList.SelectedItems[0].Text, "modVersionList.txt");
+                updateListFromUrl(installVersionList, api_url + "?mode=version&n=" + installModList.SelectedItems[0].Text, "modVersionList.txt");
                 lastMod = installModList.SelectedItems[0].Text;
                 lastVersion = null;
                 installButton.Enabled = false;
@@ -226,7 +251,7 @@ namespace modbrowser
         private void searchButton_Click(object sender, EventArgs e)
         {
             if (searchBox.TextLength >= 3)
-                updateListFromUrl(installModList, "http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview2/search.php?a=" + searchBox.Text, "modList.txt");
+                updateListFromUrl(installModList, api_url + "?mode=list&s=" + searchBox.Text, "modList.txt");
             else if (searchBox.TextLength > 0)
                 MessageBox.Show("Votre recherche ne comprend pas assez de caractères.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
@@ -236,7 +261,7 @@ namespace modbrowser
 
         private void cancelSearchButton_Click(object sender, EventArgs e)
         {
-            updateListFromUrl(installModList, "http://modbrowser.shost.ca/plateforme/minecraft/mods_clientview2/index.php", "modList.txt");
+            updateListFromUrl(installModList, api_url + "?mode=list", "modList.txt");
         }
 
         /**
@@ -248,21 +273,16 @@ namespace modbrowser
         private void installButton_Clicked(object sender, EventArgs e)
         {
             // Verify mod install conditions
-            if (Directory.Exists(File.ReadAllText("config.txt") + "\\" + mainForm.currentPlugin.name + "\\"))
+            if (Directory.Exists(mainForm.currentPlugin.game.realRes))
             {
                 modInstall(lastMod, installVersionList.SelectedItems[0].Text);
             }
             else if (!Directory.Exists(File.ReadAllText("config.txt")))
             {
-                MessageBox.Show("Le répertoire de Minecraft spécifié dans les paramètres n'existe pas. Merci de le régler avant de pouvoir installer un mod.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Form settingsForm = new Settings();
+                MessageBox.Show("Le répertoire du jeu spécifié dans le plugin n'existe pas. Merci de le régler avant de pouvoir installer un mod.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Form settingsForm = new Plugins();
                 settingsForm.Show();
                 this.Close();
-            }
-            else if (!Directory.Exists(File.ReadAllText("config.txt") + "\\" + mainForm.currentPlugin.name + "\\"))
-            {
-                Directory.CreateDirectory(File.ReadAllText("config.txt") + "\\" + mainForm.currentPlugin.name + "\\");
-                MessageBox.Show("Il n'y avait pas de dossier \"mods\" dans le répertoire de Minecraft alors modbrowser en a créé un.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }

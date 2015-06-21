@@ -39,6 +39,13 @@ namespace modbrowser
                 }
             }
             public string resourcesPath { get; set; }
+            public string realRes
+            {
+                get
+                {
+                    return resourcesPath.Replace("%gamePath%", realPath);
+                }
+            }
             public string modsPrefix { get; set; }
         }
 

@@ -57,7 +57,7 @@
             // 
             // installBox
             // 
-            this.installBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
+            this.installBox.BackColor = System.Drawing.Color.Transparent;
             this.installBox.Controls.Add(this.modInfo);
             this.installBox.Controls.Add(this.installButton);
             this.installBox.Controls.Add(this.correspondingVersionsLabel);
@@ -114,7 +114,7 @@
             this.modDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.modDescription.BackColor = System.Drawing.SystemColors.Control;
+            this.modDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
             this.modDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.modDescription.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.modDescription.Location = new System.Drawing.Point(15, 84);
@@ -126,7 +126,7 @@
             // 
             // modIcon
             // 
-            this.modIcon.BackColor = System.Drawing.SystemColors.Control;
+            this.modIcon.BackColor = System.Drawing.Color.Transparent;
             this.modIcon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.modIcon.Location = new System.Drawing.Point(15, 14);
             this.modIcon.Name = "modIcon";

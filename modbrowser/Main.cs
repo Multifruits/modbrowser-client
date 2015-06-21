@@ -22,7 +22,7 @@ namespace modbrowser
         public string tempPath = Path.GetTempPath() + "mb_cache\\";
 
         List<string> pluginPathes = new List<string>();
-        public Plugin currentPlugin = new Plugin();
+        public Plugin currentPlugin;
 
         // minecraft's path
         public string minecraftpath;
@@ -113,10 +113,6 @@ namespace modbrowser
         {
             InitializeComponent();
 
-            // Native modbrowser files
-            if (!File.Exists("config.txt"))
-                File.WriteAllText("config.txt", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\.minecraft");
-            
             if (!File.Exists("color.txt"))
                 File.WriteAllText("color.txt", "14");
 
@@ -125,6 +121,9 @@ namespace modbrowser
 
             if(!Directory.Exists(Path.GetTempPath() + "mb_cache"))
                 Directory.CreateDirectory(Path.GetTempPath() + "mb_cache");
+
+            if (!Directory.Exists(@"\\plugins"))
+                Directory.CreateDirectory(@"\\plugins");
 
             // Set useful variables
             mbpath = Directory.GetCurrentDirectory();
@@ -202,9 +201,9 @@ namespace modbrowser
         {
             if (modlist.SelectedItems.Count > 0)
             {
-                if (File.Exists(@"" + currentPlugin.name + "/" + modlist.SelectedItems[0].Text + ".xml"))
+                if (File.Exists(@"" + currentPlugin.name + "/" + modlist.SelectedItems[0].Text + ".json"))
                 {
-                    updateModInfo(@"" + currentPlugin.name + "/" + modlist.SelectedItems[0].Text + ".xml");
+                    updateModInfo(@"" + currentPlugin.name + "/" + modlist.SelectedItems[0].Text + ".json");
                     mainPagePanel.Visible = false;
                     modInfo.Visible = true;
                     mainPageButton.Enabled = true;
@@ -226,14 +225,6 @@ namespace modbrowser
         private void menuButton(object sender, EventArgs e)
         {
             gotoMenu();
-        }
-
-        /**
-         * Update mod number stat
-         */
-        private void modNumberButton(object sender, EventArgs e)
-        {
-            updateModNumber();
         }
 
         /**
@@ -367,11 +358,7 @@ namespace modbrowser
 
         #region Functions
         /// <summary>
-<<<<<<< HEAD
         /// Lists modbrowser-known mods.
-=======
-        /// Lists modbrowser know mods.
->>>>>>> origin/master
         /// </summary>
         public void ListMods()
         {
@@ -385,7 +372,7 @@ namespace modbrowser
                 foreach (string file in Directory.EnumerateFiles(@"" + currentPlugin.name))
                 {
                     i++;
-                    string[] modmeta = DecodeXML(file);
+                    string[] modmeta = DecodeJSON(file);
                     modlist.Items.Add(modmeta[0], i - 1);
                     nomod.Text = "contenus installés";
                     buildImageList(modmeta);
@@ -396,17 +383,10 @@ namespace modbrowser
         }
 
         /// <summary>
-<<<<<<< HEAD
         /// Builds modIconsList.
         /// </summary>
         /// <param name="modmeta"></param>
         private void buildImageList(string[] modmeta)
-=======
-        /// Ping an URL.
-        /// </summary>
-        /// <param name="url">The URL to ping.</param>
-        private void pingTest(string url)
->>>>>>> origin/master
         {
             // Show the image
             if (!File.Exists(Path.GetTempPath() + "mb_cache\\" + modmeta[0]))
@@ -464,11 +444,7 @@ namespace modbrowser
         }
 
         /// <summary>
-<<<<<<< HEAD
         /// Shows install mod form when the menuItem is clicked.
-=======
-        /// What to do when the mod installation button is clicked
->>>>>>> origin/master
         /// </summary>
         private void installMod(object sender, EventArgs e)
         {
@@ -478,33 +454,28 @@ namespace modbrowser
         }
 
         /// <summary>
-<<<<<<< HEAD
-        /// Decodes a *.xml file.
-=======
-        ///Decodes a *.xml file.
->>>>>>> origin/master
+        /// Decodes a *.json file.
         /// </summary>
         /// <param name="filepath">File to decode.</param>
         /// <returns>The decoded array</returns>
-        public string[] DecodeXML(string filepath)
+        public string[] DecodeJSON(string filepath)
         {
             try
             {
                 // Prepares the DataSet and the DataTable
-                DataSet ds = new DataSet("smartsaveformat");
-                ds.ReadXml(filepath);
-                DataTable dt = ds.Tables["datas"];
+                Mod modToDecode = JsonConvert.DeserializeObject<Mod>(File.ReadAllText(filepath));
 
                 // Prepares the array to return
-                string[] decoded = new string[dt.Columns.Count];
+                string[] decoded = new string[7];
 
                 // Puts saved variables on the array to return
-                decoded[0] = dt.Rows[0]["col_name"].ToString();
-                decoded[1] = dt.Rows[0]["col_author"].ToString();
-                decoded[2] = dt.Rows[0]["col_version"].ToString();
-                decoded[3] = dt.Rows[0]["col_description"].ToString();
-                decoded[4] = dt.Rows[0]["col_image-url"].ToString();
-                decoded[5] = dt.Rows[0]["col_jar-path"].ToString();
+                decoded[0] = modToDecode.name;
+                decoded[1] = modToDecode.author;
+                decoded[2] = modToDecode.version;
+                decoded[3] = modToDecode.description;
+                decoded[4] = modToDecode.image_url;
+                decoded[5] = modToDecode.jar.path;
+                decoded[6] = modToDecode.jar.url;
 
                 // Returns the array
                 return decoded;
@@ -518,19 +489,13 @@ namespace modbrowser
         }
 
         /// <summary>
-<<<<<<< HEAD
-        /// Update mod info
+        /// Updates mod info
         /// </summary>
         /// <param name="path">Mod info path</param>
-=======
-        /// Update mod's info
-        /// </summary>
-        /// <param name="path"></param>
->>>>>>> origin/master
         public void updateModInfo(string path)
         {
             // Get mod info
-            string[] modmeta = DecodeXML(path);
+            string[] modmeta = DecodeJSON(path);
 
             // Show mod info
             modTitle.Text = modmeta[0];
@@ -555,45 +520,24 @@ namespace modbrowser
         }
 
         /// <summary>
-<<<<<<< HEAD
         /// Fully uninstalls a mod
-=======
-        /// Updates a mod number state
-        /// </summary>
-        public void updateModNumber()
-        {
-            int modnumber = 0;
-            foreach (string file in System.IO.Directory.EnumerateFiles(mbpath + "\\mods"))
-            {
-                modnumber++;
-            }
-            modNumberLabel.Text = modnumber.ToString();
-        }
-
-        /// <summary>
-        /// Fully uninstall a mod
->>>>>>> origin/master
         /// </summary>
         /// <param name="modName">The mod to uninstall.</param>
         public void modUninstall(String modName)
         {
-            string[] modmeta = DecodeXML(mbpath + "\\mods\\" + modName + ".xml");
+            string[] modmeta = DecodeJSON(mbpath + "\\mods\\" + modName + ".json");
             if (File.Exists(modmeta[5]))
                 File.Delete(modmeta[5]);
             else
                 MessageBox.Show("Ce mod est introuvable et va être supprimé de la liste.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            File.Delete(mbpath + "\\mods\\" + modlist.SelectedItems[0].Text.ToString() + ".xml");
+            File.Delete(mbpath + "\\mods\\" + modlist.SelectedItems[0].Text.ToString() + ".json");
             ListMods();
             MessageBox.Show("Le mod '" + modmeta[0] + "' a été supprimé avec succès.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         /// <summary>
-<<<<<<< HEAD
         /// Hides the modInfo panel and shows the mainPage panel
-=======
-        /// Hide the modInfo panel and shows the mainPage panel
->>>>>>> origin/master
         /// </summary>
         public void gotoMenu()
         {
@@ -611,49 +555,5 @@ namespace modbrowser
             MessageBox.Show("Fonctionnalité en cours de développement.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
-<<<<<<< HEAD
-=======
-
-        /// <summary>
-        /// Open Forge's website.
-        /// </summary>
-        private void menuItem_other_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Dans le site qui va s'ouvrir, sélectionnez la version de Minecraft que vous voulez modder, puis cliquez sur l\'Installer-win qui correspond à votre version.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            System.Diagnostics.Process.Start("http://files.minecraftforge.net/#Downloads");
-        }
-
-        /// <summary>
-        /// Downloads Forge 1.8
-        /// </summary>
-        private void menuItem_18_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Téléchargez le fichier qui va apparaître et ouvrez le.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            System.Diagnostics.Process.Start("http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.1.1398/forge-1.8-11.14.1.1398-installer-win.exe");
-        }
-
-        /// <summary>
-        /// Downloads Forge 1.7.10
-        /// </summary>
-        private void menuItem_1710_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Téléchargez le fichier qui va apparaître et ouvrez le.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            System.Diagnostics.Process.Start("http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.7.10-10.13.3.1399-1.7.10/forge-1.7.10-10.13.3.1399-1.7.10-installer-win.exe");
-        }
-
-        /// <summary>
-        /// Downloads Forge 1.6.4
-        /// </summary>
-        private void menuItem_164_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Téléchargez le fichier qui va apparaître et ouvrez le.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            System.Diagnostics.Process.Start("http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.6.4-9.11.1.1345/forge-1.6.4-9.11.1.1345-installer-win.exe");
-        }
-
-        private void resizeModList(Object sender, EventArgs e)
-        {
-            modlist.Size = new Size(150, this.Size.Height - 200);
-        }
->>>>>>> origin/master
     }
 }

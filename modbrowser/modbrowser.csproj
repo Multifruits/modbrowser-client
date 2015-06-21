@@ -71,6 +71,7 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mod.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Plugins.cs">
       <SubType>Form</SubType>
