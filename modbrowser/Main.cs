@@ -372,9 +372,17 @@ namespace modbrowser
                 {
                     i++;
                     string[] modmeta = DecodeJSON(file);
-                    modlist.Items.Add(modmeta[0], i - 1);
-                    nomod.Text = "contenus installés";
-                    buildImageList(modmeta);
+                    if (File.Exists(modmeta[5]))
+                    {
+                        modlist.Items.Add(modmeta[0], i - 1);
+                        nomod.Text = "contenus installés";
+                        buildImageList(modmeta);
+                    }
+                    else
+                    {
+                        buildImageList(modmeta);
+                        File.Delete(mbpath + "\\" + currentPlugin.name + "\\" + modmeta[0] + ".json");
+                    }
                 }
             }
             catch (Exception) { }
@@ -524,13 +532,11 @@ namespace modbrowser
         /// <param name="modName">The mod to uninstall.</param>
         public void modUninstall(String modName)
         {
-            string[] modmeta = DecodeJSON(mbpath + "\\mods\\" + modName + ".json");
+            string[] modmeta = DecodeJSON(mbpath + "\\" + currentPlugin.name + "\\" + modName + ".json");
             if (File.Exists(modmeta[5]))
                 File.Delete(modmeta[5]);
-            else
-                MessageBox.Show("Ce mod est introuvable et va être supprimé de la liste.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            File.Delete(mbpath + "\\mods\\" + modlist.SelectedItems[0].Text.ToString() + ".json");
+            File.Delete(mbpath + "\\" + currentPlugin.name + "\\" + modName + ".json");
             ListMods();
             MessageBox.Show("Le mod '" + modmeta[0] + "' a été supprimé avec succès.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

@@ -61,18 +61,18 @@ namespace modbrowser
             // Get mod's install url from the HASH
             WebClient client = new WebClient();
 
-            string modPath = File.ReadAllText("config.txt") + "\\" + mainForm.currentPlugin.name + "\\" + "mb_" + lastMod + mainForm.currentPlugin.game.modsPrefix;
+            string modPath = mainForm.currentPlugin.game.realRes + "\\" + "mb_" + lastMod + mainForm.currentPlugin.modsPrefix;
             string modInfoPath = Directory.GetCurrentDirectory() + "\\" + mainForm.currentPlugin.name + "\\" + lastMod + ".json";
 
             // Install the mod
-            if (!File.Exists(modPath))
+            if (!File.Exists(modPath) && !File.Exists(modInfoPath))
             {
                 // Download the mod from the mod's install url
                 installButton.Enabled = false;
                 installing = true;
 
                 installStatusLabel.Text = "Installation des informations du mod";
-                client.DownloadFile((api_url + "?n=" + lastMod + "&v=" + lastVersion).Replace("modpathgoeshere", File.ReadAllText("config.txt") + "\\" + mainForm.currentPlugin.name + "\\mb_" + lastMod + mainForm.currentPlugin.game.modsPrefix), modInfoPath);
+                File.WriteAllText(modInfoPath, client.DownloadString(api_url + "?mode=info&n=" + lastMod + "&v=" + lastVersion).Replace("modpathgoeshere", System.Text.RegularExpressions.Regex.Replace(modPath, @"\\", @"\\")));
                 updateModInfo(modInfoPath);
                 modInfo.Visible = true;
                 statusBar.Visible = true;
@@ -84,10 +84,21 @@ namespace modbrowser
                 client.DownloadFileCompleted += new AsyncCompletedEventHandler(downloadCompleted);
                 client.DownloadFileAsync(new Uri(modUrl), modPath);
             }
-            else if(!File.Exists(modPath) && File.Exists(modInfoPath))
+            else if (!File.Exists(modPath) && File.Exists(modInfoPath))
             {
                 File.Delete(modInfoPath);
-                modInstall(lastMod, installVersionList.SelectedItems[0].Text);
+                modInstall(lastMod, lastVersion);
+            }
+            else if (File.Exists(modPath) && !File.Exists(modInfoPath))
+            {
+                // Download the mod from the mod's install url
+                installButton.Enabled = false;
+                installing = true;
+
+                installStatusLabel.Text = "Installation des informations du mod";
+                File.WriteAllText(modInfoPath, client.DownloadString(api_url + "?mode=info&n=" + lastMod + "&v=" + lastVersion).Replace("modpathgoeshere", System.Text.RegularExpressions.Regex.Replace(modPath, @"\\", @"\\")));
+                MessageBox.Show("Mod installé avec succès. N'oubliez pas de recharger la liste des mods.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                installationFinished();
             }
             else
             {
@@ -96,7 +107,7 @@ namespace modbrowser
                 if (result == DialogResult.Yes)
                 {
                     mainForm.modUninstall(lastMod);
-                    modInstall(lastMod, installVersionList.SelectedItems[0].Text);
+                    modInstall(lastMod, lastVersion);
                 }
                 else
                 {
