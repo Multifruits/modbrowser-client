@@ -36,7 +36,7 @@ namespace modbrowser
             api_url = mainForm.currentPlugin.api.url;
 
             #region Apply Material Design colors
-            int selectedTheme = Convert.ToInt32(File.ReadAllText("color.txt"));
+            int selectedTheme = Convert.ToInt32(File.ReadAllText("theme.txt"));
             this.BackColor = mainForm.themeColors[0, selectedTheme];
             installBox.ForeColor = mainForm.themeColors[2, selectedTheme];
             modDescription.BackColor = mainForm.themeColors[0, selectedTheme];
@@ -61,7 +61,7 @@ namespace modbrowser
             // Get mod's install url from the HASH
             WebClient client = new WebClient();
 
-            string modPath = mainForm.currentPlugin.game.realRes + "\\" + "mb_" + lastMod + mainForm.currentPlugin.modsPrefix;
+            string modPath = mainForm.currentPlugin.game.realRes + "\\" + "mb_" + lastMod + mainForm.currentPlugin.modsExtension;
             string modInfoPath = Directory.GetCurrentDirectory() + "\\" + mainForm.currentPlugin.name + "\\" + lastMod + ".json";
 
             // Install the mod

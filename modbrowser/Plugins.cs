@@ -51,7 +51,7 @@ namespace modbrowser
             pluginsList.Items.Clear();
             int i = 0;
 
-            // For each file in instances path...
+            // For each file in plugins path...
             foreach (string file in System.IO.Directory.EnumerateFiles(@"plugins"))
             {
                 i++;
@@ -72,7 +72,7 @@ namespace modbrowser
         private void Plugins_Load(object sender, EventArgs e)
         {
             Main mainForm = new Main();
-            int selectedTheme = Convert.ToInt32(File.ReadAllText("color.txt"));
+            int selectedTheme = Convert.ToInt32(File.ReadAllText("theme.txt"));
             pluginsList.BackColor = mainForm.themeColors[0, selectedTheme];
             pluginsList.ForeColor = mainForm.themeColors[2, selectedTheme];
         }

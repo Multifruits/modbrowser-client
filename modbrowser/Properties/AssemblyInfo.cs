@@ -7,18 +7,18 @@ using System.Resources;
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
 [assembly: AssemblyTitle("modbrowser")]
-[assembly: AssemblyDescription("La façon libre d'installer ses mods en toute simplicité")]
+[assembly: AssemblyDescription("Installer et gérer ses mods n'a jamais été aussi simple.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Multifruits")]
 [assembly: AssemblyProduct("modbrowser")]
-[assembly: AssemblyCopyright("Copyright ©  2015 modbrowser")]
+[assembly: AssemblyCopyright("MIT License")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // L'affectation de la valeur false à ComVisible rend les types invisibles dans cet assembly 
 // aux composants COM. Si vous devez accéder à un type dans cet assembly à partir de 
 // COM, affectez la valeur true à l'attribut ComVisible sur ce type.
-[assembly: ComVisible(false)]
+[assembly: ComVisible(true)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
 [assembly: Guid("e14c1d62-4cec-43de-84d7-10912bec6b84")]
@@ -33,6 +33,6 @@ using System.Resources;
 // Vous pouvez spécifier toutes les valeurs ou indiquer les numéros de build et de révision par défaut 
 // en utilisant '*', comme indiqué ci-dessous :
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.1.2")]
-[assembly: AssemblyFileVersion("1.0.1.2")]
+[assembly: AssemblyVersion("2.0.1.5")]
+[assembly: AssemblyFileVersion("2.0.1.5")]
 [assembly: NeutralResourcesLanguageAttribute("fr-FR")]

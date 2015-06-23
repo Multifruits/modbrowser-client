@@ -34,13 +34,12 @@
             this.minecraftPathLabel = new System.Windows.Forms.Label();
             this.settingsBox = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.colorComboBox = new System.Windows.Forms.ComboBox();
+            this.color_comboBox = new System.Windows.Forms.ComboBox();
             this.cacheSize = new System.Windows.Forms.Label();
             this.reloadModList = new System.Windows.Forms.Button();
-            this.folderBrowserBtn = new System.Windows.Forms.Button();
-            this.minecraftPathBox = new System.Windows.Forms.TextBox();
             this.saveSettings = new System.Windows.Forms.Button();
             this.minecraftFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
+            this.language_comboBox = new System.Windows.Forms.ComboBox();
             this.settingsBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,18 +72,17 @@
             this.minecraftPathLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.minecraftPathLabel.Location = new System.Drawing.Point(18, 31);
             this.minecraftPathLabel.Name = "minecraftPathLabel";
-            this.minecraftPathLabel.Size = new System.Drawing.Size(106, 16);
+            this.minecraftPathLabel.Size = new System.Drawing.Size(43, 16);
             this.minecraftPathLabel.TabIndex = 5;
-            this.minecraftPathLabel.Text = "Chemin de Minecraft";
+            this.minecraftPathLabel.Text = "Langue";
             // 
             // settingsBox
             // 
+            this.settingsBox.Controls.Add(this.language_comboBox);
             this.settingsBox.Controls.Add(this.label1);
-            this.settingsBox.Controls.Add(this.colorComboBox);
+            this.settingsBox.Controls.Add(this.color_comboBox);
             this.settingsBox.Controls.Add(this.cacheSize);
             this.settingsBox.Controls.Add(this.reloadModList);
-            this.settingsBox.Controls.Add(this.folderBrowserBtn);
-            this.settingsBox.Controls.Add(this.minecraftPathBox);
             this.settingsBox.Controls.Add(this.saveSettings);
             this.settingsBox.Controls.Add(this.minecraftPathLabel);
             this.settingsBox.Location = new System.Drawing.Point(34, 64);
@@ -105,10 +103,10 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Couleur de l\'interface";
             // 
-            // colorComboBox
+            // color_comboBox
             // 
-            this.colorComboBox.FormattingEnabled = true;
-            this.colorComboBox.Items.AddRange(new object[] {
+            this.color_comboBox.FormattingEnabled = true;
+            this.color_comboBox.Items.AddRange(new object[] {
             "Ambre",
             "Bleu",
             "Bleu clair",
@@ -127,13 +125,13 @@
             "Vert clair",
             "Violet",
             "Violet foncé"});
-            this.colorComboBox.Location = new System.Drawing.Point(152, 56);
-            this.colorComboBox.Name = "colorComboBox";
-            this.colorComboBox.Size = new System.Drawing.Size(196, 21);
-            this.colorComboBox.Sorted = true;
-            this.colorComboBox.TabIndex = 12;
-            this.colorComboBox.Text = "Couleur";
-            this.colorComboBox.SelectedIndexChanged += new System.EventHandler(this.colorComboBox_SelectedIndexChanged);
+            this.color_comboBox.Location = new System.Drawing.Point(152, 56);
+            this.color_comboBox.Name = "color_comboBox";
+            this.color_comboBox.Size = new System.Drawing.Size(196, 21);
+            this.color_comboBox.Sorted = true;
+            this.color_comboBox.TabIndex = 12;
+            this.color_comboBox.Text = "Couleur";
+            this.color_comboBox.SelectedIndexChanged += new System.EventHandler(this.colorComboBox_SelectedIndexChanged);
             // 
             // cacheSize
             // 
@@ -159,24 +157,6 @@
             this.reloadModList.UseVisualStyleBackColor = false;
             this.reloadModList.Click += new System.EventHandler(this.eraseCache);
             // 
-            // folderBrowserBtn
-            // 
-            this.folderBrowserBtn.Location = new System.Drawing.Point(317, 30);
-            this.folderBrowserBtn.Name = "folderBrowserBtn";
-            this.folderBrowserBtn.Size = new System.Drawing.Size(31, 20);
-            this.folderBrowserBtn.TabIndex = 10;
-            this.folderBrowserBtn.Text = "...";
-            this.folderBrowserBtn.UseVisualStyleBackColor = true;
-            this.folderBrowserBtn.Click += new System.EventHandler(this.selectFolder);
-            // 
-            // minecraftPathBox
-            // 
-            this.minecraftPathBox.Location = new System.Drawing.Point(152, 30);
-            this.minecraftPathBox.Name = "minecraftPathBox";
-            this.minecraftPathBox.Size = new System.Drawing.Size(159, 20);
-            this.minecraftPathBox.TabIndex = 9;
-            this.minecraftPathBox.TextChanged += new System.EventHandler(this.pathChanged);
-            // 
             // saveSettings
             // 
             this.saveSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(74)))));
@@ -191,6 +171,19 @@
             this.saveSettings.Text = "SAUVEGARDER";
             this.saveSettings.UseVisualStyleBackColor = false;
             this.saveSettings.Click += new System.EventHandler(this.saveSettingsAction);
+            // 
+            // language_comboBox
+            // 
+            this.language_comboBox.FormattingEnabled = true;
+            this.language_comboBox.Items.AddRange(new object[] {
+            "Anglais (en_US)",
+            "Français (fr_FR)"});
+            this.language_comboBox.Location = new System.Drawing.Point(152, 29);
+            this.language_comboBox.Name = "language_comboBox";
+            this.language_comboBox.Size = new System.Drawing.Size(196, 21);
+            this.language_comboBox.Sorted = true;
+            this.language_comboBox.TabIndex = 14;
+            this.language_comboBox.Text = "Langue";
             // 
             // Settings
             // 
@@ -217,13 +210,12 @@
         private System.Windows.Forms.Label mbTitle;
         private System.Windows.Forms.Label minecraftPathLabel;
         private System.Windows.Forms.GroupBox settingsBox;
-        private System.Windows.Forms.Button folderBrowserBtn;
-        private System.Windows.Forms.TextBox minecraftPathBox;
         private System.Windows.Forms.Button saveSettings;
         private System.Windows.Forms.FolderBrowserDialog minecraftFolderBrowser;
         private System.Windows.Forms.Button reloadModList;
         private System.Windows.Forms.Label cacheSize;
-        private System.Windows.Forms.ComboBox colorComboBox;
+        private System.Windows.Forms.ComboBox color_comboBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox language_comboBox;
     }
 }

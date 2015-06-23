@@ -32,11 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.menu = new System.Windows.Forms.MenuStrip();
             this.installMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.forgeInstallItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItem_18 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItem_1710 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItem_164 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItem_other = new System.Windows.Forms.ToolStripMenuItem();
             this.modInstallItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsMenuButton = new System.Windows.Forms.ToolStripMenuItem();
             this.modbrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,7 +68,8 @@
             this.modDescription = new System.Windows.Forms.RichTextBox();
             this.modIcon = new System.Windows.Forms.PictureBox();
             this.mainPagePanel = new System.Windows.Forms.Panel();
-            this.platformBrowser = new System.Windows.Forms.WebBrowser();
+            this.platformBrowser = new Awesomium.Windows.Forms.WebControl(this.components);
+            this.modbrowserIcon = new System.Windows.Forms.PictureBox();
             this.menu.SuspendLayout();
             this.modActions.SuspendLayout();
             this.listButtonsPanel.SuspendLayout();
@@ -85,6 +81,7 @@
             this.modActionsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modIcon)).BeginInit();
             this.mainPagePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modbrowserIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // menu
@@ -100,44 +97,9 @@
             // installMenuItem
             // 
             this.installMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.forgeInstallItem,
             this.modInstallItem});
             resources.ApplyResources(this.installMenuItem, "installMenuItem");
             this.installMenuItem.Name = "installMenuItem";
-            // 
-            // forgeInstallItem
-            // 
-            this.forgeInstallItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItem_18,
-            this.menuItem_1710,
-            this.menuItem_164,
-            this.menuItem_other});
-            this.forgeInstallItem.Name = "forgeInstallItem";
-            resources.ApplyResources(this.forgeInstallItem, "forgeInstallItem");
-            // 
-            // menuItem_18
-            // 
-            this.menuItem_18.Name = "menuItem_18";
-            resources.ApplyResources(this.menuItem_18, "menuItem_18");
-            this.menuItem_18.Click += new System.EventHandler(this.menuItem_18_Click);
-            // 
-            // menuItem_1710
-            // 
-            this.menuItem_1710.Name = "menuItem_1710";
-            resources.ApplyResources(this.menuItem_1710, "menuItem_1710");
-            this.menuItem_1710.Click += new System.EventHandler(this.menuItem_1710_Click);
-            // 
-            // menuItem_164
-            // 
-            this.menuItem_164.Name = "menuItem_164";
-            resources.ApplyResources(this.menuItem_164, "menuItem_164");
-            this.menuItem_164.Click += new System.EventHandler(this.menuItem_164_Click);
-            // 
-            // menuItem_other
-            // 
-            this.menuItem_other.Name = "menuItem_other";
-            resources.ApplyResources(this.menuItem_other, "menuItem_other");
-            this.menuItem_other.Click += new System.EventHandler(this.menuItem_other_Click);
             // 
             // modInstallItem
             // 
@@ -152,7 +114,6 @@
             this.gestionnaireDePluginsToolStripMenuItem});
             this.settingsMenuButton.Name = "settingsMenuButton";
             resources.ApplyResources(this.settingsMenuButton, "settingsMenuButton");
-            this.settingsMenuButton.Click += new System.EventHandler(this.installModMenuButton);
             // 
             // modbrowserToolStripMenuItem
             // 
@@ -404,6 +365,7 @@
             resources.ApplyResources(this.mainPagePanel, "mainPagePanel");
             this.mainPagePanel.BackColor = System.Drawing.SystemColors.Control;
             this.mainPagePanel.Controls.Add(this.platformBrowser);
+            this.mainPagePanel.Controls.Add(this.modbrowserIcon);
             this.mainPagePanel.Controls.Add(this.githubPanel);
             this.mainPagePanel.Controls.Add(this.mbVersion);
             this.mainPagePanel.Controls.Add(this.mbTitle);
@@ -412,7 +374,13 @@
             // platformBrowser
             // 
             resources.ApplyResources(this.platformBrowser, "platformBrowser");
-            this.platformBrowser.Name = "platformBrowser";
+            this.platformBrowser.Source = new System.Uri("http://modbrowser.shost.ca/blog/", System.UriKind.Absolute);
+            // 
+            // modbrowserIcon
+            // 
+            resources.ApplyResources(this.modbrowserIcon, "modbrowserIcon");
+            this.modbrowserIcon.Name = "modbrowserIcon";
+            this.modbrowserIcon.TabStop = false;
             // 
             // Main
             // 
@@ -444,6 +412,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.modIcon)).EndInit();
             this.mainPagePanel.ResumeLayout(false);
             this.mainPagePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modbrowserIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,11 +435,6 @@
         private System.Windows.Forms.ContextMenuStrip modActions;
         private System.Windows.Forms.ToolStripMenuItem uninstallStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem forgeInstallItem;
-        private System.Windows.Forms.ToolStripMenuItem menuItem_18;
-        private System.Windows.Forms.ToolStripMenuItem menuItem_1710;
-        private System.Windows.Forms.ToolStripMenuItem menuItem_164;
-        private System.Windows.Forms.ToolStripMenuItem menuItem_other;
         private System.Windows.Forms.ListView modlist;
         private System.Windows.Forms.ImageList modIconsList;
         private System.Windows.Forms.Label mbTitle;
@@ -491,10 +455,11 @@
         private System.Windows.Forms.RichTextBox modDescription;
         private System.Windows.Forms.PictureBox modIcon;
         private System.Windows.Forms.Panel mainPagePanel;
-        private System.Windows.Forms.WebBrowser platformBrowser;
         private System.Windows.Forms.ToolStripMenuItem modbrowserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionnaireDePluginsToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox pluginsList;
+        private System.Windows.Forms.PictureBox modbrowserIcon;
+        public Awesomium.Windows.Forms.WebControl platformBrowser;
     }
 }
 

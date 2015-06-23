@@ -47,7 +47,7 @@ namespace modbrowser
                 }
             }
         }
-        public string modsPrefix { get; set; }
+        public string modsExtension { get; set; }
             public string name { get; set; }
             public string author { get; set; }
             public string version { get; set; }

@@ -14,68 +14,30 @@ namespace modbrowser
 {
     public partial class Settings : Form
     {
-        public string lastConfig = System.IO.File.ReadAllText("config.txt");
-        public int lastColor = Convert.ToInt32(System.IO.File.ReadAllText("color.txt"));
-
+        public int lastLang = Properties.Settings.Default.language;
+        public int lastColor = Properties.Settings.Default.theme;
+        
         public Settings()
         {
             InitializeComponent();
-            minecraftPathBox.Text = lastConfig;
-            colorComboBox.SelectedIndex = lastColor;
-            if (!System.IO.Directory.Exists(lastConfig))
-            {
-                minecraftPathBox.Text = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\.minecraft";
-                MessageBox.Show("Le chemin de Minecraft entré était invalide et a été réinitialisé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                System.IO.File.WriteAllText("config.txt", minecraftPathBox.Text);
-            }
-
+            color_comboBox.SelectedIndex = lastColor;
+            language_comboBox.SelectedIndex = lastLang;
+            saveSettings.Enabled = false;
             cacheSize.Text = Math.Truncate(GetDirectorySize(System.IO.Path.GetTempPath() + "mb_cache\\")/1000).ToString() + "KB";
         }
 
-        /**
-         * Folder browser dialog
-         * Occurs when folderBrowserBtn is clicked.
-         */
-        private void selectFolder(object sender, EventArgs e)
-        {
-            DialogResult minecraftPath = minecraftFolderBrowser.ShowDialog();
-            if (minecraftPath == DialogResult.OK) {
-                minecraftPathBox.Text = minecraftFolderBrowser.SelectedPath;
-            }
-            
-        }
-
-        /**
-         * Save settings.
-         * Occurs when saveSettings button is clicked.
-         */
+        /// <summary>
+        /// Save settings when saveSettings button is clicked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveSettingsAction(object sender, EventArgs e)
         {
-            try
-            {
-                if (System.IO.Directory.Exists(minecraftPathBox.Text))
-                {
-                    System.IO.File.WriteAllText("config.txt", minecraftPathBox.Text);
-                    System.IO.File.WriteAllText("color.txt", colorComboBox.SelectedIndex.ToString());
-                    MessageBox.Show("Paramètres de modbrowser sauvegardés avec succès. Le logiciel va redémarrer pour que les modifications soient prises en compte.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Application.Restart();
-                    Environment.Exit(0);
-                    Main mainForm = new Main();
-                    mainForm.Show();
-                }
-                else
-                {
-                    System.IO.File.WriteAllText("config.txt", minecraftPathBox.Text);
-                    MessageBox.Show("Le dossier entré n'existe pas.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    minecraftPathBox.Text = lastConfig;
-                }
-            }
-            catch (Exception)
-            {
-                System.IO.File.WriteAllText("config.txt", minecraftPathBox.Text);
-                MessageBox.Show("Le chemin du dossier entré est invalide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                minecraftPathBox.Text = lastConfig;
-            }
+            Properties.Settings.Default.theme = color_comboBox.SelectedIndex;
+            Properties.Settings.Default.language = language_comboBox.SelectedIndex;
+            Properties.Settings.Default.Save();
+            MessageBox.Show("Paramètres de modbrowser sauvegardés avec succès. Merci de redémarrer le logiciel pour que les modifications soient prises en compte.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         /**
@@ -89,7 +51,7 @@ namespace modbrowser
 
         public void buttonOnOff()
         {
-            if (!minecraftPathBox.Text.Equals(lastConfig) || !colorComboBox.SelectedIndex.Equals(lastColor))
+            if (!language_comboBox.SelectedIndex.Equals(lastLang) || !color_comboBox.SelectedIndex.Equals(lastColor))
                 saveSettings.Enabled = true;
             else
                 saveSettings.Enabled = false;
