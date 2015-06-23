@@ -29,15 +29,14 @@ Nous tenons à nous démarquer des autres logiciels de ce genre en mettant en av
 
 # Screenshots
 Voici des screenshots de la release 1.0 en développement.  
-[[secret]]
-| ![Actions liées aux mods installés](http://img15.hostingpics.net/pics/308288Nouvelleimagebitmap2.png)
-| Actions liées aux mods installés  
-|
-| ![Installation d'un mod](http://img15.hostingpics.net/pics/435973Nouvelleimagebitmap2.png)  
-| Installation d'un mod  
-|
-| ![Paramètres de modbrowser](http://img15.hostingpics.net/pics/570476Nouvelleimagebitmap2.png)  
-| Paramètres de modbrowser
+![Actions liées aux mods installés](http://img15.hostingpics.net/pics/308288Nouvelleimagebitmap2.png)
+Actions liées aux mods installés  
+
+![Installation d'un mod](http://img15.hostingpics.net/pics/435973Nouvelleimagebitmap2.png)  
+Installation d'un mod  
+
+![Paramètres de modbrowser](http://img15.hostingpics.net/pics/570476Nouvelleimagebitmap2.png)  
+Paramètres de modbrowser
 
 # Liens divers
 Tester le client (*v1.0*) : https://github.com/Multifruits/modbrowser-client/releases  
