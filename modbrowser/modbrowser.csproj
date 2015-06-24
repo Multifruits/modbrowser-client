@@ -11,6 +11,7 @@
     <AssemblyName>modbrowser</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publier\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -59,7 +59,7 @@
     <Reference Include="Awesomium.Core, Version=1.7.5.1, Culture=neutral, PublicKeyToken=e1a0d7c8071a5214" />
     <Reference Include="Awesomium.Windows.Forms, Version=1.7.5.1, Culture=neutral, PublicKeyToken=9bd24830fbe304a0, processorArchitecture=x86" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>D:\Desktop\Newtonsoft.Json.dll</HintPath>
+      <HintPath>DLL\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -107,8 +107,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.en.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.fr.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallMod.en.resx">
+      <DependentUpon>InstallMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallMod.fr.resx">
+      <DependentUpon>InstallMod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InstallMod.resx">
       <DependentUpon>InstallMod.cs</DependentUpon>
@@ -125,6 +137,12 @@
     <EmbeddedResource Include="Plugins.resx">
       <DependentUpon>Plugins.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Settings.en.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.fr.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings.nqo.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +157,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -156,6 +175,14 @@
   <ItemGroup>
     <Content Include="minecraft.ico" />
     <Content Include="modbrowser.ico" />
+    <None Include="Resources\modbrowser_light2.png" />
+    <None Include="Resources\modbrowser_dark2.png" />
+    <None Include="Resources\modbrowser_light.png" />
+    <None Include="Resources\modbrowser_dark.png" />
+    <None Include="Resources\IMG_21062015_180814.png" />
+    <None Include="Resources\modbrowser_light1.png" />
+    <None Include="Resources\modbrowser_dark1.png" />
+    <None Include="Resources\mb_icon-dark.bmp" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

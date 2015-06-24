@@ -13,6 +13,7 @@ Global
 		{79085C75-24C2-4614-93E3-27F0DEC16EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79085C75-24C2-4614-93E3-27F0DEC16EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79085C75-24C2-4614-93E3-27F0DEC16EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79085C75-24C2-4614-93E3-27F0DEC16EAB}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -117,150 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;statusBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modAuthor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="statusBar.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;searchButton.Parent" xml:space="preserve">
-    <value>searchPanel</value>
-  </data>
-  <data name="&gt;&gt;modIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="installModLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;searchButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modTitle.Name" xml:space="preserve">
-    <value>modTitle</value>
-  </data>
-  <data name="&gt;&gt;modDescription.Name" xml:space="preserve">
-    <value>modDescription</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="modTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 21</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="searchLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="installButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="installButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="installBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 12</value>
-  </data>
-  <data name="&gt;&gt;modIcon.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;searchBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;installModList.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="cancelSearchButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 8.25pt</value>
-  </data>
-  <data name="&gt;&gt;modDescription.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="searchBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 23</value>
-  </data>
-  <data name="searchPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="searchPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 42</value>
-  </data>
-  <data name="correspondingVersionsLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="&gt;&gt;searchBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;correspondingVersionsLabel.Name" xml:space="preserve">
-    <value>correspondingVersionsLabel</value>
-  </data>
-  <data name="searchButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 8.25pt</value>
-  </data>
-  <data name="modAuthor.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;searchButton.Name" xml:space="preserve">
-    <value>searchButton</value>
-  </data>
-  <data name="installStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 17</value>
-  </data>
-  <data name="installModList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 209</value>
-  </data>
-  <data name="&gt;&gt;cancelSearchButton.Name" xml:space="preserve">
-    <value>cancelSearchButton</value>
-  </data>
-  <data name="searchBox.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="modDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 197</value>
-  </data>
-  <data name="modAuthor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;searchPanel.Name" xml:space="preserve">
-    <value>searchPanel</value>
-  </data>
-  <data name="installBox.Text" xml:space="preserve">
-    <value>Installation de mods</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Installation de mods</value>
-  </data>
-  <data name="&gt;&gt;installButton.Parent" xml:space="preserve">
-    <value>installBox</value>
-  </data>
-  <data name="searchLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;correspondingVersionsLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;searchBox.Parent" xml:space="preserve">
-    <value>searchPanel</value>
-  </data>
-  <data name="installStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 357</value>
-  </data>
-  <data name="&gt;&gt;installBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="modAuthor.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed Light, 8.25pt</value>
-  </data>
-  <data name="installBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>412, 333</value>
-  </data>
-  <data name="modInfo.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAQAEBAAAAAAIABoBAAARgAAACAgAAAAACAAqBAAAK4EAAAwMAAAAAAgAKglAABWFQAAQEAAAAAA
@@ -799,409 +656,100 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
   </data>
-  <data name="installModList.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>modbrowser settings</value>
   </data>
-  <data name="statusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
+  <data name="cacheSize.Text" xml:space="preserve">
+    <value>unknown</value>
   </data>
-  <data name="searchLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 16</value>
+  <data name="color_comboBox.Items" xml:space="preserve">
+    <value>Amber</value>
   </data>
-  <data name="&gt;&gt;installStatus.Name" xml:space="preserve">
-    <value>installStatus</value>
+  <data name="color_comboBox.Items1" xml:space="preserve">
+    <value>Blue</value>
   </data>
-  <data name="&gt;&gt;modIcon.Parent" xml:space="preserve">
-    <value>modInfo</value>
+  <data name="color_comboBox.Items10" xml:space="preserve">
+    <value>Orange</value>
   </data>
-  <data name="modAuthor.Text" xml:space="preserve">
-    <value>Auteur</value>
+  <data name="color_comboBox.Items11" xml:space="preserve">
+    <value>Deep Orange</value>
   </data>
-  <data name="installButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
+  <data name="color_comboBox.Items12" xml:space="preserve">
+    <value>Pink</value>
   </data>
-  <data name="&gt;&gt;cancelSearchButton.Parent" xml:space="preserve">
-    <value>searchPanel</value>
+  <data name="color_comboBox.Items13" xml:space="preserve">
+    <value>Red</value>
   </data>
-  <data name="correspondingVersionsLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+  <data name="color_comboBox.Items14" xml:space="preserve">
+    <value>Green</value>
   </data>
-  <data name="&gt;&gt;installVersionList.Parent" xml:space="preserve">
-    <value>installBox</value>
+  <data name="color_comboBox.Items15" xml:space="preserve">
+    <value>Light Green</value>
   </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>456, 418</value>
+  <data name="color_comboBox.Items16" xml:space="preserve">
+    <value>Purple</value>
   </data>
-  <data name="installVersionList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 212</value>
+  <data name="color_comboBox.Items17" xml:space="preserve">
+    <value>Deep Purple</value>
   </data>
-  <data name="searchButton.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="color_comboBox.Items2" xml:space="preserve">
+    <value>Light Blue</value>
   </data>
-  <data name="installVersionList.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="color_comboBox.Items3" xml:space="preserve">
+    <value>Lime</value>
   </data>
-  <data name="installVersionList.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed Light, 11pt</value>
+  <data name="color_comboBox.Items4" xml:space="preserve">
+    <value>Cyan</value>
   </data>
-  <data name="&gt;&gt;modInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="color_comboBox.Items5" xml:space="preserve">
+    <value>Grey</value>
   </data>
-  <data name="correspondingVersionsLabel.Text" xml:space="preserve">
-    <value>versions correspondantes</value>
+  <data name="color_comboBox.Items6" xml:space="preserve">
+    <value>Blue Grey</value>
   </data>
-  <data name="&gt;&gt;searchPanel.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="color_comboBox.Items7" xml:space="preserve">
+    <value>Indigo</value>
   </data>
-  <data name="correspondingVersionsLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="color_comboBox.Items8" xml:space="preserve">
+    <value>Yellow</value>
   </data>
-  <data name="installModLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 16</value>
+  <data name="color_comboBox.Items9" xml:space="preserve">
+    <value>Brown</value>
   </data>
-  <data name="installButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 260</value>
+  <data name="color_comboBox.Text" xml:space="preserve">
+    <value>Theme</value>
   </data>
-  <data name="installButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 54</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>UI Theme</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="language_comboBox.Items" xml:space="preserve">
+    <value>English (en_US)</value>
   </data>
-  <data name="&gt;&gt;searchLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="language_comboBox.Items1" xml:space="preserve">
+    <value>French (fr_FR)</value>
   </data>
-  <data name="searchLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="language_comboBox.Text" xml:space="preserve">
+    <value>Language</value>
   </data>
-  <data name="&gt;&gt;searchLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="mbSettings.Text" xml:space="preserve">
+    <value>settings</value>
   </data>
-  <data name="correspondingVersionsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 21</value>
+  <data name="mbTitle.Text" xml:space="preserve">
+    <value>modbrowser</value>
   </data>
-  <data name="installStatus.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="minecraftPathLabel.Text" xml:space="preserve">
+    <value>Language</value>
   </data>
-  <data name="&gt;&gt;modTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="reloadModList.Text" xml:space="preserve">
+    <value>ERASE CACHE</value>
   </data>
-  <data name="installStatus.Text" xml:space="preserve">
-    <value>statusStrip1</value>
+  <data name="saveSettings.Text" xml:space="preserve">
+    <value>SAVE</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>InstallMod</value>
+  <data name="saveSuccess" xml:space="preserve">
+    <value>modbrowser settings have been successfully saved. Changes will take effect on next start.</value>
   </data>
-  <data name="modDescription.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="settingsBox.Text" xml:space="preserve">
+    <value>Settings</value>
   </data>
-  <data name="&gt;&gt;searchButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cancelSearchButton.Text" xml:space="preserve">
-    <value>Annuler</value>
-  </data>
-  <data name="&gt;&gt;installVersionList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="modDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 84</value>
-  </data>
-  <data name="installVersionList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 42</value>
-  </data>
-  <data name="modIcon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 14</value>
-  </data>
-  <data name="modDescription.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;modTitle.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>456, 418</value>
-  </data>
-  <data name="&gt;&gt;modInfo.Name" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="&gt;&gt;installModLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="installModLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="installModLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;correspondingVersionsLabel.Parent" xml:space="preserve">
-    <value>installBox</value>
-  </data>
-  <data name="&gt;&gt;installModLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;installVersionList.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;installButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modIcon.Name" xml:space="preserve">
-    <value>modIcon</value>
-  </data>
-  <data name="installStatusLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="modTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;installButton.Name" xml:space="preserve">
-    <value>installButton</value>
-  </data>
-  <data name="searchButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="modInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 297</value>
-  </data>
-  <data name="&gt;&gt;installStatusLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="modIcon.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="installStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>440, 22</value>
-  </data>
-  <data name="cancelSearchButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 3</value>
-  </data>
-  <data name="modTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 18pt</value>
-  </data>
-  <data name="&gt;&gt;installButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="modAuthor.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="installStatusLabel.Text" xml:space="preserve">
-    <value>En attente</value>
-  </data>
-  <data name="correspondingVersionsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;installStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;installModList.Name" xml:space="preserve">
-    <value>installModList</value>
-  </data>
-  <data name="&gt;&gt;cancelSearchButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="modAuthor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 53</value>
-  </data>
-  <data name="&gt;&gt;cancelSearchButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="modDescription.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="searchButton.Text" xml:space="preserve">
-    <value>GO</value>
-  </data>
-  <data name="cancelSearchButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 24</value>
-  </data>
-  <data name="&gt;&gt;correspondingVersionsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="installButton.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;installModList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;installModLabel.Parent" xml:space="preserve">
-    <value>installBox</value>
-  </data>
-  <data name="&gt;&gt;installVersionList.Name" xml:space="preserve">
-    <value>installVersionList</value>
-  </data>
-  <data name="&gt;&gt;searchPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="installModLabel.Text" xml:space="preserve">
-    <value>mod désiré</value>
-  </data>
-  <data name="modIcon.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="installBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="modTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;searchLabel.Parent" xml:space="preserve">
-    <value>searchPanel</value>
-  </data>
-  <data name="modAuthor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 15</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modDescription.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;modInfo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="installModLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 21</value>
-  </data>
-  <data name="&gt;&gt;installStatus.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;installModList.Parent" xml:space="preserve">
-    <value>installBox</value>
-  </data>
-  <data name="&gt;&gt;installModLabel.Name" xml:space="preserve">
-    <value>installModLabel</value>
-  </data>
-  <data name="&gt;&gt;searchBox.Name" xml:space="preserve">
-    <value>searchBox</value>
-  </data>
-  <data name="modInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="modTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="searchLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="searchButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 24</value>
-  </data>
-  <data name="searchLabel.Text" xml:space="preserve">
-    <value>Recherche</value>
-  </data>
-  <data name="searchPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="modIcon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 64</value>
-  </data>
-  <data name="installModLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="installButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;installBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;modAuthor.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="&gt;&gt;modInfo.Parent" xml:space="preserve">
-    <value>installBox</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>440, 379</value>
-  </data>
-  <data name="&gt;&gt;statusBar.Name" xml:space="preserve">
-    <value>statusBar</value>
-  </data>
-  <data name="&gt;&gt;installBox.Name" xml:space="preserve">
-    <value>installBox</value>
-  </data>
-  <data name="&gt;&gt;searchPanel.Parent" xml:space="preserve">
-    <value>installBox</value>
-  </data>
-  <data name="correspondingVersionsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 16</value>
-  </data>
-  <data name="modIcon.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="searchButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="cancelSearchButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="modTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 32</value>
-  </data>
-  <data name="searchPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 58</value>
-  </data>
-  <data name="installModList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 105</value>
-  </data>
-  <data name="&gt;&gt;installBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modAuthor.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="searchButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 3</value>
-  </data>
-  <data name="installModList.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed Light, 11pt</value>
-  </data>
-  <data name="modTitle.Text" xml:space="preserve">
-    <value>Titre</value>
-  </data>
-  <data name="searchBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 32</value>
-  </data>
-  <data name="installBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="modInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 17</value>
-  </data>
-  <data name="installButton.Text" xml:space="preserve">
-    <value>INSTALLER</value>
-  </data>
-  <data name="searchLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 7</value>
-  </data>
-  <data name="&gt;&gt;searchLabel.Name" xml:space="preserve">
-    <value>searchLabel</value>
-  </data>
-  <data name="&gt;&gt;modAuthor.Name" xml:space="preserve">
-    <value>modAuthor</value>
-  </data>
-  <data name="&gt;&gt;installStatus.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="cancelSearchButton.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;installStatusLabel.Name" xml:space="preserve">
-    <value>installStatusLabel</value>
-  </data>
-  <data name="&gt;&gt;modDescription.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="&gt;&gt;modTitle.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cancelSearchButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="installStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

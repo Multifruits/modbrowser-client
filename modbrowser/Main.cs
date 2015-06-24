@@ -93,24 +93,24 @@ namespace modbrowser
                 //     FORE COLOR
                 // =====================
 
-                Color.Black, // Amber (#ffa000)         
-                Color.White, // Blue (#1976d2)
-                Color.Black, // Light Blue (#0288d1)
-                Color.Black, // Lime (#afb42b)
-                Color.Black, // Cyan (#0097a7)
-                Color.Black, // Grey (#616161)
-                Color.White, // Blue Grey (#455a64)
-                Color.White, // Indigo (#303f9f)
-                Color.Black, // Yellow (#fbc02d)
-                Color.White, // Brown (#5d4037)
-                Color.Black, // Orange (#f57c00)
-                Color.White, // Deep Orange (#e64a19)
-                Color.White, // Pink (#c2185b)
-                Color.White, // Red (#d32f2f)
-                Color.Black, // Green (#388e3c)
-                Color.Black, // Light Green (#689f38)
-                Color.White, // Purple (#7b1fa2)
-                Color.White, // Deep Purple (#512da8)
+                ColorTranslator.FromHtml("#212121"),      
+                Color.White,
+                ColorTranslator.FromHtml("#212121"),
+                ColorTranslator.FromHtml("#212121"),
+                ColorTranslator.FromHtml("#212121"),
+                ColorTranslator.FromHtml("#212121"),
+                Color.White,
+                Color.White,
+                ColorTranslator.FromHtml("#212121"),
+                Color.White,
+                ColorTranslator.FromHtml("#212121"),
+                Color.White,
+                Color.White,
+                Color.White,
+                ColorTranslator.FromHtml("#212121"),
+                ColorTranslator.FromHtml("#212121"),
+                Color.White,
+                Color.White,
             }
         };
         #endregion
@@ -119,11 +119,7 @@ namespace modbrowser
         {
             // Localization
             RM = new System.Resources.ResourceManager("modbrowser.Main", System.Reflection.Assembly.GetExecutingAssembly());
-
-            if (!File.Exists("lang.txt"))
-                File.WriteAllText("lang.txt", "1");
-
-            if (File.ReadAllText("lang.txt") == "1")
+            if (Properties.Settings.Default.language == 1)
             {
                 System.Threading.Thread.CurrentThread.CurrentUICulture = FrenchCulture;
             }
@@ -131,7 +127,6 @@ namespace modbrowser
             {
                 System.Threading.Thread.CurrentThread.CurrentUICulture = EnglishCulture;
             }
-
 
             // Initialize component
             InitializeComponent();
@@ -147,15 +142,22 @@ namespace modbrowser
             mbpath = Directory.GetCurrentDirectory();
 
             // Load stats menu informations
-            mbVersion.Text = "v2.0-alpha.1";
+            mbVersion.Text = "v2.0-alpha.3";
 
-            // Apply Material Design colors
+            #region Apply Material Design colors
             int selectedTheme = Convert.ToInt32(Properties.Settings.Default.theme);
             modlistPanel.BackColor = themeColors[0, selectedTheme];
+            modbrowserIconColorPanel.BackColor = themeColors[0, selectedTheme];
             modlist.BackColor = themeColors[0, selectedTheme];
             listButtonsPanel.BackColor = themeColors[1, selectedTheme];
             nomod.ForeColor = themeColors[2, selectedTheme];
             modlist.ForeColor = themeColors[2, selectedTheme];
+
+            if (themeColors[2, selectedTheme] == ColorTranslator.FromHtml("#212121"))
+                modbrowserIcon.Image = (System.Drawing.Image)RM.GetObject("modbrowser_dark");
+            else
+                modbrowserIcon.Image = (System.Drawing.Image)RM.GetObject("modbrowser_light");
+            #endregion
 
             // Load mods and plugins
             ListMods();
@@ -303,7 +305,7 @@ namespace modbrowser
         /// <param name="e"></param>
         private void resizeModList(Object sender, EventArgs e)
         {
-            modlist.Size = new Size(150, this.Size.Height - 200);
+            modlist.Size = new Size(160, this.Size.Height - 200);
         }
 
         private void modbrowserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -541,5 +543,10 @@ namespace modbrowser
             MessageBox.Show(RM.GetString("indev"), RM.GetString("info"), MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
+
+        private void modActionsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

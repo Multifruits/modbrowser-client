@@ -117,10 +117,369 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mbSettings.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="mbSettings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 9pt</value>
+  </data>
+  <data name="mbSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 30</value>
+  </data>
+  <data name="mbSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 16</value>
+  </data>
+  <data name="mbSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="mbSettings.Text" xml:space="preserve">
+    <value>paramètres</value>
+  </data>
+  <data name="&gt;&gt;mbSettings.Name" xml:space="preserve">
+    <value>mbSettings</value>
+  </data>
+  <data name="&gt;&gt;mbSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mbSettings.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mbSettings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mbTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mbTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 24pt</value>
+  </data>
+  <data name="mbTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="mbTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 43</value>
+  </data>
+  <data name="mbTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="mbTitle.Text" xml:space="preserve">
+    <value>modbrowser</value>
+  </data>
+  <data name="&gt;&gt;mbTitle.Name" xml:space="preserve">
+    <value>mbTitle</value>
+  </data>
+  <data name="&gt;&gt;mbTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mbTitle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mbTitle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="minecraftPathLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 9pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="minecraftPathLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="minecraftPathLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 23</value>
+  </data>
+  <data name="minecraftPathLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 19</value>
+  </data>
+  <data name="minecraftPathLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="minecraftPathLabel.Text" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="minecraftPathLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;minecraftPathLabel.Name" xml:space="preserve">
+    <value>minecraftPathLabel</value>
+  </data>
+  <data name="&gt;&gt;minecraftPathLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;minecraftPathLabel.Parent" xml:space="preserve">
+    <value>settingsBox</value>
+  </data>
+  <data name="&gt;&gt;minecraftPathLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="language_comboBox.Items" xml:space="preserve">
+    <value>Anglais (en_US)</value>
+  </data>
+  <data name="language_comboBox.Items1" xml:space="preserve">
+    <value>Français (fr_FR)</value>
+  </data>
+  <data name="language_comboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 23</value>
+  </data>
+  <data name="language_comboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 21</value>
+  </data>
+  <data name="language_comboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;language_comboBox.Name" xml:space="preserve">
+    <value>language_comboBox</value>
+  </data>
+  <data name="&gt;&gt;language_comboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;language_comboBox.Parent" xml:space="preserve">
+    <value>settingsBox</value>
+  </data>
+  <data name="&gt;&gt;language_comboBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 9pt</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 49</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 20</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Couleur de l'interface</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>settingsBox</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="color_comboBox.Items" xml:space="preserve">
+    <value>Ambre</value>
+  </data>
+  <data name="color_comboBox.Items1" xml:space="preserve">
+    <value>Bleu</value>
+  </data>
+  <data name="color_comboBox.Items2" xml:space="preserve">
+    <value>Bleu clair</value>
+  </data>
+  <data name="color_comboBox.Items3" xml:space="preserve">
+    <value>Citron vert</value>
+  </data>
+  <data name="color_comboBox.Items4" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="color_comboBox.Items5" xml:space="preserve">
+    <value>Gris</value>
+  </data>
+  <data name="color_comboBox.Items6" xml:space="preserve">
+    <value>Gris-bleu</value>
+  </data>
+  <data name="color_comboBox.Items7" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="color_comboBox.Items8" xml:space="preserve">
+    <value>Jaune</value>
+  </data>
+  <data name="color_comboBox.Items9" xml:space="preserve">
+    <value>Marron</value>
+  </data>
+  <data name="color_comboBox.Items10" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="color_comboBox.Items11" xml:space="preserve">
+    <value>Orange foncé</value>
+  </data>
+  <data name="color_comboBox.Items12" xml:space="preserve">
+    <value>Rose</value>
+  </data>
+  <data name="color_comboBox.Items13" xml:space="preserve">
+    <value>Rouge</value>
+  </data>
+  <data name="color_comboBox.Items14" xml:space="preserve">
+    <value>Vert</value>
+  </data>
+  <data name="color_comboBox.Items15" xml:space="preserve">
+    <value>Vert clair</value>
+  </data>
+  <data name="color_comboBox.Items16" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="color_comboBox.Items17" xml:space="preserve">
+    <value>Violet foncé</value>
+  </data>
+  <data name="color_comboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 50</value>
+  </data>
+  <data name="color_comboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 21</value>
+  </data>
+  <data name="color_comboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="color_comboBox.Text" xml:space="preserve">
+    <value>Couleur</value>
+  </data>
+  <data name="&gt;&gt;color_comboBox.Name" xml:space="preserve">
+    <value>color_comboBox</value>
+  </data>
+  <data name="&gt;&gt;color_comboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;color_comboBox.Parent" xml:space="preserve">
+    <value>settingsBox</value>
+  </data>
+  <data name="&gt;&gt;color_comboBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cacheSize.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7.75pt</value>
+  </data>
+  <data name="cacheSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 122</value>
+  </data>
+  <data name="cacheSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 16</value>
+  </data>
+  <data name="cacheSize.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="cacheSize.Text" xml:space="preserve">
+    <value>indéterminé</value>
+  </data>
+  <data name="cacheSize.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;cacheSize.Name" xml:space="preserve">
+    <value>cacheSize</value>
+  </data>
+  <data name="&gt;&gt;cacheSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cacheSize.Parent" xml:space="preserve">
+    <value>settingsBox</value>
+  </data>
+  <data name="&gt;&gt;cacheSize.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="reloadModList.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="reloadModList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 9pt</value>
+  </data>
+  <data name="reloadModList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 90</value>
+  </data>
+  <data name="reloadModList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 29</value>
+  </data>
+  <data name="reloadModList.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="reloadModList.Text" xml:space="preserve">
+    <value>VIDER LE CACHE</value>
+  </data>
+  <data name="&gt;&gt;reloadModList.Name" xml:space="preserve">
+    <value>reloadModList</value>
+  </data>
+  <data name="&gt;&gt;reloadModList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;reloadModList.Parent" xml:space="preserve">
+    <value>settingsBox</value>
+  </data>
+  <data name="&gt;&gt;reloadModList.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="saveSettings.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="saveSettings.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="saveSettings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 9pt</value>
+  </data>
+  <data name="saveSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 90</value>
+  </data>
+  <data name="saveSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 29</value>
+  </data>
+  <data name="saveSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="saveSettings.Text" xml:space="preserve">
+    <value>SAUVEGARDER</value>
+  </data>
+  <data name="&gt;&gt;saveSettings.Name" xml:space="preserve">
+    <value>saveSettings</value>
+  </data>
+  <data name="&gt;&gt;saveSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveSettings.Parent" xml:space="preserve">
+    <value>settingsBox</value>
+  </data>
+  <data name="&gt;&gt;saveSettings.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="settingsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 64</value>
+  </data>
+  <data name="settingsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>340, 142</value>
+  </data>
+  <data name="settingsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="settingsBox.Text" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="&gt;&gt;settingsBox.Name" xml:space="preserve">
+    <value>settingsBox</value>
+  </data>
+  <data name="&gt;&gt;settingsBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;settingsBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;settingsBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="minecraftFolderBrowser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>404, 234</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAQAEBAAAAAAIABoBAAARgAAACAgAAAAACAAqBAAAK4EAAAwMAAAAAAgAKglAABWFQAAQEAAAAAA
@@ -658,5 +1017,26 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>420, 273</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>420, 273</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Paramètres de modbrowser</value>
+  </data>
+  <data name="&gt;&gt;minecraftFolderBrowser.Name" xml:space="preserve">
+    <value>minecraftFolderBrowser</value>
+  </data>
+  <data name="&gt;&gt;minecraftFolderBrowser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

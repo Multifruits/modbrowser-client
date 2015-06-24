@@ -54,7 +54,6 @@
             this.mbVersion = new System.Windows.Forms.Label();
             this.githubPanel = new System.Windows.Forms.Panel();
             this.githubLabel_1 = new System.Windows.Forms.Label();
-            this.githubIcon = new System.Windows.Forms.PictureBox();
             this.githubLabel_2 = new System.Windows.Forms.Label();
             this.modInfo = new System.Windows.Forms.Panel();
             this.plusonePanel = new System.Windows.Forms.Panel();
@@ -66,22 +65,25 @@
             this.modAuthor = new System.Windows.Forms.Label();
             this.modTitle = new System.Windows.Forms.Label();
             this.modDescription = new System.Windows.Forms.RichTextBox();
-            this.modIcon = new System.Windows.Forms.PictureBox();
             this.mainPagePanel = new System.Windows.Forms.Panel();
+            this.modbrowserIconColorPanel = new System.Windows.Forms.Panel();
             this.platformBrowser = new Awesomium.Windows.Forms.WebControl(this.components);
+            this.modIcon = new System.Windows.Forms.PictureBox();
             this.modbrowserIcon = new System.Windows.Forms.PictureBox();
+            this.githubIcon = new System.Windows.Forms.PictureBox();
             this.menu.SuspendLayout();
             this.modActions.SuspendLayout();
             this.listButtonsPanel.SuspendLayout();
             this.modlistPanel.SuspendLayout();
             this.githubPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.githubIcon)).BeginInit();
             this.modInfo.SuspendLayout();
             this.plusonePanel.SuspendLayout();
             this.modActionsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.modIcon)).BeginInit();
             this.mainPagePanel.SuspendLayout();
+            this.modbrowserIconColorPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modbrowserIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.githubIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // menu
@@ -150,8 +152,8 @@
             // pluginsList
             // 
             this.pluginsList.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.pluginsList.Name = "pluginsList";
             resources.ApplyResources(this.pluginsList, "pluginsList");
+            this.pluginsList.Name = "pluginsList";
             this.pluginsList.SelectedIndexChanged += new System.EventHandler(this.pluginsList_Click);
             // 
             // modActions
@@ -262,14 +264,6 @@
             resources.ApplyResources(this.githubLabel_1, "githubLabel_1");
             this.githubLabel_1.Name = "githubLabel_1";
             // 
-            // githubIcon
-            // 
-            this.githubIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.githubIcon, "githubIcon");
-            this.githubIcon.Name = "githubIcon";
-            this.githubIcon.TabStop = false;
-            this.githubIcon.Click += new System.EventHandler(this.GitHubLink);
-            // 
             // githubLabel_2
             // 
             resources.ApplyResources(this.githubLabel_2, "githubLabel_2");
@@ -314,6 +308,7 @@
             this.modActionsPanel.Controls.Add(this.uninstallMod);
             this.modActionsPanel.Controls.Add(this.updateMod);
             this.modActionsPanel.Name = "modActionsPanel";
+            this.modActionsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.modActionsPanel_Paint);
             // 
             // uninstallMod
             // 
@@ -353,6 +348,28 @@
             this.modDescription.Name = "modDescription";
             this.modDescription.ReadOnly = true;
             // 
+            // mainPagePanel
+            // 
+            resources.ApplyResources(this.mainPagePanel, "mainPagePanel");
+            this.mainPagePanel.BackColor = System.Drawing.SystemColors.Control;
+            this.mainPagePanel.Controls.Add(this.modbrowserIconColorPanel);
+            this.mainPagePanel.Controls.Add(this.platformBrowser);
+            this.mainPagePanel.Controls.Add(this.githubPanel);
+            this.mainPagePanel.Controls.Add(this.mbVersion);
+            this.mainPagePanel.Controls.Add(this.mbTitle);
+            this.mainPagePanel.Name = "mainPagePanel";
+            // 
+            // modbrowserIconColorPanel
+            // 
+            this.modbrowserIconColorPanel.Controls.Add(this.modbrowserIcon);
+            resources.ApplyResources(this.modbrowserIconColorPanel, "modbrowserIconColorPanel");
+            this.modbrowserIconColorPanel.Name = "modbrowserIconColorPanel";
+            // 
+            // platformBrowser
+            // 
+            resources.ApplyResources(this.platformBrowser, "platformBrowser");
+            this.platformBrowser.Source = new System.Uri("http://modbrowser.shost.ca/blog/", System.UriKind.Absolute);
+            // 
             // modIcon
             // 
             this.modIcon.BackColor = System.Drawing.SystemColors.Control;
@@ -360,27 +377,21 @@
             this.modIcon.Name = "modIcon";
             this.modIcon.TabStop = false;
             // 
-            // mainPagePanel
-            // 
-            resources.ApplyResources(this.mainPagePanel, "mainPagePanel");
-            this.mainPagePanel.BackColor = System.Drawing.SystemColors.Control;
-            this.mainPagePanel.Controls.Add(this.platformBrowser);
-            this.mainPagePanel.Controls.Add(this.modbrowserIcon);
-            this.mainPagePanel.Controls.Add(this.githubPanel);
-            this.mainPagePanel.Controls.Add(this.mbVersion);
-            this.mainPagePanel.Controls.Add(this.mbTitle);
-            this.mainPagePanel.Name = "mainPagePanel";
-            // 
-            // platformBrowser
-            // 
-            resources.ApplyResources(this.platformBrowser, "platformBrowser");
-            this.platformBrowser.Source = new System.Uri("http://modbrowser.shost.ca/blog/", System.UriKind.Absolute);
-            // 
             // modbrowserIcon
             // 
+            this.modbrowserIcon.BackColor = System.Drawing.Color.Transparent;
+            this.modbrowserIcon.Image = global::modbrowser.Properties.Resources.modbrowser_dark;
             resources.ApplyResources(this.modbrowserIcon, "modbrowserIcon");
             this.modbrowserIcon.Name = "modbrowserIcon";
             this.modbrowserIcon.TabStop = false;
+            // 
+            // githubIcon
+            // 
+            this.githubIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.githubIcon, "githubIcon");
+            this.githubIcon.Name = "githubIcon";
+            this.githubIcon.TabStop = false;
+            this.githubIcon.Click += new System.EventHandler(this.GitHubLink);
             // 
             // Main
             // 
@@ -404,15 +415,16 @@
             this.modlistPanel.PerformLayout();
             this.githubPanel.ResumeLayout(false);
             this.githubPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.githubIcon)).EndInit();
             this.modInfo.ResumeLayout(false);
             this.modInfo.PerformLayout();
             this.plusonePanel.ResumeLayout(false);
             this.modActionsPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.modIcon)).EndInit();
             this.mainPagePanel.ResumeLayout(false);
             this.mainPagePanel.PerformLayout();
+            this.modbrowserIconColorPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.modIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modbrowserIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.githubIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,6 +472,7 @@
         private System.Windows.Forms.ToolStripComboBox pluginsList;
         private System.Windows.Forms.PictureBox modbrowserIcon;
         public Awesomium.Windows.Forms.WebControl platformBrowser;
+        private System.Windows.Forms.Panel modbrowserIconColorPanel;
     }
 }
 

@@ -48,10 +48,10 @@ namespace modbrowser
             }
         }
         public string modsExtension { get; set; }
-            public string name { get; set; }
-            public string author { get; set; }
-            public string version { get; set; }
-            public Api api { get; set; }
-            public Game game { get; set; }
+        public string name { get; set; }
+        public string author { get; set; }
+        public string version { get; set; }
+        public Api api { get; set; }
+        public Game game { get; set; }
     }
 }

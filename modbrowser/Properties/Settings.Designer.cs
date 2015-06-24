@@ -25,7 +25,7 @@ namespace modbrowser.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("14")]
         public int theme {
             get {
                 return ((int)(this["theme"]));

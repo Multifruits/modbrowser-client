@@ -117,14 +117,133 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="aboutText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed Light, 9pt</value>
+  </data>
+  <data name="aboutText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 87</value>
+  </data>
+  <data name="aboutText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 131</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="aboutText.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="aboutText.Text" xml:space="preserve">
     <value>modbrowser est distribué sous la license MIT.
-Ce logiciel a été programmé initialement par ThuleMalta dans le cadre du projet modbrowser.
-Toute l'équipe de développement Multifruits remercie l'ensemble des développeurs qui ont contribué à modbrowser par le biais de GitHub et ceux qui ont fait remonter les bugs logiciels.
+Ce logiciel a été initialement programmé par ThuleMalta.
+L'équipe de développement Multifruits remercie l'ensemble des développeurs qui ont contribué à modbrowser par le biais de GitHub et ceux qui ont fait remonter les bugs.
 Vous avez le droit de redistribuer ce logiciel selon les conditions prévues par la license MIT.
-Merci d'avoir utilisé modbrowser !</value>
+Merci d'avoir utilisé notre logiciel ! :)</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="&gt;&gt;aboutText.Name" xml:space="preserve">
+    <value>aboutText</value>
+  </data>
+  <data name="&gt;&gt;aboutText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aboutText.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;aboutText.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="mbVersion.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mbVersion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 9pt</value>
+  </data>
+  <data name="mbVersion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>273, 39</value>
+  </data>
+  <data name="mbVersion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 16</value>
+  </data>
+  <data name="mbVersion.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="mbVersion.Text" xml:space="preserve">
+    <value>à propos</value>
+  </data>
+  <data name="&gt;&gt;mbVersion.Name" xml:space="preserve">
+    <value>mbVersion</value>
+  </data>
+  <data name="&gt;&gt;mbVersion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mbVersion.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mbVersion.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mbTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mbTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 24pt</value>
+  </data>
+  <data name="mbTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 18</value>
+  </data>
+  <data name="mbTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 43</value>
+  </data>
+  <data name="mbTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="mbTitle.Text" xml:space="preserve">
+    <value>modbrowser</value>
+  </data>
+  <data name="&gt;&gt;mbTitle.Name" xml:space="preserve">
+    <value>mbTitle</value>
+  </data>
+  <data name="&gt;&gt;mbTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mbTitle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mbTitle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 12</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>423, 236</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAQAEBAAAAAAIABoBAAARgAAACAgAAAAACAAqBAAAK4EAAAwMAAAAAAgAKglAABWFQAAQEAAAAAA
@@ -662,5 +781,14 @@ Merci d'avoir utilisé modbrowser !</value>
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>A propos</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

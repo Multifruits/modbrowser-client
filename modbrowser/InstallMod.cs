@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
+using System.Globalization;
 using System.IO;
 #endregion
 
@@ -16,6 +17,11 @@ namespace modbrowser
 {
     public partial class InstallMod : Form
     {
+        // localization
+        private System.Resources.ResourceManager RM = null;
+        private CultureInfo EnglishCulture = new CultureInfo("en");
+        private CultureInfo FrenchCulture = new CultureInfo("fr");
+
         Main mainForm = new Main();
 
         public string api_url;
@@ -31,12 +37,23 @@ namespace modbrowser
 
         public InstallMod()
         {
+            // Localization
+            RM = new System.Resources.ResourceManager("modbrowser.InstallMod", System.Reflection.Assembly.GetExecutingAssembly());
+            if (Properties.Settings.Default.language == 1)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = FrenchCulture;
+            }
+            else
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = EnglishCulture;
+            }
+
             InitializeComponent();
 
             api_url = mainForm.currentPlugin.api.url;
 
             #region Apply Material Design colors
-            int selectedTheme = Convert.ToInt32(File.ReadAllText("theme.txt"));
+            int selectedTheme = Convert.ToInt32(Properties.Settings.Default.theme);
             this.BackColor = mainForm.themeColors[0, selectedTheme];
             installBox.ForeColor = mainForm.themeColors[2, selectedTheme];
             modDescription.BackColor = mainForm.themeColors[0, selectedTheme];
@@ -71,7 +88,7 @@ namespace modbrowser
                 installButton.Enabled = false;
                 installing = true;
 
-                installStatusLabel.Text = "Installation des informations du mod";
+                installStatusLabel.Text = RM.GetString("modInfoDownload");
                 File.WriteAllText(modInfoPath, client.DownloadString(api_url + "?mode=info&n=" + lastMod + "&v=" + lastVersion).Replace("modpathgoeshere", System.Text.RegularExpressions.Regex.Replace(modPath, @"\\", @"\\")));
                 updateModInfo(modInfoPath);
                 modInfo.Visible = true;
@@ -79,7 +96,7 @@ namespace modbrowser
 
                 string modUrl = mainForm.DecodeJSON(modInfoPath)[6];
 
-                installStatusLabel.Text = "Installation du mod";
+                installStatusLabel.Text = RM.GetString("installingMod");
                 client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(downloadInProgress);
                 client.DownloadFileCompleted += new AsyncCompletedEventHandler(downloadCompleted);
                 client.DownloadFileAsync(new Uri(modUrl), modPath);
@@ -95,15 +112,15 @@ namespace modbrowser
                 installButton.Enabled = false;
                 installing = true;
 
-                installStatusLabel.Text = "Installation des informations du mod";
+                installStatusLabel.Text = RM.GetString("modInfoDownload");
                 File.WriteAllText(modInfoPath, client.DownloadString(api_url + "?mode=info&n=" + lastMod + "&v=" + lastVersion).Replace("modpathgoeshere", System.Text.RegularExpressions.Regex.Replace(modPath, @"\\", @"\\")));
-                MessageBox.Show("Mod installé avec succès. N'oubliez pas de recharger la liste des mods.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(RM.GetString("installSuccess"), RM.GetString("info"), MessageBoxButtons.OK, MessageBoxIcon.Information);
                 installationFinished();
             }
             else
             {
-                MessageBox.Show("Vous avez déjà ce mod installé. Pour le réinstaller, désinstallez le d'abord.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                DialogResult result = MessageBox.Show("Voulez-vous désinstaller ce mod et procéder à sa réinstallation ?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+                MessageBox.Show(RM.GetString("modAlreadyInstalled"), RM.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult result = MessageBox.Show(RM.GetString("uninstallAsking"), RM.GetString("question"), MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
                 if (result == DialogResult.Yes)
                 {
                     mainForm.modUninstall(lastMod);
@@ -111,7 +128,7 @@ namespace modbrowser
                 }
                 else
                 {
-                    MessageBox.Show("Installation annulée.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(RM.GetString("installationAborted"), RM.GetString("info"), MessageBoxButtons.OK, MessageBoxIcon.Information);
                     installationFinished();
                 }
             }
@@ -155,15 +172,12 @@ namespace modbrowser
             // Show the image
             if (!File.Exists(Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg"))
             {
-                WebClient webClient = new WebClient();
                 try
                 {
+                    WebClient webClient = new WebClient();
                     webClient.DownloadFile(modmeta[4], Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg");
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Vous devez être connecté à Internet pour récupérer les icônes des mods", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                catch (Exception) { }
             }
             modIcon.ImageLocation = Path.GetTempPath() + modmeta[0] + "_modbrowser.jpg";
         }
@@ -173,7 +187,7 @@ namespace modbrowser
         /// </summary>
         public void installationFinished()
         {
-            installStatusLabel.Text = "En attente";
+            installStatusLabel.Text = RM.GetString("waiting");
             statusBar.Visible = false;
             installing = false;
             this.Close();
@@ -190,7 +204,7 @@ namespace modbrowser
         public void downloadCompleted(object sender, AsyncCompletedEventArgs e)
         {
             // Finish the download
-            MessageBox.Show("Mod installé avec succès. N'oubliez pas de recharger la liste des mods.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(RM.GetString("installSuccess"), RM.GetString("info"), MessageBoxButtons.OK, MessageBoxIcon.Information);
             installationFinished();
         }
 
@@ -206,7 +220,7 @@ namespace modbrowser
             double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
             double percentage = bytesIn / totalBytes * 100;
 
-            installStatusLabel.Text = "Installation du mod (" + Math.Truncate(bytesIn/1000) + "kb/" + Math.Truncate(totalBytes/1000) + "kb)";
+            installStatusLabel.Text = RM.GetString("installingMod") + "(" + Math.Truncate(bytesIn/1000) + "kb/" + Math.Truncate(totalBytes/1000) + "kb)";
             try
             {
                 statusBar.Value = int.Parse(Math.Truncate(percentage).ToString());
@@ -224,10 +238,10 @@ namespace modbrowser
         {
             if (installing)
             {
-                DialogResult result = MessageBox.Show("Annuler l'installation pourrait corrompre ce mod ou/et faire bugger le logiciel. Êtes-vous sûr ?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                DialogResult result = MessageBox.Show(RM.GetString("abortionWarning"), RM.GetString("warning"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
                 if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("L'installation a été annulée.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(RM.GetString("installationAborted"), RM.GetString("info"), MessageBoxButtons.OK, MessageBoxIcon.Information);
                     installButton.Enabled = true;
                 }
                 else
@@ -259,14 +273,19 @@ namespace modbrowser
                 installButton.Enabled = false;
         }
 
+        /// <summary>
+        /// Search mod and put the results in the listView.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void searchButton_Click(object sender, EventArgs e)
         {
             if (searchBox.TextLength >= 3)
                 updateListFromUrl(installModList, api_url + "?mode=list&s=" + searchBox.Text, "modList.txt");
             else if (searchBox.TextLength > 0)
-                MessageBox.Show("Votre recherche ne comprend pas assez de caractères.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(RM.GetString("notEnoughChars"), RM.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
-                MessageBox.Show("Merci d'ajouter des mots-clés à votre recherche.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(RM.GetString("pleaseAddKeywords"), RM.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -275,12 +294,11 @@ namespace modbrowser
             updateListFromUrl(installModList, api_url + "?mode=list", "modList.txt");
         }
 
-        /**
- * Get mod's install url from the HASH
- * Download the mod from the mod's install url
- * Put the mod in Minecraft's mod folder
- * Occurs when installButton is clicked
- */
+        /// <summary>
+        /// Installs mod when installButton is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void installButton_Clicked(object sender, EventArgs e)
         {
             // Verify mod install conditions

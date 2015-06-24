@@ -72,7 +72,7 @@ namespace modbrowser
         private void Plugins_Load(object sender, EventArgs e)
         {
             Main mainForm = new Main();
-            int selectedTheme = Convert.ToInt32(File.ReadAllText("theme.txt"));
+            int selectedTheme = Convert.ToInt32(Properties.Settings.Default.theme);
             pluginsList.BackColor = mainForm.themeColors[0, selectedTheme];
             pluginsList.ForeColor = mainForm.themeColors[2, selectedTheme];
         }

@@ -32,52 +32,48 @@
             this.aboutText = new System.Windows.Forms.RichTextBox();
             this.mbVersion = new System.Windows.Forms.Label();
             this.mbTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // aboutText
             // 
             this.aboutText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.aboutText.Location = new System.Drawing.Point(33, 79);
+            resources.ApplyResources(this.aboutText, "aboutText");
             this.aboutText.Name = "aboutText";
             this.aboutText.ReadOnly = true;
-            this.aboutText.Size = new System.Drawing.Size(352, 123);
-            this.aboutText.TabIndex = 0;
-            this.aboutText.Text = resources.GetString("aboutText.Text");
             // 
             // mbVersion
             // 
-            this.mbVersion.AutoSize = true;
-            this.mbVersion.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.mbVersion, "mbVersion");
             this.mbVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.mbVersion.Location = new System.Drawing.Point(196, 39);
             this.mbVersion.Name = "mbVersion";
-            this.mbVersion.Size = new System.Drawing.Size(50, 16);
-            this.mbVersion.TabIndex = 3;
-            this.mbVersion.Text = "à propos";
             // 
             // mbTitle
             // 
-            this.mbTitle.AutoSize = true;
-            this.mbTitle.Font = new System.Drawing.Font("Roboto Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.mbTitle, "mbTitle");
             this.mbTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.mbTitle.Location = new System.Drawing.Point(25, 18);
             this.mbTitle.Name = "mbTitle";
-            this.mbTitle.Size = new System.Drawing.Size(176, 43);
-            this.mbTitle.TabIndex = 2;
-            this.mbTitle.Text = "modbrowser";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::modbrowser.Properties.Resources.IMG_21062015_180814;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // About
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 222);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.mbVersion);
             this.Controls.Add(this.mbTitle);
             this.Controls.Add(this.aboutText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About";
-            this.Text = "A propos";
+            this.Load += new System.EventHandler(this.About_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,5 +84,6 @@
         private System.Windows.Forms.RichTextBox aboutText;
         private System.Windows.Forms.Label mbVersion;
         private System.Windows.Forms.Label mbTitle;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
