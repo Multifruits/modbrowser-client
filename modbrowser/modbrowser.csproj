@@ -130,6 +130,9 @@
     <EmbeddedResource Include="InstallMod.resx">
       <DependentUpon>InstallMod.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main.de.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.en.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

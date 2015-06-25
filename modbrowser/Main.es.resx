@@ -6393,7 +6393,7 @@
     <value>modbrowser para windows</value>
   </data>
   <data name="aboutMenuItem.Text" xml:space="preserve">
-    <value>About</value>
+    <value>A propósito</value>
   </data>
   <data name="corruptedJSON" xml:space="preserve">
     <value>This mod information file is corrupted and will be deleted.</value>
@@ -6402,19 +6402,19 @@
     <value> have been successfully deleted.</value>
   </data>
   <data name="error" xml:space="preserve">
-    <value>Erreur</value>
+    <value>Error</value>
   </data>
   <data name="errorCopiedInClipboard" xml:space="preserve">
-    <value>Error copied in clipboard.</value>
+    <value>Error copiado en el portapapeles.</value>
   </data>
   <data name="gestionnaireDePluginsToolStripMenuItem.Text" xml:space="preserve">
     <value>Plugin manager</value>
   </data>
   <data name="githubLabel_1.Text" xml:space="preserve">
-    <value>help us</value>
+    <value>ayudanos</value>
   </data>
   <data name="githubLabel_2.Text" xml:space="preserve">
-    <value>on GitHub</value>
+    <value>en GitHub</value>
   </data>
   <data name="helpMenuItem.Text" xml:space="preserve">
     <value>?</value>
@@ -6423,16 +6423,16 @@
     <value>Functionality under development.</value>
   </data>
   <data name="info" xml:space="preserve">
-    <value>Information</value>
+    <value>Información</value>
   </data>
   <data name="installedMods" xml:space="preserve">
-    <value>installed mods</value>
+    <value>mods instalados</value>
   </data>
   <data name="installMenuItem.Text" xml:space="preserve">
-    <value>Installation</value>
+    <value>Instalación</value>
   </data>
   <data name="mainPageButton.Text" xml:space="preserve">
-    <value>MAIN PAGE</value>
+    <value>MENU PRINCIPAL</value>
   </data>
   <data name="mbTitle.Text" xml:space="preserve">
     <value>modbrowser</value>
@@ -6462,10 +6462,10 @@
     <value>Actions</value>
   </data>
   <data name="modAuthor.Text" xml:space="preserve">
-    <value>Version + Author</value>
+    <value>Versión + Autor</value>
   </data>
   <data name="modbrowserToolStripMenuItem.Text" xml:space="preserve">
-    <value>modbrowser settings</value>
+    <value>modbrowser ajustes</value>
   </data>
   <data name="modDescription.Text" xml:space="preserve">
     <value />
@@ -6477,7 +6477,7 @@
     <value>Mod</value>
   </data>
   <data name="modTitle.Text" xml:space="preserve">
-    <value>Title</value>
+    <value>Título</value>
   </data>
   <data name="nomod" xml:space="preserve">
     <value>no mod</value>
@@ -6486,7 +6486,7 @@
     <value>no mod</value>
   </data>
   <data name="pluginLoadError" xml:space="preserve">
-    <value>An error occured while loading following plugin : </value>
+    <value>Este plugin no se pudo cargar : </value>
   </data>
   <data name="plusone.Text" xml:space="preserve">
     <value>+1</value>
@@ -6495,30 +6495,30 @@
     <value> </value>
   </data>
   <data name="reloadModList.Text" xml:space="preserve">
-    <value>RELOAD LIST</value>
+    <value>RECARGAR LA LISTA</value>
   </data>
   <data name="reloadModsList" xml:space="preserve">
-    <value>Mods list have been reloaded.</value>
+    <value>Mods lista se ha recargado.</value>
   </data>
   <data name="settingsMenuButton.Text" xml:space="preserve">
-    <value>Settings</value>
+    <value>Ajustes</value>
   </data>
   <data name="uninstallMod.Text" xml:space="preserve">
-    <value>UNINSTALL</value>
+    <value>DESINSTALACION</value>
   </data>
   <data name="uninstallStripMenuItem.Text" xml:space="preserve">
-    <value>Uninstall</value>
+    <value>Desinstalación</value>
   </data>
   <data name="uninstall_modnonselected" xml:space="preserve">
-    <value>Please select a mod before trying to uninstall it.</value>
+    <value>Usted selecciona un mod antes de desinstalar.</value>
   </data>
   <data name="updateMenuItem.Text" xml:space="preserve">
-    <value>Updates</value>
+    <value>Actualizaciónes</value>
   </data>
   <data name="updateMod.Text" xml:space="preserve">
-    <value>UPDATE</value>
+    <value>ACTUALIZACION</value>
   </data>
   <data name="updateStripMenuItem.Text" xml:space="preserve">
-    <value>Update</value>
+    <value>Actualización</value>
   </data>
 </root>
