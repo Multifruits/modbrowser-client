@@ -117,47 +117,105 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="plusone.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="modIconsList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACI
+        CAAAAk1TRnQBSQFMAwEBAAEIAQEBDAEBARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
+        AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
+        AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
+        AwABmQMAAcwCAAEzAwACMwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZ
+        AgABZgHMAgABZgH/AgABmQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFm
+        AgABzAGZAgACzAIAAcwB/wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEz
+        AQABmQEAATMBAAHMAQABMwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFm
+        AgABMwFmATMBAAEzAmYBAAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFm
+        AQABMwKZAQABMwGZAcwBAAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEA
+        ATMBzAH/AQABMwH/ATMBAAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFm
+        AQABZgEAAWYBAAGZAQABZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFm
+        ATMBzAEAAWYBMwH/AQACZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFm
+        AQABZgKZAQABZgGZAcwBAAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEA
+        AWYB/wIAAWYB/wEzAQABZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZ
+        AQABmQEAAZkBAAHMAQABmQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEz
+        AQABmQEzAWYBAAGZAWYBmQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/
+        AQABmQHMAgABmQHMATMBAAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEA
+        AZkBzAFmAQABmQH/AZkBAAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHM
+        AQABzAEAAZkBMwIAAcwCMwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFm
+        ATMBAAGZAmYBAAHMAWYBmQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZ
+        AQABzAGZAcwBAAHMAZkB/wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/
+        ATMBAAGZAf8BZgEAAcwB/wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHM
+        ATMCAAH/AjMBAAH/ATMBZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJm
+        AQAB/wFmAZkBAAH/AWYBzAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHM
+        AQAB/wGZAf8BAAH/AcwCAAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEA
+        AcwB/wFmAQAC/wGZAQAC/wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEA
+        ASEBAAGlAQADXwEAA3cBAAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7
+        Af8BAAGkAqABAAOAAwAB/wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/8BAAf/AfAB7AFtBv8wAAP/
+        AfIC7wETAREBFQFDAewBvAHwAfMB9AH/MAAC/wHzAewBEQIUAhUBKQEUAe0B6wHsAbwB/zAAAv8B8gFK
+        ARQBEwQiAUoBFAFtAe0B6wHyMAAC/wH0ARMBFAFuASICRAEjAUQBSgHqAUoB7wHwMAAB/wH0AbwBHAHt
+        AQcBRAFvAZQBbgFKAesD7AHyMAAB/wH0AewBcwFKARoBRAFoAUQBFQFDAXMBHALvAQcwAAH/Ae8B6gFu
+        AUoBDgEUAkQBQwERAQ4BEQH0AbwB/zAAAf8B8AHsAQcCEQEQAREBDwEQAQ4BQwERA/8wAAH/AfQB8gHx
+        AUMBEQEPARABDwEOASIB6wG8A/8wAAH/AfMBvAH0AZIBHAHsAW4BDwHrAUMBEgT/MAAC/wG8Ae8C7QHq
+        AUoBFAFtARIB6wHsAfcBBwH/MAAC/wH0AQcB9wLsAW0BEgFtAesC7AGSAQcB/zAABP8BBwHvAe0C7AGS
+        AesB7QH3Ae8B8wH/MAAE/wHzAQcB7wGSAe8BBwHvAQcBvAHzAv8wAAb/AfQJ/zAAAUIBTQE+BwABPgMA
+        ASgDAAFAAwABEAMAAQEBAAEBBQABgBcAA/+XAAs=
+</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="gestionnaireDePluginsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 22</value>
-  </data>
-  <data name="&gt;&gt;modlist.Parent" xml:space="preserve">
-    <value>modlistPanel</value>
-  </data>
-  <data name="&gt;&gt;modbrowserToolStripMenuItem.Name" xml:space="preserve">
-    <value>modbrowserToolStripMenuItem</value>
-  </data>
-  <data name="modIcon.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;modInfo.Name" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="modDescription.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="modDescription.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="plusonePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;modActionsPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;modAuthor.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="menu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 0</value>
+  <data name="githubIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        gg==
+</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -6331,1105 +6389,136 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
-  <data name="updateMod.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="modAuthor.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed Light, 8.25pt</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;modAuthor.Name" xml:space="preserve">
-    <value>modAuthor</value>
-  </data>
-  <data name="modlist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 314</value>
-  </data>
-  <data name="githubIcon.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="modCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 15</value>
-  </data>
-  <data name="&gt;&gt;modlist.Name" xml:space="preserve">
-    <value>modlist</value>
-  </data>
-  <data name="installMenuItem.Text" xml:space="preserve">
-    <value>Installation</value>
-  </data>
-  <data name="githubLabel_2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 26</value>
-  </data>
-  <data name="&gt;&gt;githubIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="modAuthor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;plusonePanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="modbrowserIconColorPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
-  </data>
-  <data name="nomod.Text" xml:space="preserve">
-    <value>aucun contenu</value>
-  </data>
-  <data name="&gt;&gt;helpMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="modIcon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 64</value>
-  </data>
-  <data name="&gt;&gt;plusonePanel.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="nomod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 24</value>
-  </data>
-  <data name="&gt;&gt;updateMod.Parent" xml:space="preserve">
-    <value>modActionsPanel</value>
-  </data>
-  <data name="&gt;&gt;menu.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="reloadModList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 29</value>
-  </data>
-  <data name="mbTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="githubLabel_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 16</value>
-  </data>
-  <data name="&gt;&gt;modbrowserIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="mainPagePanel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="pluginsList.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Standard</value>
-  </data>
-  <data name="&gt;&gt;reloadModList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="modInstallItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 22</value>
-  </data>
-  <data name="&gt;&gt;modTitle.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="githubLabel_1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;nomod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="modTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mbVersion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 16</value>
-  </data>
-  <data name="plusone.Text" xml:space="preserve">
-    <value>+1</value>
-  </data>
-  <data name="&gt;&gt;mainPageButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="mbTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 48</value>
-  </data>
-  <data name="githubIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        gg==
-</value>
-  </data>
-  <data name="mainPageButton.Text" xml:space="preserve">
-    <value>PAGE D'ACCUEIL</value>
-  </data>
-  <data name="&gt;&gt;modIconsList.Name" xml:space="preserve">
-    <value>modIconsList</value>
-  </data>
-  <data name="modIcon.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;uninstallMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="uninstallMod.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="modbrowserToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+M</value>
-  </data>
-  <data name="modInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 434</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pluginsList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
-  </data>
-  <data name="&gt;&gt;reloadModList.Name" xml:space="preserve">
-    <value>reloadModList</value>
-  </data>
-  <data name="modActions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 48</value>
-  </data>
-  <data name="settingsMenuButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="mbTitle.Text" xml:space="preserve">
-    <value>modbrowser</value>
-  </data>
-  <data name="githubLabel_2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 32</value>
-  </data>
-  <data name="&gt;&gt;plusonePanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="modInstallItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+I</value>
-  </data>
-  <data name="&gt;&gt;githubIcon.Name" xml:space="preserve">
-    <value>githubIcon</value>
-  </data>
-  <data name="githubIcon.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;modIcon.Name" xml:space="preserve">
-    <value>modIcon</value>
-  </data>
-  <data name="modCategory.Text" xml:space="preserve">
-    <value>Catégorie</value>
-  </data>
-  <data name="updateStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 22</value>
-  </data>
-  <data name="updateMod.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="gestionnaireDePluginsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Gestionnaire de plugins</value>
-  </data>
-  <data name="&gt;&gt;platformBrowser.Name" xml:space="preserve">
-    <value>platformBrowser</value>
-  </data>
-  <data name="&gt;&gt;modbrowserIcon.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;mainPageButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="nomod.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="updateStripMenuItem.Text" xml:space="preserve">
-    <value>Mettre à jour</value>
-  </data>
-  <data name="modlistPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="installMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;gestionnaireDePluginsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modActionsPanel.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="&gt;&gt;modbrowserIcon.Name" xml:space="preserve">
-    <value>modbrowserIcon</value>
-  </data>
-  <data name="modActionsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 79</value>
-  </data>
-  <data name="&gt;&gt;modInfo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;updateMod.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="menu.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;mbVersion.Name" xml:space="preserve">
-    <value>mbVersion</value>
-  </data>
-  <data name="&gt;&gt;platformBrowser.Parent" xml:space="preserve">
-    <value>mainPagePanel</value>
-  </data>
-  <data name="&gt;&gt;modTitle.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="modTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 27</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_2.Name" xml:space="preserve">
-    <value>githubLabel_2</value>
-  </data>
-  <data name="&gt;&gt;menu.Name" xml:space="preserve">
-    <value>menu</value>
-  </data>
-  <data name="plusoneNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="plusone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 28</value>
-  </data>
-  <data name="&gt;&gt;githubIcon.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="modlist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 42</value>
-  </data>
-  <data name="modInstallItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value />
-  </data>
-  <data name="modDescription.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="gestionnaireDePluginsToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+P</value>
-  </data>
-  <data name="&gt;&gt;installMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;plusone.Parent" xml:space="preserve">
-    <value>plusonePanel</value>
-  </data>
-  <data name="modActionsPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="menu.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="uninstallMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 9</value>
-  </data>
-  <data name="&gt;&gt;modInstallItem.Name" xml:space="preserve">
-    <value>modInstallItem</value>
-  </data>
-  <data name="modInstallItem.Text" xml:space="preserve">
-    <value>Mod</value>
-  </data>
-  <data name="&gt;&gt;modAuthor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="mbVersion.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;mainPageButton.Name" xml:space="preserve">
-    <value>mainPageButton</value>
-  </data>
-  <data name="modlist.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;reloadModList.Parent" xml:space="preserve">
-    <value>listButtonsPanel</value>
-  </data>
-  <data name="mbTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 24pt</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="updateMod.Text" xml:space="preserve">
-    <value>METTRE À JOUR</value>
-  </data>
-  <data name="uninstallStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 22</value>
-  </data>
-  <data name="listButtonsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="nomod.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 13pt</value>
-  </data>
-  <data name="&gt;&gt;plusonePanel.Name" xml:space="preserve">
-    <value>plusonePanel</value>
-  </data>
-  <data name="githubLabel_1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;updateMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listButtonsPanel.Parent" xml:space="preserve">
-    <value>modlistPanel</value>
-  </data>
-  <data name="&gt;&gt;nomod.Parent" xml:space="preserve">
-    <value>modlistPanel</value>
-  </data>
-  <data name="modCategory.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 8.25pt</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 500</value>
-  </data>
-  <data name="modInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 27</value>
-  </data>
-  <data name="&gt;&gt;githubPanel.Name" xml:space="preserve">
-    <value>githubPanel</value>
-  </data>
-  <data name="&gt;&gt;mainPagePanel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="reloadModList.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="githubPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 76</value>
-  </data>
-  <data name="&gt;&gt;pluginsList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="githubPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>384, 385</value>
-  </data>
-  <data name="&gt;&gt;modTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mainPagePanel.Name" xml:space="preserve">
-    <value>mainPagePanel</value>
-  </data>
-  <data name="&gt;&gt;platformBrowser.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>modbrowser pour windows</value>
-  </data>
-  <data name="&gt;&gt;menu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;plusoneNumber.Name" xml:space="preserve">
-    <value>plusoneNumber</value>
-  </data>
-  <data name="plusoneNumber.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="plusoneNumber.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;modbrowserIconColorPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;githubIcon.Parent" xml:space="preserve">
-    <value>githubPanel</value>
-  </data>
-  <data name="&gt;&gt;menu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modDescription.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mbTitle.Parent" xml:space="preserve">
-    <value>mainPagePanel</value>
-  </data>
-  <data name="githubLabel_2.Text" xml:space="preserve">
-    <value>sur GitHub</value>
-  </data>
-  <data name="githubPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;plusone.Name" xml:space="preserve">
-    <value>plusone</value>
-  </data>
-  <data name="githubLabel_2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mbVersion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;modCategory.Name" xml:space="preserve">
-    <value>modCategory</value>
-  </data>
-  <data name="modCategory.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;mbVersion.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="modbrowserIcon.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="githubLabel_1.Text" xml:space="preserve">
-    <value>retrouvez nous</value>
-  </data>
-  <data name="uninstallMod.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="plusone.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;settingsMenuButton.Name" xml:space="preserve">
-    <value>settingsMenuButton</value>
-  </data>
-  <data name="modAuthor.Text" xml:space="preserve">
-    <value>Version + Auteur</value>
-  </data>
-  <data name="modbrowserToolStripMenuItem.Text" xml:space="preserve">
-    <value>Paramètres de modbrowser</value>
-  </data>
-  <data name="mbVersion.Text" xml:space="preserve">
-    <value>undefined version</value>
-  </data>
-  <data name="&gt;&gt;modlist.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="uninstallMod.Text" xml:space="preserve">
-    <value>DÉSINSTALLER</value>
-  </data>
-  <data name="modActions.Text" xml:space="preserve">
-    <value>Actions</value>
-  </data>
-  <data name="&gt;&gt;mbTitle.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;helpMenuItem.Name" xml:space="preserve">
-    <value>helpMenuItem</value>
-  </data>
-  <data name="&gt;&gt;modlistPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modbrowserIconColorPanel.Parent" xml:space="preserve">
-    <value>mainPagePanel</value>
-  </data>
-  <data name="updateMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 41</value>
-  </data>
-  <data name="mainPageButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="updateMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 29</value>
-  </data>
-  <data name="modbrowserIconColorPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 42</value>
-  </data>
-  <data name="&gt;&gt;modActionsPanel.Name" xml:space="preserve">
-    <value>modActionsPanel</value>
-  </data>
-  <data name="plusoneNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 6</value>
-  </data>
-  <data name="mbVersion.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;modCategory.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="githubLabel_2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="modbrowserIcon.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="menu.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="settingsMenuButton.Text" xml:space="preserve">
-    <value>Paramètres</value>
-  </data>
-  <data name="&gt;&gt;plusone.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;uninstallMod.Parent" xml:space="preserve">
-    <value>modActionsPanel</value>
-  </data>
-  <data name="&gt;&gt;mbVersion.Parent" xml:space="preserve">
-    <value>mainPagePanel</value>
-  </data>
-  <data name="reloadModList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="modAuthor.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="plusone.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="listButtonsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 373</value>
-  </data>
-  <data name="modDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 102</value>
-  </data>
-  <data name="&gt;&gt;mbVersion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="modInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;mbTitle.Name" xml:space="preserve">
-    <value>mbTitle</value>
-  </data>
-  <data name="uninstallMod.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;nomod.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="modIconsList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACI
-        CAAAAk1TRnQBSQFMAwEBAAEMAQEBEAEBARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
-        AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
-        AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
-        AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
-        AwABmQMAAcwCAAEzAwACMwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZ
-        AgABZgHMAgABZgH/AgABmQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFm
-        AgABzAGZAgACzAIAAcwB/wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEz
-        AQABmQEAATMBAAHMAQABMwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFm
-        AgABMwFmATMBAAEzAmYBAAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFm
-        AQABMwKZAQABMwGZAcwBAAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEA
-        ATMBzAH/AQABMwH/ATMBAAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFm
-        AQABZgEAAWYBAAGZAQABZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFm
-        ATMBzAEAAWYBMwH/AQACZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFm
-        AQABZgKZAQABZgGZAcwBAAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEA
-        AWYB/wIAAWYB/wEzAQABZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZ
-        AQABmQEAAZkBAAHMAQABmQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEz
-        AQABmQEzAWYBAAGZAWYBmQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/
-        AQABmQHMAgABmQHMATMBAAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEA
-        AZkBzAFmAQABmQH/AZkBAAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHM
-        AQABzAEAAZkBMwIAAcwCMwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFm
-        ATMBAAGZAmYBAAHMAWYBmQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZ
-        AQABzAGZAcwBAAHMAZkB/wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/
-        ATMBAAGZAf8BZgEAAcwB/wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHM
-        ATMCAAH/AjMBAAH/ATMBZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJm
-        AQAB/wFmAZkBAAH/AWYBzAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHM
-        AQAB/wGZAf8BAAH/AcwCAAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEA
-        AcwB/wFmAQAC/wGZAQAC/wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEA
-        ASEBAAGlAQADXwEAA3cBAAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7
-        Af8BAAGkAqABAAOAAwAB/wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/8BAAf/AfAB7AFtBv8wAAP/
-        AfIC7wETAREBFQFDAewBvAHwAfMB9AH/MAAC/wHzAewBEQIUAhUBKQEUAe0B6wHsAbwB/zAAAv8B8gFK
-        ARQBEwQiAUoBFAFtAe0B6wHyMAAC/wH0ARMBFAFuASICRAEjAUQBSgHqAUoB7wHwMAAB/wH0AbwBHAHt
-        AQcBRAFvAZQBbgFKAesD7AHyMAAB/wH0AewBcwFKARoBRAFoAUQBFQFDAXMBHALvAQcwAAH/Ae8B6gFu
-        AUoBDgEUAkQBQwERAQ4BEQH0AbwB/zAAAf8B8AHsAQcCEQEQAREBDwEQAQ4BQwERA/8wAAH/AfQB8gHx
-        AUMBEQEPARABDwEOASIB6wG8A/8wAAH/AfMBvAH0AZIBHAHsAW4BDwHrAUMBEgT/MAAC/wG8Ae8C7QHq
-        AUoBFAFtARIB6wHsAfcBBwH/MAAC/wH0AQcB9wLsAW0BEgFtAesC7AGSAQcB/zAABP8BBwHvAe0C7AGS
-        AesB7QH3Ae8B8wH/MAAE/wHzAQcB7wGSAe8BBwHvAQcBvAHzAv8wAAb/AfQJ/zAAAUIBTQE+BwABPgMA
-        ASgDAAFAAwABEAMAAQEBAAEBBQABgBcAA/+XAAs=
-</value>
-  </data>
-  <data name="modCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 47</value>
-  </data>
-  <data name="&gt;&gt;platformBrowser.Type" xml:space="preserve">
-    <value>Awesomium.Windows.Forms.WebControl, Awesomium.Windows.Forms, Version=1.7.5.1, Culture=neutral, PublicKeyToken=9bd24830fbe304a0</value>
-  </data>
-  <data name="updateMod.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="installMenuItem.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;modIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="modlistPanel.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="plusonePanel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;plusone.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;uninstallStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modInstallItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="platformBrowser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 251</value>
-  </data>
-  <data name="&gt;&gt;listButtonsPanel.Name" xml:space="preserve">
-    <value>listButtonsPanel</value>
-  </data>
-  <data name="modActionsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;settingsMenuButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="mainPagePanel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="modIcon.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="reloadModList.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;modActions.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="modTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 18pt</value>
-  </data>
-  <data name="modAuthor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 60</value>
-  </data>
-  <data name="modCategory.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="aboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Main</value>
+    <value>modbrowser para windows</value>
   </data>
   <data name="aboutMenuItem.Text" xml:space="preserve">
-    <value>A propos</value>
+    <value>About</value>
   </data>
-  <data name="modTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 18</value>
+  <data name="corruptedJSON" xml:space="preserve">
+    <value>This mod information file is corrupted and will be deleted.</value>
   </data>
-  <data name="&gt;&gt;updateStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="deleteSuccess" xml:space="preserve">
+    <value> have been successfully deleted.</value>
   </data>
-  <data name="&gt;&gt;gestionnaireDePluginsToolStripMenuItem.Name" xml:space="preserve">
-    <value>gestionnaireDePluginsToolStripMenuItem</value>
+  <data name="error" xml:space="preserve">
+    <value>Erreur</value>
   </data>
-  <data name="reloadModList.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="errorCopiedInClipboard" xml:space="preserve">
+    <value>Error copied in clipboard.</value>
   </data>
-  <data name="&gt;&gt;githubLabel_2.Parent" xml:space="preserve">
-    <value>githubPanel</value>
+  <data name="gestionnaireDePluginsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Plugin manager</value>
   </data>
-  <data name="mainPagePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="githubLabel_1.Text" xml:space="preserve">
+    <value>help us</value>
   </data>
-  <data name="&gt;&gt;modDescription.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="nomod.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;modAuthor.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="modbrowserIconColorPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="listButtonsPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;modlistPanel.Name" xml:space="preserve">
-    <value>modlistPanel</value>
-  </data>
-  <data name="&gt;&gt;listButtonsPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="mainPageButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 29</value>
-  </data>
-  <data name="modbrowserIcon.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="&gt;&gt;modInfo.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="mbVersion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 69</value>
-  </data>
-  <data name="&gt;&gt;updateStripMenuItem.Name" xml:space="preserve">
-    <value>updateStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;mbTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modCategory.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="modlistPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 461</value>
-  </data>
-  <data name="nomod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 9</value>
-  </data>
-  <data name="&gt;&gt;modlistPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="platformBrowser.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;modbrowserIconColorPanel.Name" xml:space="preserve">
-    <value>modbrowserIconColorPanel</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_1.Parent" xml:space="preserve">
-    <value>githubPanel</value>
-  </data>
-  <data name="updateMod.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updateMenuItem.Text" xml:space="preserve">
-    <value>Mises à jour</value>
-  </data>
-  <data name="helpMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 23</value>
-  </data>
-  <data name="modDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>563, 285</value>
-  </data>
-  <data name="githubPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;installMenuItem.Name" xml:space="preserve">
-    <value>installMenuItem</value>
-  </data>
-  <data name="&gt;&gt;modbrowserIcon.Parent" xml:space="preserve">
-    <value>modbrowserIconColorPanel</value>
-  </data>
-  <data name="&gt;&gt;pluginsList.Name" xml:space="preserve">
-    <value>pluginsList</value>
-  </data>
-  <data name="&gt;&gt;modlistPanel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="mainPageButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;modIcon.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="&gt;&gt;listButtonsPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="githubLabel_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 16</value>
-  </data>
-  <data name="&gt;&gt;modIcon.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;mainPagePanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="plusoneNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 16</value>
-  </data>
-  <data name="&gt;&gt;modActionsPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;aboutMenuItem.Name" xml:space="preserve">
-    <value>aboutMenuItem</value>
-  </data>
-  <data name="&gt;&gt;aboutMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modlist.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;reloadModList.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="modbrowserIcon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 54</value>
-  </data>
-  <data name="&gt;&gt;modIconsList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;uninstallMod.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="modAuthor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 15</value>
-  </data>
-  <data name="&gt;&gt;plusoneNumber.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="plusonePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>471, 394</value>
-  </data>
-  <data name="mainPagePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 0</value>
-  </data>
-  <data name="uninstallStripMenuItem.Text" xml:space="preserve">
-    <value>Désinstaller</value>
-  </data>
-  <data name="&gt;&gt;githubPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="githubIcon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 1</value>
-  </data>
-  <data name="&gt;&gt;updateMenuItem.Name" xml:space="preserve">
-    <value>updateMenuItem</value>
-  </data>
-  <data name="&gt;&gt;modTitle.Name" xml:space="preserve">
-    <value>modTitle</value>
-  </data>
-  <data name="mainPageButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="platformBrowser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 125</value>
-  </data>
-  <data name="&gt;&gt;modDescription.Parent" xml:space="preserve">
-    <value>modInfo</value>
-  </data>
-  <data name="&gt;&gt;githubPanel.Parent" xml:space="preserve">
-    <value>mainPagePanel</value>
-  </data>
-  <data name="modCategory.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="modbrowserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 22</value>
-  </data>
-  <data name="mbTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;updateMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="modlist.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed Light, 11pt</value>
-  </data>
-  <data name="&gt;&gt;githubLabel_1.Name" xml:space="preserve">
-    <value>githubLabel_1</value>
-  </data>
-  <data name="&gt;&gt;updateMod.Name" xml:space="preserve">
-    <value>updateMod</value>
-  </data>
-  <data name="modInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="modTitle.Text" xml:space="preserve">
-    <value>Titre</value>
-  </data>
-  <data name="uninstallMod.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mainPageButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="plusone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 0</value>
-  </data>
-  <data name="mbTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="modlistPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="modIcon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 15</value>
-  </data>
-  <data name="reloadModList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 15</value>
-  </data>
-  <data name="githubLabel_2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 15pt</value>
-  </data>
-  <data name="githubLabel_2.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="modTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>784, 461</value>
-  </data>
-  <data name="&gt;&gt;nomod.Name" xml:space="preserve">
-    <value>nomod</value>
-  </data>
-  <data name="mainPageButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 49</value>
-  </data>
-  <data name="plusoneNumber.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="listButtonsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 88</value>
-  </data>
-  <data name="&gt;&gt;modInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="uninstallMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 29</value>
-  </data>
-  <data name="mbVersion.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="&gt;&gt;plusoneNumber.Parent" xml:space="preserve">
-    <value>plusonePanel</value>
-  </data>
-  <data name="mainPageButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;plusoneNumber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="githubLabel_1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="modlistPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="githubLabel_1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="modAuthor.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="githubIcon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 64</value>
-  </data>
-  <data name="&gt;&gt;modbrowserToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="nomod.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;modbrowserIconColorPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="settingsMenuButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+S</value>
-  </data>
-  <data name="&gt;&gt;uninstallStripMenuItem.Name" xml:space="preserve">
-    <value>uninstallStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;modCategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mainPageButton.Parent" xml:space="preserve">
-    <value>listButtonsPanel</value>
-  </data>
-  <data name="&gt;&gt;uninstallMod.Name" xml:space="preserve">
-    <value>uninstallMod</value>
-  </data>
-  <data name="modbrowserIcon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="mbTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 43</value>
-  </data>
-  <data name="modInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9pt</value>
-  </data>
-  <data name="&gt;&gt;githubPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="plusonePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 40</value>
-  </data>
-  <data name="modActionsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>457, 6</value>
-  </data>
-  <data name="reloadModList.Text" xml:space="preserve">
-    <value>RECHARGER LA LISTE</value>
-  </data>
-  <data name="githubIcon.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="modTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 32</value>
-  </data>
-  <data name="platformBrowser.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;modActions.Name" xml:space="preserve">
-    <value>modActions</value>
-  </data>
-  <data name="mainPagePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 461</value>
+  <data name="githubLabel_2.Text" xml:space="preserve">
+    <value>on GitHub</value>
   </data>
   <data name="helpMenuItem.Text" xml:space="preserve">
     <value>?</value>
   </data>
-  <data name="&gt;&gt;mainPagePanel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="indev" xml:space="preserve">
+    <value>Functionality under development.</value>
   </data>
-  <data name="&gt;&gt;modDescription.Name" xml:space="preserve">
-    <value>modDescription</value>
+  <data name="info" xml:space="preserve">
+    <value>Information</value>
   </data>
-  <data name="updateMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
+  <data name="installedMods" xml:space="preserve">
+    <value>installed mods</value>
   </data>
-  <metadata name="modIconsList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>217, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="modActions.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>100, 17</value>
-  </metadata>
-  <metadata name="menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="installMenuItem.Text" xml:space="preserve">
+    <value>Installation</value>
+  </data>
+  <data name="mainPageButton.Text" xml:space="preserve">
+    <value>MAIN PAGE</value>
+  </data>
+  <data name="mbTitle.Text" xml:space="preserve">
+    <value>modbrowser</value>
+  </data>
+  <data name="mbVersion.Text" xml:space="preserve">
+    <value>undefined version</value>
+  </data>
+  <data name="mb_update" xml:space="preserve">
+    <value>In order to get modbrowser's last version, just select last version from the page going to open.</value>
+  </data>
+  <data name="menu.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="menuItem_164.Text" xml:space="preserve">
+    <value>1.6.4</value>
+  </data>
+  <data name="menuItem_1710.Text" xml:space="preserve">
+    <value>1.7.10</value>
+  </data>
+  <data name="menuItem_18.Text" xml:space="preserve">
+    <value>1.8</value>
+  </data>
+  <data name="menuItem_other.Text" xml:space="preserve">
+    <value>Other...</value>
+  </data>
+  <data name="modActions.Text" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="modAuthor.Text" xml:space="preserve">
+    <value>Version + Author</value>
+  </data>
+  <data name="modbrowserToolStripMenuItem.Text" xml:space="preserve">
+    <value>modbrowser settings</value>
+  </data>
+  <data name="modDescription.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="modInstallItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value />
+  </data>
+  <data name="modInstallItem.Text" xml:space="preserve">
+    <value>Mod</value>
+  </data>
+  <data name="modTitle.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="nomod" xml:space="preserve">
+    <value>no mod</value>
+  </data>
+  <data name="nomod.Text" xml:space="preserve">
+    <value>no mod</value>
+  </data>
+  <data name="pluginLoadError" xml:space="preserve">
+    <value>An error occured while loading following plugin : </value>
+  </data>
+  <data name="plusone.Text" xml:space="preserve">
+    <value>+1</value>
+  </data>
+  <data name="plusoneNumber.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="reloadModList.Text" xml:space="preserve">
+    <value>RELOAD LIST</value>
+  </data>
+  <data name="reloadModsList" xml:space="preserve">
+    <value>Mods list have been reloaded.</value>
+  </data>
+  <data name="settingsMenuButton.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="uninstallMod.Text" xml:space="preserve">
+    <value>UNINSTALL</value>
+  </data>
+  <data name="uninstallStripMenuItem.Text" xml:space="preserve">
+    <value>Uninstall</value>
+  </data>
+  <data name="uninstall_modnonselected" xml:space="preserve">
+    <value>Please select a mod before trying to uninstall it.</value>
+  </data>
+  <data name="updateMenuItem.Text" xml:space="preserve">
+    <value>Updates</value>
+  </data>
+  <data name="updateMod.Text" xml:space="preserve">
+    <value>UPDATE</value>
+  </data>
+  <data name="updateStripMenuItem.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
 </root>

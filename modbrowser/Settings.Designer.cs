@@ -80,7 +80,9 @@
             this.language_comboBox.FormattingEnabled = true;
             this.language_comboBox.Items.AddRange(new object[] {
             resources.GetString("language_comboBox.Items"),
-            resources.GetString("language_comboBox.Items1")});
+            resources.GetString("language_comboBox.Items1"),
+            resources.GetString("language_comboBox.Items2"),
+            resources.GetString("language_comboBox.Items3")});
             resources.ApplyResources(this.language_comboBox, "language_comboBox");
             this.language_comboBox.Name = "language_comboBox";
             this.language_comboBox.Sorted = true;

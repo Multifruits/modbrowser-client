@@ -22,6 +22,8 @@ namespace modbrowser
         private System.Resources.ResourceManager RM = null;
         private CultureInfo EnglishCulture = new CultureInfo("en");
         private CultureInfo FrenchCulture = new CultureInfo("fr");
+        private CultureInfo GermanCulture = new CultureInfo("de");
+        private CultureInfo SpanishCulture = new CultureInfo("es");
 
         // modbrowser's paths
         public string mbpath;
@@ -119,9 +121,17 @@ namespace modbrowser
         {
             // Localization
             RM = new System.Resources.ResourceManager("modbrowser.Main", System.Reflection.Assembly.GetExecutingAssembly());
-            if (Properties.Settings.Default.language == 1)
+            if (Properties.Settings.Default.language == 0)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = GermanCulture;
+            }
+            else if (Properties.Settings.Default.language == 2)
             {
                 System.Threading.Thread.CurrentThread.CurrentUICulture = FrenchCulture;
+            }
+            else if (Properties.Settings.Default.language == 3)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = SpanishCulture;
             }
             else
             {
@@ -132,17 +142,20 @@ namespace modbrowser
             InitializeComponent();
 
             // Create modbrowser-necessary files and folders
-            if(!Directory.Exists(Path.GetTempPath() + "mb_cache"))
+            if (!Directory.Exists(Path.GetTempPath() + "mb_cache"))
                 Directory.CreateDirectory(Path.GetTempPath() + "mb_cache");
 
             if (!Directory.Exists(@"plugins"))
+            {
                 Directory.CreateDirectory(@"plugins");
+                System.Diagnostics.Process.Start("http://modbrowser.shost.ca/installsuccess/");
+            }
 
             // Set useful variables
             mbpath = Directory.GetCurrentDirectory();
 
             // Load stats menu informations
-            mbVersion.Text = "v2.0-alpha.3";
+            mbVersion.Text = "v2.0-beta.1";
 
             #region Apply Material Design colors
             int selectedTheme = Convert.ToInt32(Properties.Settings.Default.theme);
@@ -154,9 +167,9 @@ namespace modbrowser
             modlist.ForeColor = themeColors[2, selectedTheme];
 
             if (themeColors[2, selectedTheme] == ColorTranslator.FromHtml("#212121"))
-                modbrowserIcon.Image = (System.Drawing.Image)RM.GetObject("modbrowser_dark");
+                modbrowserIcon.Image = Properties.Resources.modbrowser_dark;
             else
-                modbrowserIcon.Image = (System.Drawing.Image)RM.GetObject("modbrowser_light");
+                modbrowserIcon.Image = Properties.Resources.modbrowser_light;
             #endregion
 
             // Load mods and plugins
@@ -454,7 +467,7 @@ namespace modbrowser
                 Mod modToDecode = JsonConvert.DeserializeObject<Mod>(File.ReadAllText(filepath));
 
                 // Prepares the array to return
-                string[] decoded = new string[7];
+                string[] decoded = new string[8];
 
                 // Puts saved variables on the array to return
                 decoded[0] = modToDecode.name;
@@ -464,6 +477,7 @@ namespace modbrowser
                 decoded[4] = modToDecode.image_url;
                 decoded[5] = modToDecode.jar.path;
                 decoded[6] = modToDecode.jar.url;
+                decoded[7] = modToDecode.category;
 
                 // Returns the array
                 return decoded;
@@ -491,6 +505,7 @@ namespace modbrowser
             modTitle.Text = modmeta[0];
             modAuthor.Text = modmeta[1] + " / " + modmeta[2];
             modDescription.Text = modmeta[3];
+            modCategory.Text = modmeta[7];
 
             // Show the image
             if (!File.Exists(Path.GetTempPath() + "mb_cache\\" + modmeta[0]))
@@ -545,6 +560,11 @@ namespace modbrowser
         #endregion
 
         private void modActionsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Main_Load(object sender, EventArgs e)
         {
 
         }

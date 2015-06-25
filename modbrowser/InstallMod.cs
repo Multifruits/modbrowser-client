@@ -152,7 +152,10 @@ namespace modbrowser
             client.DownloadFile(url, tempPath + fileName);
 
             foreach (var line in File.ReadAllLines(tempPath + fileName))
-                listView.Items.Add(line);
+            {
+                if(!File.Exists(@"" + mainForm.currentPlugin.name + "\\" + line + ".json"))
+                    listView.Items.Add(line);
+            }
         }
 
         /// <summary>

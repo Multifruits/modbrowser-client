@@ -92,6 +92,11 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Mod.cs" />
+    <Compile Include="modbrowser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modbrowser.resx</DependentUpon>
+    </Compile>
     <Compile Include="Plugin.cs" />
     <Compile Include="Plugins.cs">
       <SubType>Form</SubType>
@@ -128,11 +133,18 @@
     <EmbeddedResource Include="Main.en.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main.es.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.fr.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modbrowser.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>modbrowser.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Plugins.resx">
       <DependentUpon>Plugins.cs</DependentUpon>
@@ -175,14 +187,9 @@
   <ItemGroup>
     <Content Include="minecraft.ico" />
     <Content Include="modbrowser.ico" />
-    <None Include="Resources\modbrowser_light2.png" />
-    <None Include="Resources\modbrowser_dark2.png" />
     <None Include="Resources\modbrowser_light.png" />
     <None Include="Resources\modbrowser_dark.png" />
     <None Include="Resources\IMG_21062015_180814.png" />
-    <None Include="Resources\modbrowser_light1.png" />
-    <None Include="Resources\modbrowser_dark1.png" />
-    <None Include="Resources\mb_icon-dark.bmp" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

@@ -723,10 +723,16 @@
     <value>UI Theme</value>
   </data>
   <data name="language_comboBox.Items" xml:space="preserve">
-    <value>English (en_US)</value>
+    <value>German (de-DE) (beta)</value>
   </data>
   <data name="language_comboBox.Items1" xml:space="preserve">
-    <value>French (fr_FR)</value>
+    <value>English (en-US)</value>
+  </data>
+  <data name="language_comboBox.Items2" xml:space="preserve">
+    <value>Spanish (es-ES) (beta)</value>
+  </data>
+  <data name="language_comboBox.Items3" xml:space="preserve">
+    <value>French (fr-FR)</value>
   </data>
   <data name="language_comboBox.Text" xml:space="preserve">
     <value>Language</value>

@@ -214,10 +214,16 @@
     <value>6</value>
   </data>
   <data name="language_comboBox.Items" xml:space="preserve">
-    <value>Anglais (en_US)</value>
+    <value>Allemand (de-DE) (beta)</value>
   </data>
   <data name="language_comboBox.Items1" xml:space="preserve">
-    <value>Français (fr_FR)</value>
+    <value>Anglais (en-US)</value>
+  </data>
+  <data name="language_comboBox.Items2" xml:space="preserve">
+    <value>Espagnol (es-ES) (beta)</value>
+  </data>
+  <data name="language_comboBox.Items3" xml:space="preserve">
+    <value>Français (fr-FR)</value>
   </data>
   <data name="language_comboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>125, 23</value>
